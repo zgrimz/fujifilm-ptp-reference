@@ -1,0 +1,116 @@
+{
+  "schema_version": 1,
+  "provenance": {
+    "kind": "synthetic",
+    "hardware_evidence": false,
+    "source": "Synthetic bank-write fault cases for tools/bankprobe.py; not camera measurements."
+  },
+  "cases": [
+    {
+      "id": "lost-bank-name-reply",
+      "kind": "workflow",
+      "policy": "stop_after_unknown_delivery",
+      "input": {
+        "initial": {
+          "session": "s1",
+          "target_bank": 1,
+          "originals_available": true
+        },
+        "events": [
+          {
+            "id": "send",
+            "action": "write_property",
+            "property": "0xD18D",
+            "outcome": "outcome_unknown"
+          },
+          {
+            "id": "blocked",
+            "action": "attempt_remaining_plan",
+            "after": "send"
+          }
+        ],
+        "writes": [
+          {
+            "property": "0xD18D",
+            "value": "temporary"
+          },
+          {
+            "property": "0xD193",
+            "value": 10
+          }
+        ],
+        "fault": {
+          "property": "0xD18D",
+          "phase": "after_delivery_before_reply"
+        }
+      },
+      "expected": {
+        "command": "outcome_unknown",
+        "verification": "unavailable",
+        "later_writes": "not_attempted",
+        "automatic_cleanup": "not_attempted",
+        "next_bank": "not_attempted",
+        "recovery": "unresolved"
+      },
+      "coverage": {
+        "reference": [
+          "fixture_integrity",
+          "bankprobe_write_policy"
+        ]
+      }
+    },
+    {
+      "id": "lost-bank-field-reply",
+      "kind": "workflow",
+      "policy": "stop_after_unknown_delivery",
+      "input": {
+        "initial": {
+          "session": "s1",
+          "target_bank": 1,
+          "originals_available": true
+        },
+        "events": [
+          {
+            "id": "send",
+            "action": "write_property",
+            "property": "0xD192",
+            "outcome": "outcome_unknown"
+          },
+          {
+            "id": "blocked",
+            "action": "attempt_remaining_plan",
+            "after": "send"
+          }
+        ],
+        "writes": [
+          {
+            "property": "0xD192",
+            "value": 2
+          },
+          {
+            "property": "0xD193",
+            "value": 10
+          }
+        ],
+        "fault": {
+          "property": "0xD192",
+          "phase": "after_delivery_before_reply"
+        }
+      },
+      "expected": {
+        "command": "outcome_unknown",
+        "verification": "unavailable",
+        "later_writes": "not_attempted",
+        "automatic_cleanup": "not_attempted",
+        "next_bank": "not_attempted",
+        "recovery": "unresolved"
+      },
+      "coverage": {
+        "reference": [
+          "fixture_integrity",
+          "bankprobe_write_policy"
+        ]
+      }
+    }
+  ]
+}

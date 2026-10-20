@@ -1,0 +1,36 @@
+{
+  "provenance": "Expected scalar facts from the public FilmKit #12/#13 transcripts; no original capture bytes or photos are redistributed.",
+  "captures": [
+    {
+      "filename":"X-T50_Preset_Save.pcapng",
+      "source":"https://github.com/eggricesoy/filmkit/issues/12",
+      "sha256":"267fb1204d4fdc498e99bccde241ed3692e3ef53c17c9722e4369fac101d9020",
+      "write_count":20,
+      "changes":{"1144":[[4,3,2]],"1178":[[5,0,-1000]],"1214":[[8,1,11]],"1250":[[9,4,5]],"1284":[[9,5,3]],"1320":[[10,2,3]],"1354":[[25,2,3]],"1390":[[24,3,2]],"1426":[[12,32776,4],[15,5600,0]],"1462":[[13,-4,3],[14,4,-2]],"1498":[[16,0,10]],"1534":[[17,20,0]],"1570":[[18,30,0]],"1606":[[19,-40,-20]],"1642":[[20,32768,16384]],"1680":[[27,30,0]],"1701":[[21,2,1]],"1722":[[22,2,1]]},
+      "metadata":{"1690":{"lens_modulation_optimizer":"off","color_space":"adobe_rgb"},"1711":{"lens_modulation_optimizer":"on","color_space":"adobe_rgb"},"1732":{"lens_modulation_optimizer":"on","color_space":"srgb"}},
+      "bank_tail":{"1819":53668,"1820":53669,"1821":53272,"1822":53255,"1823":53294,"1824":53249}
+    },
+    {
+      "filename":"X-T30_Preset_Save_PT1.pcapng",
+      "source":"https://github.com/eggricesoy/filmkit/issues/13",
+      "sha256":"55bff8cbd0c5b9779b895d4c87611f47d23acb70265020c01d2171952150863f",
+      "write_count":17,
+      "changes":{"223":[[4,2,3]],"244":[[5,0,1000]],"265":[[6,100,400]],"286":[[8,3,11]],"305":[[9,1,3]],"326":[[10,3,2]],"347":[[12,32775,32776],[15,5300,0]],"366":[[13,0,-4],[14,0,4]],"387":[[16,0,20]],"408":[[17,0,-10]],"431":[[18,0,20]],"451":[[19,-40,-20]],"472":[[20,32768,16384]],"493":[[21,1,2]],"514":[[22,1,2]]},
+      "metadata":{"483":{"lens_modulation_optimizer":"on","color_space":"srgb"},"504":{"lens_modulation_optimizer":"off","color_space":"srgb"},"525":{"lens_modulation_optimizer":"off","color_space":"adobe_rgb"}}
+    },
+    {
+      "filename":"X-T30_Profile_Read.pcapng",
+      "source":"https://github.com/eggricesoy/filmkit/issues/13",
+      "sha256":"d21bf902c9f2736aaf357c91149c61d806c68544da8c8213abd38fd1d8785e58",
+      "write_count":1,
+      "profiles":{"43":{"bytes":605,"num_params":24},"44":{"bytes":629,"num_params":29,"tail":[0,1,0,0,2,1]},"69":{"bytes":605}}
+    },
+    {
+      "filename":"X-T30_Preset_Save_PT2.pcapng",
+      "source":"https://github.com/eggricesoy/filmkit/issues/13",
+      "sha256":"67ed9c928f6b577b38abf596ad2e96f540b9acdbb5e157b8ae07ef8ea6b4230d",
+      "write_count":0,
+      "transaction_count":8
+    }
+  ]
+}

@@ -1,0 +1,455 @@
+{
+  "format": "fuji-bankprobe-selected-numeric-findings-v1",
+  "evidenceId": "xt50-20261015-224819",
+  "sourceFindingCount": 10,
+  "omittedSourceFindingIndices": [
+    2,
+    9
+  ],
+  "findings": [
+    {
+      "sourceFindingIndex": 0,
+      "kind": "prompted_film_simulation",
+      "rows": [
+        {
+          "sourceDetailIndex": 0,
+          "promptedMenuLabel": "PRO Neg. Hi",
+          "readUnsigned": 4,
+          "expectedUnsigned": 4,
+          "reportedOtherChanges": 0
+        },
+        {
+          "sourceDetailIndex": 1,
+          "promptedMenuLabel": "PRO Neg. Std",
+          "readUnsigned": 5,
+          "expectedUnsigned": 5,
+          "reportedOtherChanges": 0
+        },
+        {
+          "sourceDetailIndex": 2,
+          "promptedMenuLabel": "MONOCHROME",
+          "readUnsigned": 6,
+          "expectedUnsigned": 6,
+          "reportedOtherChanges": 0
+        },
+        {
+          "sourceDetailIndex": 3,
+          "promptedMenuLabel": "MONOCHROME + Ye",
+          "readUnsigned": 7,
+          "expectedUnsigned": 7,
+          "reportedOtherChanges": 0
+        },
+        {
+          "sourceDetailIndex": 4,
+          "promptedMenuLabel": "SEPIA",
+          "readUnsigned": 10,
+          "expectedUnsigned": 10,
+          "reportedOtherChanges": 0
+        },
+        {
+          "sourceDetailIndex": 5,
+          "promptedMenuLabel": "ACROS",
+          "readUnsigned": 12,
+          "expectedUnsigned": 12,
+          "reportedOtherChanges": 0
+        },
+        {
+          "sourceDetailIndex": 6,
+          "promptedMenuLabel": "ACROS + Ye",
+          "readUnsigned": 13,
+          "expectedUnsigned": 13,
+          "reportedOtherChanges": 0
+        },
+        {
+          "sourceDetailIndex": 7,
+          "promptedMenuLabel": "ACROS + R",
+          "readUnsigned": 14,
+          "expectedUnsigned": 14,
+          "reportedOtherChanges": 0
+        },
+        {
+          "sourceDetailIndex": 8,
+          "promptedMenuLabel": "ACROS + G",
+          "readUnsigned": 15,
+          "expectedUnsigned": 15,
+          "reportedOtherChanges": 0
+        }
+      ]
+    },
+    {
+      "sourceFindingIndex": 1,
+      "kind": "prompted_menu_mapping",
+      "rows": [
+        {
+          "sourceDetailIndex": 0,
+          "promptLabel": "LMO toggle",
+          "reportedChanges": [
+            {
+              "property": "0xD1A3",
+              "beforeUnsigned": 1,
+              "afterUnsigned": 2
+            }
+          ]
+        },
+        {
+          "sourceDetailIndex": 1,
+          "promptLabel": "Long Exposure NR toggle",
+          "reportedChanges": []
+        },
+        {
+          "sourceDetailIndex": 2,
+          "promptLabel": "Color Space toggle",
+          "reportedChanges": [
+            {
+              "property": "0xD1A4",
+              "beforeUnsigned": 1,
+              "afterUnsigned": 2
+            }
+          ]
+        },
+        {
+          "sourceDetailIndex": 3,
+          "promptLabel": "Color Space return",
+          "reportedChanges": [
+            {
+              "property": "0xD1A4",
+              "beforeUnsigned": 2,
+              "afterUnsigned": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sourceFindingIndex": 3,
+      "kind": "selector_report",
+      "values": {
+        "before": 7,
+        "selected": 7,
+        "after_cable": 7,
+        "after_menu": 7
+      }
+    },
+    {
+      "sourceFindingIndex": 4,
+      "kind": "dynamic_range_trials",
+      "rows": [
+        {
+          "sourceDetailIndex": 0,
+          "property": "0xD190",
+          "writtenUnsigned": 0,
+          "response": "0x201C",
+          "readbackUnsigned": 100
+        },
+        {
+          "sourceDetailIndex": 1,
+          "property": "0xD190",
+          "writtenUnsigned": 65535,
+          "response": "0x2001",
+          "readbackUnsigned": 65535
+        },
+        {
+          "sourceDetailIndex": 2,
+          "property": "0xD190",
+          "writtenUnsigned": 100,
+          "response": "0x2001",
+          "readbackUnsigned": 100
+        }
+      ]
+    },
+    {
+      "sourceFindingIndex": 5,
+      "kind": "toning_trials",
+      "rows": [
+        {
+          "sourceDetailIndex": 0,
+          "property": "0xD192",
+          "writtenUnsigned": 12,
+          "response": "0x2001",
+          "readbackUnsigned": 12
+        },
+        {
+          "sourceDetailIndex": 1,
+          "property": "0xD193",
+          "writtenUnsigned": 0,
+          "response": "0x2001",
+          "readbackUnsigned": 0
+        },
+        {
+          "sourceDetailIndex": 2,
+          "property": "0xD193",
+          "writtenUnsigned": 10,
+          "response": "0x2001",
+          "readbackUnsigned": 10
+        },
+        {
+          "sourceDetailIndex": 3,
+          "property": "0xD193",
+          "writtenUnsigned": 65526,
+          "response": "0x2001",
+          "readbackUnsigned": 65526
+        },
+        {
+          "sourceDetailIndex": 4,
+          "property": "0xD193",
+          "writtenUnsigned": 5,
+          "response": "0x201C",
+          "readbackUnsigned": 65526
+        },
+        {
+          "sourceDetailIndex": 5,
+          "property": "0xD193",
+          "writtenUnsigned": 9,
+          "response": "0x201C",
+          "readbackUnsigned": 65526
+        },
+        {
+          "sourceDetailIndex": 6,
+          "property": "0xD193",
+          "writtenUnsigned": 65527,
+          "response": "0x201C",
+          "readbackUnsigned": 65526
+        },
+        {
+          "sourceDetailIndex": 7,
+          "property": "0xD193",
+          "writtenUnsigned": 180,
+          "response": "0x2001",
+          "readbackUnsigned": 180
+        },
+        {
+          "sourceDetailIndex": 8,
+          "property": "0xD193",
+          "writtenUnsigned": 65356,
+          "response": "0x2001",
+          "readbackUnsigned": 65356
+        },
+        {
+          "sourceDetailIndex": 9,
+          "property": "0xD193",
+          "writtenUnsigned": 190,
+          "response": "0x201C",
+          "readbackUnsigned": 65356
+        },
+        {
+          "sourceDetailIndex": 10,
+          "property": "0xD194",
+          "writtenUnsigned": 0,
+          "response": "0x2001",
+          "readbackUnsigned": 0
+        },
+        {
+          "sourceDetailIndex": 11,
+          "property": "0xD194",
+          "writtenUnsigned": 10,
+          "response": "0x2001",
+          "readbackUnsigned": 10
+        },
+        {
+          "sourceDetailIndex": 12,
+          "property": "0xD194",
+          "writtenUnsigned": 65526,
+          "response": "0x2001",
+          "readbackUnsigned": 65526
+        },
+        {
+          "sourceDetailIndex": 13,
+          "property": "0xD194",
+          "writtenUnsigned": 5,
+          "response": "0x201C",
+          "readbackUnsigned": 65526
+        },
+        {
+          "sourceDetailIndex": 14,
+          "property": "0xD194",
+          "writtenUnsigned": 9,
+          "response": "0x201C",
+          "readbackUnsigned": 65526
+        },
+        {
+          "sourceDetailIndex": 15,
+          "property": "0xD194",
+          "writtenUnsigned": 65527,
+          "response": "0x201C",
+          "readbackUnsigned": 65526
+        },
+        {
+          "sourceDetailIndex": 16,
+          "property": "0xD194",
+          "writtenUnsigned": 180,
+          "response": "0x2001",
+          "readbackUnsigned": 180
+        },
+        {
+          "sourceDetailIndex": 17,
+          "property": "0xD194",
+          "writtenUnsigned": 65356,
+          "response": "0x2001",
+          "readbackUnsigned": 65356
+        },
+        {
+          "sourceDetailIndex": 18,
+          "property": "0xD194",
+          "writtenUnsigned": 190,
+          "response": "0x201C",
+          "readbackUnsigned": 65356
+        },
+        {
+          "sourceDetailIndex": 19,
+          "property": "0xD192",
+          "writtenUnsigned": 10,
+          "response": "0x2001",
+          "readbackUnsigned": 10
+        },
+        {
+          "sourceDetailIndex": 20,
+          "property": "0xD193",
+          "writtenUnsigned": 10,
+          "response": "0x201C",
+          "readbackUnsigned": 65356
+        },
+        {
+          "sourceDetailIndex": 21,
+          "property": "0xD193",
+          "writtenUnsigned": 0,
+          "response": "0x201C",
+          "readbackUnsigned": 65356
+        },
+        {
+          "sourceDetailIndex": 22,
+          "property": "0xD194",
+          "writtenUnsigned": 10,
+          "response": "0x201C",
+          "readbackUnsigned": 65356
+        },
+        {
+          "sourceDetailIndex": 23,
+          "property": "0xD194",
+          "writtenUnsigned": 0,
+          "response": "0x201C",
+          "readbackUnsigned": 65356
+        }
+      ]
+    },
+    {
+      "sourceFindingIndex": 6,
+      "kind": "monochrome_colour_trials",
+      "rows": [
+        {
+          "sourceDetailIndex": 0,
+          "property": "0xD192",
+          "writtenUnsigned": 12,
+          "response": "0x2001",
+          "readbackUnsigned": 12
+        },
+        {
+          "sourceDetailIndex": 1,
+          "property": "0xD196",
+          "writtenUnsigned": 3,
+          "response": "0x2001",
+          "readbackUnsigned": 3
+        },
+        {
+          "sourceDetailIndex": 2,
+          "property": "0xD196",
+          "writtenUnsigned": 2,
+          "response": "0x2001",
+          "readbackUnsigned": 2
+        },
+        {
+          "sourceDetailIndex": 3,
+          "property": "0xD197",
+          "writtenUnsigned": 1,
+          "response": "0x2001",
+          "readbackUnsigned": 1
+        },
+        {
+          "sourceDetailIndex": 4,
+          "property": "0xD197",
+          "writtenUnsigned": 2,
+          "response": "0x2001",
+          "readbackUnsigned": 2
+        },
+        {
+          "sourceDetailIndex": 5,
+          "property": "0xD19A",
+          "writtenUnsigned": 9,
+          "response": "0x2001",
+          "readbackUnsigned": 9
+        },
+        {
+          "sourceDetailIndex": 6,
+          "property": "0xD19A",
+          "writtenUnsigned": 8,
+          "response": "0x2001",
+          "readbackUnsigned": 8
+        },
+        {
+          "sourceDetailIndex": 7,
+          "property": "0xD19B",
+          "writtenUnsigned": 65527,
+          "response": "0x2001",
+          "readbackUnsigned": 65527
+        },
+        {
+          "sourceDetailIndex": 8,
+          "property": "0xD19B",
+          "writtenUnsigned": 65528,
+          "response": "0x2001",
+          "readbackUnsigned": 65528
+        },
+        {
+          "sourceDetailIndex": 9,
+          "property": "0xD19F",
+          "writtenUnsigned": 65526,
+          "response": "0x201C",
+          "readbackUnsigned": 65526
+        }
+      ]
+    },
+    {
+      "sourceFindingIndex": 7,
+      "kind": "prompted_format_trials",
+      "heif": [
+        {
+          "property": "0xD1A2",
+          "writtenUnsigned": 40,
+          "response": "0x201C",
+          "readbackUnsigned": 40
+        },
+        {
+          "property": "0xD1A2",
+          "writtenUnsigned": 50,
+          "response": "0x201C",
+          "readbackUnsigned": 40
+        }
+      ],
+      "jpeg": [
+        {
+          "property": "0xD1A2",
+          "writtenUnsigned": 50,
+          "response": "0x2001",
+          "readbackUnsigned": 50
+        },
+        {
+          "property": "0xD1A2",
+          "writtenUnsigned": 40,
+          "response": "0x2001",
+          "readbackUnsigned": 40
+        }
+      ],
+      "d18fHeifUnsigned": 4,
+      "d18fJpegUnsigned": 4
+    },
+    {
+      "sourceFindingIndex": 8,
+      "kind": "live_size_report",
+      "sourceNamedValues": {
+        "a5_k": 7,
+        "a5_j": 7,
+        "e_j": 7,
+        "target": 9
+      }
+    }
+  ]
+}

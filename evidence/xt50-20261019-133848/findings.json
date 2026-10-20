@@ -1,0 +1,97 @@
+{
+  "format": "fuji-bankprobe-selected-observations-v1",
+  "evidenceId": "xt50-20261019-133848",
+  "sourceFindingCount": 1,
+  "findings": {
+    "test": "empty_name_with_setting_writes",
+    "selectedBank": 7,
+    "initialName": {
+      "readSourceIndex": 34,
+      "readResponse": "0x2001",
+      "wasEmpty": false,
+      "contentsOmitted": true
+    },
+    "settingWritten": "0xD192",
+    "settingOriginalUnsigned": 11,
+    "settingTemporaryUnsigned": 2,
+    "trials": [
+      {
+        "form": "one_byte_empty_string",
+        "payloadHex": "00",
+        "writeSourceIndex": 59,
+        "response": "0x2001",
+        "readbacks": [
+          {
+            "after": "name_write",
+            "readSourceIndex": 60,
+            "payloadHex": "010000"
+          },
+          {
+            "after": "setting_write",
+            "settingWriteSourceIndex": 62,
+            "settingReadbackUnsigned": 2,
+            "readSourceIndex": 64,
+            "payloadHex": "010000"
+          },
+          {
+            "after": "setting_write_back",
+            "settingWriteSourceIndex": 66,
+            "settingReadbackUnsigned": 11,
+            "readSourceIndex": 68,
+            "payloadHex": "010000"
+          }
+        ],
+        "originalNameRestore": {
+          "writeSourceIndex": 70,
+          "readSourceIndex": 71,
+          "response": "0x2001",
+          "readEqualsInitialNameBytes": true
+        }
+      },
+      {
+        "form": "count_one_and_nul",
+        "payloadHex": "010000",
+        "writeSourceIndex": 73,
+        "response": "0x2001",
+        "readbacks": [
+          {
+            "after": "name_write",
+            "readSourceIndex": 74,
+            "payloadHex": "010000"
+          },
+          {
+            "after": "setting_write",
+            "settingWriteSourceIndex": 76,
+            "settingReadbackUnsigned": 2,
+            "readSourceIndex": 78,
+            "payloadHex": "010000"
+          },
+          {
+            "after": "setting_write_back",
+            "settingWriteSourceIndex": 80,
+            "settingReadbackUnsigned": 11,
+            "readSourceIndex": 82,
+            "payloadHex": "010000"
+          }
+        ],
+        "originalNameRestore": {
+          "writeSourceIndex": 84,
+          "readSourceIndex": 85,
+          "response": "0x2001",
+          "readEqualsInitialNameBytes": true
+        }
+      }
+    ],
+    "cleanup": {
+      "verificationSourceIndex": 140,
+      "exact": true,
+      "cleanupWrites": 0
+    },
+    "autoUpdateReported": "unknown",
+    "closeSession": {
+      "sourceIndex": 144,
+      "response": "0x2001"
+    },
+    "persistenceAcrossPowerCycle": "not_tested"
+  }
+}

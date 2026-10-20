@@ -1,0 +1,16 @@
+{
+  "provenance": "Synthetic contract vectors derived from failure cases in the author's iOS client; not camera measurements.",
+  "write_results": [
+    {"case":"ignored-ok","input":{"attempted":true,"response":8193,"expected":2,"actual":1},"expected":{"command":"accepted","verification":"mismatched"}},
+    {"case":"lost-reply","input":{"attempted":true,"expected":2},"expected":{"command":"outcome_unknown","verification":"unavailable"}},
+    {"case":"refused-no-op","input":{"attempted":true,"response":8220,"expected":1,"actual":1},"expected":{"command":"refused","verification":"matched"}},
+    {"case":"unattempted","input":{"attempted":false,"expected":2},"expected":{"command":"not_attempted","verification":"unavailable"}}
+  ],
+  "verification": [
+    {"case":"failed-read-is-not-verified","expected":{"8":11},"actual":null,"state":"unavailable"},
+    {"case":"empty-read-is-not-verified","expected":{"8":11},"actual":{},"state":"unavailable"},
+    {"case":"no-accepted-fields","expected":{},"actual":{},"state":"not_tested"},
+    {"case":"partial-read","expected":{"8":11,"9":1},"actual":{"8":11},"state":"unavailable"},
+    {"case":"persistence-reverted","expected":{"8":11},"actual":{"8":1},"state":"mismatched"}
+  ]
+}

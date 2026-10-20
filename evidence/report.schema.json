@@ -1,0 +1,346 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:fujifilm-ptp-reference:evidence:1",
+  "title": "Fujifilm recipe evidence report v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schemaVersion",
+    "evidenceId",
+    "evidenceKind",
+    "camera",
+    "conditions",
+    "connections",
+    "observations",
+    "trace"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "const": 1
+    },
+    "evidenceId": {
+      "type": "string",
+      "minLength": 1
+    },
+    "evidenceKind": {
+      "enum": [
+        "measured",
+        "captured",
+        "published",
+        "owner_report",
+        "synthetic"
+      ]
+    },
+    "source": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "url": {
+          "type": "string",
+          "format": "uri"
+        },
+        "revision": {
+          "type": "string"
+        },
+        "captureSha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "toolVersion": {
+          "type": "string"
+        }
+      }
+    },
+    "camera": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "model",
+        "firmware",
+        "usbMode"
+      ],
+      "properties": {
+        "model": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "firmware": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "usbMode": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      }
+    },
+    "conditions": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "autoUpdate"
+      ],
+      "properties": {
+        "autoUpdate": {
+          "enum": [
+            "on",
+            "off",
+            "unknown"
+          ]
+        },
+        "bank": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 1,
+          "maximum": 7
+        },
+        "iso": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 1
+        },
+        "format": {
+          "enum": [
+            "jpeg",
+            "heif",
+            "unknown"
+          ]
+        },
+        "lensPresent": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        }
+      }
+    },
+    "connections": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "startedAt"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "startedAt": {
+            "type": "string",
+            "format": "date-time"
+          }
+        }
+      }
+    },
+    "observations": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "operationId",
+          "connectionId",
+          "observedAt",
+          "kind",
+          "commandOutcome",
+          "verification",
+          "expected",
+          "readback"
+        ],
+        "properties": {
+          "operationId": {
+            "type": "string",
+            "minLength": 1
+          },
+          "connectionId": {
+            "type": "string"
+          },
+          "observedAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "kind": {
+            "enum": [
+              "bank_write",
+              "bank_restore",
+              "profile_write",
+              "persistence",
+              "conversion",
+              "read"
+            ]
+          },
+          "commandOutcome": {
+            "enum": [
+              "accepted",
+              "refused",
+              "not_attempted",
+              "outcome_unknown"
+            ]
+          },
+          "responseCode": {
+            "type": [
+              "integer",
+              "null"
+            ],
+            "minimum": 0,
+            "maximum": 65535
+          },
+          "verification": {
+            "enum": [
+              "matched",
+              "mismatched",
+              "unavailable",
+              "not_tested"
+            ]
+          },
+          "before": {
+            "type": "object",
+            "propertyNames": {
+              "pattern": "^(bank:0xD(18[E-F]|19[0-9A-F]|1A[0-4])|live:0x[0-9A-F]{4}|profile:[0-9]{1,2})$"
+            },
+            "additionalProperties": {
+              "anyOf": [
+                {
+                  "type": "string",
+                  "pattern": "^([0-9A-F]{2}){1,4}$"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            }
+          },
+          "expected": {
+            "type": "object",
+            "propertyNames": {
+              "pattern": "^(bank:0xD(18[E-F]|19[0-9A-F]|1A[0-4])|live:0x[0-9A-F]{4}|profile:[0-9]{1,2})$"
+            },
+            "additionalProperties": {
+              "anyOf": [
+                {
+                  "type": "string",
+                  "pattern": "^([0-9A-F]{2}){1,4}$"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            }
+          },
+          "readback": {
+            "anyOf": [
+              {
+                "type": "object",
+                "propertyNames": {
+                  "pattern": "^(bank:0xD(18[E-F]|19[0-9A-F]|1A[0-4])|live:0x[0-9A-F]{4}|profile:[0-9]{1,2})$"
+                },
+                "additionalProperties": {
+                  "anyOf": [
+                    {
+                      "type": "string",
+                      "pattern": "^([0-9A-F]{2}){1,4}$"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "nameVerification": {
+            "enum": [
+              "matched",
+              "mismatched",
+              "unavailable",
+              "not_tested"
+            ]
+          },
+          "restartConfirmed": {
+            "type": [
+              "boolean",
+              "null"
+            ]
+          },
+          "metadataVerification": {
+            "enum": [
+              "matched",
+              "mismatched",
+              "unavailable",
+              "not_tested"
+            ]
+          },
+          "pixelsVerification": {
+            "enum": [
+              "matched",
+              "mismatched",
+              "unavailable",
+              "not_tested"
+            ]
+          },
+          "outputSaved": {
+            "type": [
+              "boolean",
+              "null"
+            ]
+          },
+          "cleanupOutcome": {
+            "enum": [
+              "complete",
+              "failed",
+              "not_attempted",
+              "outcome_unknown"
+            ]
+          }
+        }
+      }
+    },
+    "trace": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "scope",
+        "retainedCount",
+        "droppedCount",
+        "truncated"
+      ],
+      "properties": {
+        "scope": {
+          "enum": [
+            "connection",
+            "operation",
+            "unavailable"
+          ]
+        },
+        "retainedCount": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "droppedCount": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "truncated": {
+          "type": "boolean"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "schemaVersion": 1,
+  "evidenceId": "synthetic-partial-push-1",
+  "evidenceKind": "synthetic",
+  "camera": {
+    "model": "Example body",
+    "firmware": null,
+    "usbMode": "USB RAW CONV."
+  },
+  "conditions": {
+    "autoUpdate": "unknown",
+    "bank": 3,
+    "format": "jpeg"
+  },
+  "connections": [
+    {
+      "id": "connection-a",
+      "startedAt": "2026-10-17T12:00:00Z"
+    }
+  ],
+  "observations": [
+    {
+      "operationId": "push-1-field-1",
+      "connectionId": "connection-a",
+      "observedAt": "2026-10-17T12:00:01Z",
+      "kind": "bank_write",
+      "commandOutcome": "accepted",
+      "responseCode": 8193,
+      "verification": "matched",
+      "before": {
+        "bank:0xD192": "0100"
+      },
+      "expected": {
+        "bank:0xD192": "0B00"
+      },
+      "readback": {
+        "bank:0xD192": "0B00"
+      }
+    },
+    {
+      "operationId": "push-1-field-2",
+      "connectionId": "connection-a",
+      "observedAt": "2026-10-17T12:00:02Z",
+      "kind": "bank_write",
+      "commandOutcome": "outcome_unknown",
+      "responseCode": null,
+      "verification": "unavailable",
+      "before": {
+        "bank:0xD195": "0100"
+      },
+      "expected": {
+        "bank:0xD195": "0300"
+      },
+      "readback": null
+    }
+  ],
+  "trace": {
+    "scope": "operation",
+    "retainedCount": 8,
+    "droppedCount": 0,
+    "truncated": false
+  }
+}

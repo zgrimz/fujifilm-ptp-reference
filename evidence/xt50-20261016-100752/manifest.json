@@ -1,0 +1,117 @@
+{
+  "format": "fuji-bankprobe-sanitized-package-v1",
+  "evidenceId": "xt50-20261016-100752",
+  "evidenceKind": "measured_original_sanitized_derivative",
+  "source": {
+    "access": "private archive",
+    "archivePath": "hardware-runs/bankprobe-x-t50-2026-10-15/logs/bankprobe-20261016-100752.json",
+    "revision": "803067ca4b4aefaf9849e4bda0209317a9ff2582",
+    "sha256": "176a885cc91f476decedb6fe4e94ba3df5055c4caee13df8d639adf8df119532",
+    "bytes": 16038,
+    "toolRevision": null
+  },
+  "camera": {
+    "model": "X-T50",
+    "firmware": "1.32",
+    "provenance": "original_report",
+    "usbMode": null
+  },
+  "conditions": {
+    "autoUpdateCustomSetting": "unknown",
+    "lensPresent": null,
+    "iso": null,
+    "imageFormat": "unknown"
+  },
+  "time": {
+    "startedLocal": "2026-10-16T10:07:52",
+    "timezone": null,
+    "perTransactionTimestamps": "absent",
+    "connectionIds": "absent"
+  },
+  "coverage": {
+    "sourceArray": "transactions",
+    "sourceEntries": 125,
+    "retainedEntries": 125,
+    "droppedEntries": 0,
+    "transactionEntries": 121,
+    "eventEntries": 4,
+    "outcomes": {
+      "outcome_unknown": 6,
+      "recorded_ok": 115
+    },
+    "scalarPayloadsRetained": 103,
+    "payloadFieldsOmitted": 10,
+    "emptyNamePayloadsRetained": 0,
+    "beforeSnapshots": 0,
+    "afterSnapshots": 0,
+    "topLevelSnapshotPair": "not_recorded",
+    "sourceCaptureCompleteness": "unknown"
+  },
+  "interpretation": {
+    "sourceIndex": "zero-based original transactions array index; order preserved",
+    "transactionId": "source value; repeats across sessions and is not a unique identifier",
+    "rawPayloadEncoding": "hexadecimal bytes in source order, little-endian scalar interpretation",
+    "snapshotAndFindingNumbers": "unsigned integers unless explicitly labeled; not byte strings",
+    "responseOrigin": "not independently established by this host-generated log",
+    "events": "host-recorded camera_lost/camera_back, not proof of a power cycle; experiment_context keeps the operator's normalized AUTO UPDATE answer; bank_restore_verification keeps per-field statuses, not values",
+    "operatorObservations": "reviewed normalized observations with explicit source pointers; not independent menu or power telemetry",
+    "liveD1A5": "live setting sampled while a bank was selected, not a 24th bank field"
+  },
+  "transform": {
+    "generator": "export.py",
+    "generatorSha256": "e8eb2a70dca4b951bfd778ec3795f6ead32de38aa041c749e4c066f88b7f2de3",
+    "sharedGenerator": "../bankprobe_package.py",
+    "sharedGeneratorSha256": "cdfbedda21b06b8586c6c59606e3ae6a3b9a588bba62580628a28ed23e81c7cc",
+    "originalUnchanged": true,
+    "publicSchemaV1Compatible": false,
+    "losslessBackup": false,
+    "payloadAllowlist": [
+      "0xD18C",
+      "0xD18E",
+      "0xD18F",
+      "0xD190",
+      "0xD191",
+      "0xD192",
+      "0xD193",
+      "0xD194",
+      "0xD195",
+      "0xD196",
+      "0xD197",
+      "0xD198",
+      "0xD199",
+      "0xD19A",
+      "0xD19B",
+      "0xD19C",
+      "0xD19D",
+      "0xD19E",
+      "0xD19F",
+      "0xD1A0",
+      "0xD1A1",
+      "0xD1A2",
+      "0xD1A3",
+      "0xD1A4",
+      "0xD1A5"
+    ],
+    "maximumPayloadBytes": 4,
+    "omissions": [
+      "command line and paths",
+      "bank names and all D18D payloads except the two empty-name encodings (00 and 010000)",
+      "DeviceInfo and D186/D187 payloads",
+      "identity and device identifiers",
+      "USB error text",
+      "source verdict prose and ok flags",
+      "unrestricted source strings and unknown fields"
+    ],
+    "generatedFacts": "No missing times, connection identifiers, conditions, or hardware observations are invented; finding interpretations are labeled."
+  },
+  "artifacts": {
+    "transactions.jsonl": {
+      "sha256": "0d1fbd492b4727cef3e2fe5d9e9c194a11fc7413ee53e12cfc313df125dbeb32",
+      "bytes": 23427
+    },
+    "findings.json": {
+      "sha256": "b32eb70a4a25dcc8c5cd7d62795281fff3bc76a2b868ed34f47fdd1d24f09ae6",
+      "bytes": 10980
+    }
+  }
+}

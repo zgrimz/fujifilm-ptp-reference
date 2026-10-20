@@ -1,0 +1,88 @@
+{
+  "format": "fuji-client-report-selected-observations-v1",
+  "evidenceId": "xt50-20261019-125007",
+  "findings": {
+    "test": "client_restore_empty_name",
+    "selectedBank": 7,
+    "selection": {
+      "writeSequence": 269,
+      "readSequence": 270,
+      "selectedUnsigned": 7
+    },
+    "nameBeforeWrite": {
+      "readSequence": 294,
+      "readResponse": "0x2001",
+      "wasEmpty": false,
+      "contentsOmitted": true
+    },
+    "nameWrite": {
+      "property": "0xD18D",
+      "writeSequence": 295,
+      "payloadHex": "00",
+      "payloadForm": "one_byte_empty_string",
+      "dataPhaseBytesHandedToTransport": 1,
+      "response": "0x2001"
+    },
+    "settingWritesAfterName": {
+      "firstSequence": 296,
+      "lastSequence": 315,
+      "count": 20,
+      "properties": [
+        "0xD18E",
+        "0xD18F",
+        "0xD190",
+        "0xD191",
+        "0xD192",
+        "0xD195",
+        "0xD196",
+        "0xD197",
+        "0xD198",
+        "0xD199",
+        "0xD19A",
+        "0xD19B",
+        "0xD19D",
+        "0xD19E",
+        "0xD19F",
+        "0xD1A0",
+        "0xD1A1",
+        "0xD1A2",
+        "0xD1A3",
+        "0xD1A4"
+      ],
+      "allResponses": "0x2001",
+      "readbackSequences": [
+        316,
+        338
+      ],
+      "allWrittenValuesReadBackEqual": true
+    },
+    "nameReadsBetweenWriteAndFinalRead": 0,
+    "nameAfterWrites": {
+      "readSequence": 339,
+      "readResponse": "0x2001",
+      "isEmptyForm": false,
+      "equalsNameBeforeWriteBytes": true,
+      "contentsOmitted": true
+    },
+    "clientRecords": {
+      "basis": "the client's push records in the same report; their own transactions precede this trace",
+      "pushToC7": {
+        "recordedUtc": "2026-10-19T16:48:27Z",
+        "nameReadBeforeWasEmpty": true,
+        "pushedNameNonEmpty": true,
+        "nameOutcome": "written"
+      },
+      "restoreOfC7": {
+        "recordedUtc": "2026-10-19T16:50:47Z",
+        "nameApplied": "empty",
+        "nameOutcome": "mismatched",
+        "outcome": "partiallyApplied"
+      }
+    },
+    "notEstablished": [
+      "the bytes ImageCaptureCore put on the USB wire",
+      "the name between the empty-name write and the final read",
+      "AUTO UPDATE CUSTOM SETTING, USB mode, ISO, lens and image format"
+    ]
+  }
+}

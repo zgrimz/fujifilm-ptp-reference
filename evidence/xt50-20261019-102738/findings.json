@@ -1,0 +1,54 @@
+{
+  "format": "fuji-bankprobe-selected-observations-v1",
+  "evidenceId": "xt50-20261019-102738",
+  "sourceFindingCount": 0,
+  "findings": {
+    "test": "empty_name_write",
+    "selectedBank": 7,
+    "initialName": {
+      "readSourceIndex": 5,
+      "readResponse": "0x2001",
+      "wasEmpty": false,
+      "contentsOmitted": true
+    },
+    "write": {
+      "property": "0xD18D",
+      "writeSourceIndex": 32,
+      "payloadHex": "00",
+      "payloadForm": "one_byte_empty_string",
+      "response": "0x2001"
+    },
+    "readbacks": [
+      {
+        "readSourceIndex": 33,
+        "readResponse": "0x2001",
+        "payloadHex": "010000",
+        "payloadForm": "count_one_and_nul",
+        "equalsWrittenBytes": false
+      },
+      {
+        "readSourceIndex": 34,
+        "readResponse": "0x2001",
+        "payloadHex": "010000",
+        "payloadForm": "count_one_and_nul",
+        "equalsWrittenBytes": false
+      }
+    ],
+    "bankSettingsWritten": false,
+    "nameRestoredByProbe": false,
+    "selectorRestoredEventSourceIndex": 37,
+    "closeSession": {
+      "sourceIndex": 38,
+      "response": "0x2001"
+    },
+    "menuObservation": {
+      "basis": "maintainer_report_after_run",
+      "recordedIn": "maintainer_message",
+      "date": "2026-10-19",
+      "bankLabel": "CUSTOM 7",
+      "nameEditor": "blank",
+      "photograph": false
+    },
+    "persistenceAcrossPowerCycle": "not_tested"
+  }
+}

@@ -1,0 +1,74 @@
+{
+  "format": "fuji-client-report-selected-observations-v1",
+  "evidenceId": "xt50-20261019-140542",
+  "findings": {
+    "test": "client_undo_empty_name",
+    "selectedBank": 7,
+    "nameAtSlotWalk": {
+      "readSequence": 161,
+      "payloadHex": "010000"
+    },
+    "push": {
+      "selectSequence": 186,
+      "nameBeforeReadSequence": 211,
+      "nameBeforePayloadHex": "010000",
+      "nameWriteSequence": 212,
+      "nameWriteNonEmpty": true,
+      "settingWrites": 19,
+      "nameAfterReadSequence": 255,
+      "nameAfterNonEmpty": true,
+      "contentsOmitted": true
+    },
+    "undo": {
+      "selectSequence": 256,
+      "nameBeforeReadSequence": 281,
+      "nameBeforeEqualsPushedNameBytes": true,
+      "nameWrite": {
+        "property": "0xD18D",
+        "writeSequence": 282,
+        "payloadHex": "010000",
+        "payloadForm": "count_one_and_nul",
+        "dataPhaseBytesHandedToTransport": 3,
+        "response": "0x2001"
+      },
+      "settingWritesAfterName": {
+        "firstSequence": 283,
+        "lastSequence": 301,
+        "count": 19,
+        "allResponses": "0x2001",
+        "readbackSequences": [
+          302,
+          324
+        ],
+        "allWrittenValuesReadBackEqual": true
+      },
+      "nameReadsBetweenWriteAndFinalRead": 0,
+      "nameAfterWrites": {
+        "readSequence": 325,
+        "payloadHex": "010000",
+        "isEmptyForm": true
+      }
+    },
+    "clientRecords": {
+      "basis": "the client's push records in the same report",
+      "pushToC7": {
+        "recordedUtc": "2026-10-19T18:06:03Z",
+        "nameReadBeforeWasEmpty": true,
+        "nameOutcome": "written",
+        "outcome": "applied"
+      },
+      "undoOfC7": {
+        "recordedUtc": "2026-10-19T18:06:14Z",
+        "nameApplied": "empty",
+        "nameOutcome": "written",
+        "outcome": "applied"
+      }
+    },
+    "notEstablished": [
+      "the bytes ImageCaptureCore put on the USB wire",
+      "the name between the empty-name write and the final read",
+      "AUTO UPDATE CUSTOM SETTING, USB mode, ISO, lens and image format",
+      "persistence across a power cycle"
+    ]
+  }
+}

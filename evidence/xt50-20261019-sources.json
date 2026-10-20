@@ -1,0 +1,32 @@
+{
+ "format": "private-source-inventory-v1",
+ "inventoryId": "xt50-20261019-empty-name",
+ "retrievalDateLocal": "2026-10-19",
+ "archive": "maintainers' private archive",
+ "revision": "c2e865e72c451688851a4c6706739a018c524f7a",
+ "directory": "hardware-runs/bankprobe-x-t50-2026-10-19",
+ "access": "private",
+ "originalsIncluded": false,
+ "retrievedDirectoryFileCount": 3,
+ "inventoryScope": "Every file of the directory: the folder README and the two probe logs. Hashes identify entire evidence files, not device identities.",
+ "artifacts": [
+  {
+   "path": "README.md",
+   "bytes": 1952,
+   "sha256": "02bf62d27cd4c49f21eb626450743c7de8c1b88a05247f3581d86bfd32bbb843",
+   "gitBlob": "f0a1a4e16aa630c65676f06ace410f162cfcb54a"
+  },
+  {
+   "path": "logs/bankprobe-20261019-102709.json",
+   "bytes": 3479,
+   "sha256": "ecc4aa317abe791469786e8fe16fcebe7b2c5d744eaf708200e4947d651d0660",
+   "gitBlob": "6d5318510804b8f083635231434948262fa39851"
+  },
+  {
+   "path": "logs/bankprobe-20261019-102738.json",
+   "bytes": 4906,
+   "sha256": "fa0318589a7caa4b7d6e461da9649e519b36eea4f2b9101043d804f917fc2dc0",
+   "gitBlob": "f27236f2884ee08283f53e4bc8ce62fda923f538"
+  }
+ ]
+}

@@ -1,0 +1,4 @@
+# Evidence-schema validation: tools/validate_evidence.py and tests/test_evidence.py need these packages; the camera, capture, and JPEG tools use only the standard library.
+jsonschema==4.24.0
+# jsonschema checks the schema's date-time format only when this package is importable; without it, a bad timestamp passes.
+rfc3339-validator==0.1.4

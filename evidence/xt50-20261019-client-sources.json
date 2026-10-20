@@ -1,0 +1,32 @@
+{
+ "format": "private-source-inventory-v1",
+ "inventoryId": "xt50-20261019-client-restore",
+ "retrievalDateLocal": "2026-10-19",
+ "archive": "maintainers' private archive",
+ "revision": "2a3d1221d130e8d7cddf02f9f746dfe8adfa147b",
+ "directory": "hardware-runs/app-reports-x-t50",
+ "access": "private",
+ "originalsIncluded": false,
+ "retrievedDirectoryFileCount": 62,
+ "inventoryScope": "The three files the maintainers' iOS client exported from the 2026-10-19 12:50 run: its camera report, problem report and Camera Test results; not the directory's other reports. Hashes identify entire evidence files, not device identities.",
+ "artifacts": [
+  {
+   "path": "camera-reports/fuji-cookbook-camera-report-X-T50-20261019-1250.json",
+   "bytes": 239336,
+   "sha256": "905ec32db38047acff668b141c5fde1cf055f861438b43d330a1ec5d89b7c800",
+   "gitBlob": "aa4252233bb2b9ee726f0dcc24889460f45493cf"
+  },
+  {
+   "path": "problem-reports/fuji-cookbook-problem-report-X-T50-20261019-1252.txt",
+   "bytes": 79399,
+   "sha256": "97b7e19f64aea19c5de08bc414a8fb2cb12f9efcb638d60957b01defd747b87e",
+   "gitBlob": "b6e5052ee5a05b3010c2f15ec07757f149899e4e"
+  },
+  {
+   "path": "test-results/fuji-cookbook-test-results-X-T50-20261019-1251.txt",
+   "bytes": 66671,
+   "sha256": "a66d99b04fb97625f79fdcc6198b90a70eaae1164dcaca45d5f1585bd9d20f7d",
+   "gitBlob": "9ef40deafcf2e1db6868fa29ca3204a34b02a4a7"
+  }
+ ]
+}

@@ -1,0 +1,120 @@
+{
+  "format": "fuji-client-report-sanitized-package-v1",
+  "evidenceId": "xt50-20261019-125007",
+  "evidenceKind": "measured_original_sanitized_derivative",
+  "source": {
+    "access": "private archive",
+    "archivePath": "hardware-runs/app-reports-x-t50/camera-reports/fuji-cookbook-camera-report-X-T50-20261019-1250.json",
+    "revision": "2a3d1221d130e8d7cddf02f9f746dfe8adfa147b",
+    "sha256": "905ec32db38047acff668b141c5fde1cf055f861438b43d330a1ec5d89b7c800",
+    "bytes": 239336,
+    "reportFormatVersion": 6
+  },
+  "camera": {
+    "model": "X-T50",
+    "firmware": "1.32",
+    "provenance": "original_report",
+    "identification": "exact",
+    "usbMode": null
+  },
+  "host": {
+    "client": "the maintainers' iOS client, debug build",
+    "operatingSystem": "iOS",
+    "systemVersion": "27.0.1",
+    "transport": "ImageCaptureCore"
+  },
+  "conditions": {
+    "autoUpdateCustomSetting": "unknown",
+    "lensPresent": null,
+    "iso": null,
+    "imageFormat": "unknown"
+  },
+  "time": {
+    "traceStartedUtc": "2026-10-19T16:50:07Z",
+    "reportUpdatedUtc": "2026-10-19T16:51:12Z",
+    "perTransactionTimestamps": "absent",
+    "connectionIds": "omitted"
+  },
+  "coverage": {
+    "sourceArray": "transactions",
+    "traceScope": "connection",
+    "sourceEntries": 339,
+    "retainedEntries": 339,
+    "droppedEntries": 0,
+    "sourceTransactionsDropped": 0,
+    "outcomes": {
+      "recorded_ok": 339
+    },
+    "scalarPayloadsRetained": 312,
+    "payloadFieldsOmitted": 25,
+    "emptyNamePayloadsRetained": 1,
+    "sourceCaptureCompleteness": "client_trace_only"
+  },
+  "interpretation": {
+    "sourceIndex": "zero-based original transactions array index; order preserved",
+    "sequence": "the client's own count within the connection; not a PTP transaction ID",
+    "rawPayloadEncoding": "hexadecimal bytes in source order, little-endian scalar interpretation",
+    "dataPhase": "the bytes the client handed to ImageCaptureCore or received from it; the USB wire is not observed",
+    "responseOrigin": "the response code ImageCaptureCore returned to the client; not an independent bus capture",
+    "durationMs": "host-measured time from handing over the command to its completion",
+    "findingNumbers": "unsigned integers unless explicitly labeled; not byte strings"
+  },
+  "transform": {
+    "generator": "export.py",
+    "generatorSha256": "1e61a771f6a83d4cb8fc344ed56b65fce9c8e9ac4dc659bb4e07c3f1e61d3bde",
+    "sharedGenerator": "../client_report_package.py",
+    "sharedGeneratorSha256": "81e55009f632994b55b5f7903dbc9c41882a3837fd46748c0270a5f271612a86",
+    "helperModule": "../bankprobe_package.py",
+    "helperModuleSha256": "cdfbedda21b06b8586c6c59606e3ae6a3b9a588bba62580628a28ed23e81c7cc",
+    "originalUnchanged": true,
+    "publicSchemaV1Compatible": false,
+    "losslessBackup": false,
+    "payloadAllowlist": [
+      "0xD18C",
+      "0xD18E",
+      "0xD18F",
+      "0xD190",
+      "0xD191",
+      "0xD192",
+      "0xD193",
+      "0xD194",
+      "0xD195",
+      "0xD196",
+      "0xD197",
+      "0xD198",
+      "0xD199",
+      "0xD19A",
+      "0xD19B",
+      "0xD19C",
+      "0xD19D",
+      "0xD19E",
+      "0xD19F",
+      "0xD1A0",
+      "0xD1A1",
+      "0xD1A2",
+      "0xD1A3",
+      "0xD1A4",
+      "0xD1A5"
+    ],
+    "maximumPayloadBytes": 4,
+    "omissions": [
+      "bank names and all D18D payloads except the two empty-name encodings (00 and 010000)",
+      "lengths of every omitted payload",
+      "DeviceInfo, D186/D187, conversion-profile and object payloads",
+      "parameters of operations other than property get, set and describe",
+      "serial hash, USB identifiers, connection identifier and phone model",
+      "error text, push, develop and camera-test records, slot reads and log lines"
+    ],
+    "generatedFacts": "No missing times, conditions, or hardware observations are invented; finding interpretations are labeled."
+  },
+  "artifacts": {
+    "transactions.jsonl": {
+      "sha256": "c8125d1e90242dc8881c16130ce378e716aa83e3c9ded2d3419d43105d4d5ea7",
+      "bytes": 69028
+    },
+    "findings.json": {
+      "sha256": "40108b978a202cb18dfda2531c789bfba79c70a6436e2be851068037615494fb",
+      "bytes": 2275
+    }
+  }
+}

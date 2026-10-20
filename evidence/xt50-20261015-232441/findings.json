@@ -1,0 +1,527 @@
+{
+  "format": "fuji-bankprobe-selected-observations-v1",
+  "evidenceId": "xt50-20261015-232441",
+  "sourceFindingCount": 10,
+  "findings": [
+    {
+      "sourceFindingIndex": 0,
+      "kind": "prompted_lmo_color_space",
+      "rows": [
+        {
+          "sourceDetailIndex": 0,
+          "promptedMenuLabel": "LMO ON",
+          "property": "0xD1A3",
+          "readUnsigned": 1,
+          "expectedUnsigned": 1,
+          "reportedOtherChanges": []
+        },
+        {
+          "sourceDetailIndex": 1,
+          "promptedMenuLabel": "LMO OFF",
+          "property": "0xD1A3",
+          "readUnsigned": 2,
+          "expectedUnsigned": 2,
+          "reportedOtherChanges": []
+        },
+        {
+          "sourceDetailIndex": 2,
+          "promptedMenuLabel": "Adobe RGB",
+          "property": "0xD1A4",
+          "readUnsigned": 2,
+          "expectedUnsigned": 2,
+          "reportedOtherChanges": []
+        },
+        {
+          "sourceDetailIndex": 3,
+          "promptedMenuLabel": "sRGB",
+          "property": "0xD1A4",
+          "readUnsigned": 1,
+          "expectedUnsigned": 1,
+          "reportedOtherChanges": []
+        }
+      ]
+    },
+    {
+      "sourceFindingIndex": 1,
+      "kind": "prompted_white_balance",
+      "rows": [
+        {
+          "sourceDetailIndex": 0,
+          "promptedMenuLabel": "AUTO WHITE PRIORITY",
+          "property": "0xD199",
+          "readUnsigned": 32800,
+          "expectedUnsigned": 32800,
+          "reportedOtherChanges": [
+            {
+              "property": "0xD19A",
+              "beforeUnsigned": 9,
+              "afterUnsigned": 2
+            },
+            {
+              "property": "0xD19B",
+              "beforeUnsigned": 65527,
+              "afterUnsigned": 65532
+            }
+          ]
+        },
+        {
+          "sourceDetailIndex": 1,
+          "promptedMenuLabel": "AUTO AMBIENCE PRIORITY",
+          "property": "0xD199",
+          "readUnsigned": 32801,
+          "expectedUnsigned": 32801,
+          "reportedOtherChanges": [
+            {
+              "property": "0xD19A",
+              "beforeUnsigned": 2,
+              "afterUnsigned": 0
+            },
+            {
+              "property": "0xD19B",
+              "beforeUnsigned": 65532,
+              "afterUnsigned": 0
+            }
+          ]
+        },
+        {
+          "sourceDetailIndex": 2,
+          "promptedMenuLabel": "UNDERWATER",
+          "property": "0xD199",
+          "readUnsigned": 8,
+          "expectedUnsigned": 8,
+          "reportedOtherChanges": []
+        },
+        {
+          "sourceDetailIndex": 3,
+          "promptedMenuLabel": "SHADE",
+          "property": "0xD199",
+          "readUnsigned": 32774,
+          "expectedUnsigned": 32774,
+          "reportedOtherChanges": [
+            {
+              "property": "0xD19A",
+              "beforeUnsigned": 0,
+              "afterUnsigned": 65534
+            },
+            {
+              "property": "0xD19B",
+              "beforeUnsigned": 0,
+              "afterUnsigned": 3
+            }
+          ]
+        },
+        {
+          "sourceDetailIndex": 4,
+          "promptedMenuLabel": "FLUORESCENT LIGHT 1",
+          "property": "0xD199",
+          "readUnsigned": 32769,
+          "expectedUnsigned": 32769,
+          "reportedOtherChanges": [
+            {
+              "property": "0xD19A",
+              "beforeUnsigned": 65534,
+              "afterUnsigned": 2
+            },
+            {
+              "property": "0xD19B",
+              "beforeUnsigned": 3,
+              "afterUnsigned": 65530
+            }
+          ]
+        },
+        {
+          "sourceDetailIndex": 5,
+          "promptedMenuLabel": "INCANDESCENT",
+          "property": "0xD199",
+          "readUnsigned": 6,
+          "expectedUnsigned": 6,
+          "reportedOtherChanges": [
+            {
+              "property": "0xD19A",
+              "beforeUnsigned": 2,
+              "afterUnsigned": 0
+            },
+            {
+              "property": "0xD19B",
+              "beforeUnsigned": 65530,
+              "afterUnsigned": 0
+            }
+          ]
+        },
+        {
+          "sourceDetailIndex": 6,
+          "promptedMenuLabel": "AUTO",
+          "property": "0xD199",
+          "readUnsigned": 2,
+          "expectedUnsigned": 2,
+          "reportedOtherChanges": [
+            {
+              "property": "0xD19A",
+              "beforeUnsigned": 0,
+              "afterUnsigned": 1
+            },
+            {
+              "property": "0xD19B",
+              "beforeUnsigned": 0,
+              "afterUnsigned": 65532
+            }
+          ]
+        },
+        {
+          "sourceDetailIndex": 7,
+          "promptedMenuLabel": "CUSTOM 1",
+          "property": "0xD199",
+          "readUnsigned": 32776,
+          "expectedUnsigned": 32776,
+          "reportedOtherChanges": [
+            {
+              "property": "0xD19A",
+              "beforeUnsigned": 1,
+              "afterUnsigned": 0
+            },
+            {
+              "property": "0xD19B",
+              "beforeUnsigned": 65532,
+              "afterUnsigned": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sourceFindingIndex": 2,
+      "kind": "prompted_bank_and_live_image_size",
+      "rows": [
+        {
+          "sourceDetailIndex": 0,
+          "promptedMenuLabel": "L 16:9",
+          "bankD18EUnsigned": 8,
+          "expectedUnsigned": 8,
+          "liveD1A5Unsigned": 7
+        },
+        {
+          "sourceDetailIndex": 1,
+          "promptedMenuLabel": "L 1:1",
+          "bankD18EUnsigned": 9,
+          "expectedUnsigned": 9,
+          "liveD1A5Unsigned": 7
+        },
+        {
+          "sourceDetailIndex": 2,
+          "promptedMenuLabel": "M 3:2",
+          "bankD18EUnsigned": 4,
+          "expectedUnsigned": 4,
+          "liveD1A5Unsigned": 7
+        },
+        {
+          "sourceDetailIndex": 3,
+          "promptedMenuLabel": "S 3:2",
+          "bankD18EUnsigned": 1,
+          "expectedUnsigned": 1,
+          "liveD1A5Unsigned": 7
+        },
+        {
+          "sourceDetailIndex": 4,
+          "promptedMenuLabel": "L 3:2",
+          "bankD18EUnsigned": 7,
+          "expectedUnsigned": 7,
+          "liveD1A5Unsigned": 7
+        }
+      ]
+    },
+    {
+      "sourceFindingIndex": 3,
+      "kind": "prompted_image_quality",
+      "rows": [
+        {
+          "sourceDetailIndex": 0,
+          "promptedMenuLabel": "FINE",
+          "property": "0xD18F",
+          "readUnsigned": 2,
+          "expectedUnsigned": null,
+          "reportedOtherChanges": []
+        },
+        {
+          "sourceDetailIndex": 1,
+          "promptedMenuLabel": "NORMAL",
+          "property": "0xD18F",
+          "readUnsigned": 3,
+          "expectedUnsigned": null,
+          "reportedOtherChanges": []
+        },
+        {
+          "sourceDetailIndex": 2,
+          "promptedMenuLabel": "FINE + RAW",
+          "property": "0xD18F",
+          "readUnsigned": 4,
+          "expectedUnsigned": null,
+          "reportedOtherChanges": []
+        },
+        {
+          "sourceDetailIndex": 3,
+          "promptedMenuLabel": "NORMAL + RAW",
+          "property": "0xD18F",
+          "readUnsigned": 5,
+          "expectedUnsigned": null,
+          "reportedOtherChanges": []
+        },
+        {
+          "sourceDetailIndex": 4,
+          "promptedMenuLabel": "RAW",
+          "property": "0xD18F",
+          "readUnsigned": 1,
+          "expectedUnsigned": null,
+          "reportedOtherChanges": []
+        }
+      ]
+    },
+    {
+      "sourceFindingIndex": 4,
+      "kind": "live_image_size_observation",
+      "samples": [
+        {
+          "selectedBank": 7,
+          "sourceDetailArrayIndex": 0,
+          "bankD18EUnsigned": 9,
+          "liveD1A5Unsigned": 7
+        },
+        {
+          "selectedBank": 6,
+          "sourceDetailArrayIndex": 1,
+          "bankD18EUnsigned": 7,
+          "liveD1A5Unsigned": 7
+        }
+      ],
+      "write": {
+        "sourcePointer": "/findings/4/detail/write",
+        "property": "0xD1A5",
+        "writtenUnsigned": 7,
+        "response": "0x2001",
+        "readbackUnsigned": 7
+      },
+      "operatorObservation": {
+        "sourcePointer": "/findings/4/detail/camera_showed",
+        "reportedMenuAspectRatio": "1:1"
+      }
+    },
+    {
+      "sourceFindingIndex": 5,
+      "kind": "selector_observation",
+      "reportedBodyBankBefore": {
+        "sourcePointer": "/findings/5/detail/body_before",
+        "bank": 7
+      },
+      "values": {
+        "on_connect": 6,
+        "after_cable": 7,
+        "after_change": 7,
+        "sim_noselect": 12
+      },
+      "comparisonBankFilmSimulations": [
+        {
+          "sourcePointer": "/findings/5/detail/sims/7",
+          "selectedBank": 7,
+          "readUnsigned": 12
+        },
+        {
+          "sourcePointer": "/findings/5/detail/sims/6",
+          "selectedBank": 6,
+          "readUnsigned": 11
+        }
+      ]
+    },
+    {
+      "sourceFindingIndex": 6,
+      "kind": "prompted_format_bank_comparison",
+      "rows": [
+        {
+          "sourcePointer": "/findings/6/detail/heif_C7",
+          "promptedCameraFormat": "HEIF",
+          "selectedBank": 7,
+          "property": "0xD1A2",
+          "writtenUnsigned": 40,
+          "response": "0x2001",
+          "readbackUnsigned": 40
+        },
+        {
+          "sourcePointer": "/findings/6/detail/heif_C6",
+          "promptedCameraFormat": "HEIF",
+          "selectedBank": 6,
+          "property": "0xD1A2",
+          "writtenUnsigned": 0,
+          "response": "0x201C",
+          "readbackUnsigned": 0
+        },
+        {
+          "sourcePointer": "/findings/6/detail/jpeg_C7",
+          "promptedCameraFormat": "JPEG",
+          "selectedBank": 7,
+          "property": "0xD1A2",
+          "writtenUnsigned": 40,
+          "response": "0x2001",
+          "readbackUnsigned": 40
+        },
+        {
+          "sourcePointer": "/findings/6/detail/jpeg_C6",
+          "promptedCameraFormat": "JPEG",
+          "selectedBank": 6,
+          "property": "0xD1A2",
+          "writtenUnsigned": 0,
+          "response": "0x2001",
+          "readbackUnsigned": 0
+        }
+      ]
+    },
+    {
+      "sourceFindingIndex": 7,
+      "kind": "prompted_iso_dynamic_range_trials",
+      "rows": [
+        {
+          "sourcePointer": "/findings/7/detail/125 (base)/0",
+          "promptedIso": 125,
+          "property": "0xD190",
+          "writtenUnsigned": 100,
+          "response": "0x2001",
+          "readbackUnsigned": 100
+        },
+        {
+          "sourcePointer": "/findings/7/detail/125 (base)/1",
+          "promptedIso": 125,
+          "property": "0xD190",
+          "writtenUnsigned": 200,
+          "response": "0x201C",
+          "readbackUnsigned": 100
+        },
+        {
+          "sourcePointer": "/findings/7/detail/125 (base)/2",
+          "promptedIso": 125,
+          "property": "0xD190",
+          "writtenUnsigned": 400,
+          "response": "0x201C",
+          "readbackUnsigned": 100
+        },
+        {
+          "sourcePointer": "/findings/7/detail/125 (base)/3",
+          "promptedIso": 125,
+          "property": "0xD190",
+          "writtenUnsigned": 65535,
+          "response": "0x2001",
+          "readbackUnsigned": 65535
+        },
+        {
+          "sourcePointer": "/findings/7/detail/250/0",
+          "promptedIso": 250,
+          "property": "0xD190",
+          "writtenUnsigned": 100,
+          "response": "0x2001",
+          "readbackUnsigned": 100
+        },
+        {
+          "sourcePointer": "/findings/7/detail/250/1",
+          "promptedIso": 250,
+          "property": "0xD190",
+          "writtenUnsigned": 200,
+          "response": "0x2001",
+          "readbackUnsigned": 200
+        },
+        {
+          "sourcePointer": "/findings/7/detail/250/2",
+          "promptedIso": 250,
+          "property": "0xD190",
+          "writtenUnsigned": 400,
+          "response": "0x201C",
+          "readbackUnsigned": 200
+        },
+        {
+          "sourcePointer": "/findings/7/detail/250/3",
+          "promptedIso": 250,
+          "property": "0xD190",
+          "writtenUnsigned": 65535,
+          "response": "0x2001",
+          "readbackUnsigned": 65535
+        },
+        {
+          "sourcePointer": "/findings/7/detail/500/0",
+          "promptedIso": 500,
+          "property": "0xD190",
+          "writtenUnsigned": 100,
+          "response": "0x2001",
+          "readbackUnsigned": 100
+        },
+        {
+          "sourcePointer": "/findings/7/detail/500/1",
+          "promptedIso": 500,
+          "property": "0xD190",
+          "writtenUnsigned": 200,
+          "response": "0x2001",
+          "readbackUnsigned": 200
+        },
+        {
+          "sourcePointer": "/findings/7/detail/500/2",
+          "promptedIso": 500,
+          "property": "0xD190",
+          "writtenUnsigned": 400,
+          "response": "0x2001",
+          "readbackUnsigned": 400
+        },
+        {
+          "sourcePointer": "/findings/7/detail/500/3",
+          "promptedIso": 500,
+          "property": "0xD190",
+          "writtenUnsigned": 65535,
+          "response": "0x2001",
+          "readbackUnsigned": 65535
+        }
+      ]
+    },
+    {
+      "sourceFindingIndex": 8,
+      "kind": "interrupted_image_size_gate_test",
+      "sourceDetailRecorded": false,
+      "interpretation": "partial_trials_recovered_from_ledger_and_reviewed_transcript",
+      "transcriptContext": {
+        "sourceArtifact": "transcripts/bankprobe-20261015-232441.txt",
+        "sha256": "df4f55cd6bddeb12da79ce0e82fb06a18fd06adb089287bcd8d25566d499c9d1",
+        "archivePath": "hardware-runs/bankprobe-x-t50-2026-10-15/transcripts/bankprobe-20261015-232441.txt",
+        "verification": "reviewed_separately_not_reprocessed_by_this_exporter"
+      },
+      "rows": [
+        {
+          "promptedDigitalTeleConverter": "on",
+          "transcriptPromptLine": 625,
+          "writeSourceIndex": 1562,
+          "readbackSourceIndex": 1563,
+          "property": "0xD18E",
+          "writtenUnsigned": 7,
+          "response": "0x201C",
+          "readbackUnsigned": 7
+        },
+        {
+          "promptedDigitalTeleConverter": "off",
+          "transcriptPromptLine": 632,
+          "writeSourceIndex": 1571,
+          "readbackSourceIndex": 1572,
+          "property": "0xD18E",
+          "writtenUnsigned": 7,
+          "response": "0x2001",
+          "readbackUnsigned": 7
+        }
+      ],
+      "hdrTrialRecorded": false,
+      "hdrPromptTranscriptLine": 639
+    },
+    {
+      "sourceFindingIndex": 9,
+      "kind": "no_name_write_control",
+      "property": "0xD192",
+      "initialUnsigned": 12,
+      "writtenUnsigned": 2,
+      "postProcedureReadUnsigned": 2,
+      "initialReadSourceIndex": 1587,
+      "writeSourceIndex": 1607,
+      "immediateReadSourceIndex": 1608,
+      "postProcedureReadSourceIndex": 1619,
+      "nameWritesBetweenWriteAndPostProcedureRead": 0
+    }
+  ]
+}

@@ -1,0 +1,643 @@
+{
+  "schema_version": 1,
+  "provenance": {
+    "kind": "synthetic",
+    "hardware_evidence": false,
+    "source": "Synthetic PTP framing cases for tools/bankprobe.py; no camera I/O or captured device bytes."
+  },
+  "notes": [
+    "Acceptance of a well-formed refusal response is not command success.",
+    "Complete-buffer rejection cases are not USB read-boundary rules. bankprobe is a byte-stream consumer, so extra bytes are retained for the next container."
+  ],
+  "cases": [
+    {
+      "id": "response-ok",
+      "kind": "ptp-response",
+      "input": {
+        "hex": "0c0000000300012029000000",
+        "request": {
+          "operation": 4117,
+          "transaction_id": 41
+        }
+      },
+      "expected": {
+        "accepted": true,
+        "response_code": 8193,
+        "parameters": []
+      },
+      "coverage": {
+        "reference": [
+          "fixture_integrity",
+          "bankprobe_transaction"
+        ]
+      },
+      "policy": {
+        "id": "complete-response-buffer",
+        "scope": "Exactly one complete response buffer; declared length equals buffer length, type is response, payload has at most five 32-bit parameters. Direct USB requires the request transaction ID. USB stream reassembly is tested separately."
+      }
+    },
+    {
+      "id": "response-refused",
+      "kind": "ptp-response",
+      "input": {
+        "hex": "0c00000003001c2029000000",
+        "request": {
+          "operation": 4117,
+          "transaction_id": 41
+        }
+      },
+      "expected": {
+        "accepted": true,
+        "response_code": 8220,
+        "parameters": [],
+        "command_outcome": "refused"
+      },
+      "coverage": {
+        "reference": [
+          "fixture_integrity",
+          "bankprobe_transaction"
+        ]
+      },
+      "policy": {
+        "id": "complete-response-buffer",
+        "scope": "Exactly one complete response buffer; declared length equals buffer length, type is response, payload has at most five 32-bit parameters. Direct USB requires the request transaction ID. USB stream reassembly is tested separately."
+      }
+    },
+    {
+      "id": "response-five-parameters",
+      "kind": "ptp-response",
+      "input": {
+        "hex": "2000000003000120290000000100000002000000030000000400000005000000",
+        "request": {
+          "operation": 4117,
+          "transaction_id": 41
+        }
+      },
+      "expected": {
+        "accepted": true,
+        "response_code": 8193,
+        "parameters": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ]
+      },
+      "coverage": {
+        "reference": [
+          "fixture_integrity",
+          "bankprobe_transaction"
+        ]
+      },
+      "policy": {
+        "id": "complete-response-buffer",
+        "scope": "Exactly one complete response buffer; declared length equals buffer length, type is response, payload has at most five 32-bit parameters. Direct USB requires the request transaction ID. USB stream reassembly is tested separately."
+      }
+    },
+    {
+      "id": "response-six-parameters",
+      "kind": "ptp-response",
+      "input": {
+        "hex": "240000000300012029000000010000000200000003000000040000000500000006000000",
+        "request": {
+          "operation": 4117,
+          "transaction_id": 41
+        }
+      },
+      "expected": {
+        "accepted": false,
+        "reason": "too_many_parameters",
+        "error_contains": "more than five parameters"
+      },
+      "coverage": {
+        "reference": [
+          "fixture_integrity",
+          "bankprobe_transaction"
+        ]
+      },
+      "policy": {
+        "id": "complete-response-buffer",
+        "scope": "Exactly one complete response buffer; declared length equals buffer length, type is response, payload has at most five 32-bit parameters. Direct USB requires the request transaction ID. USB stream reassembly is tested separately."
+      }
+    },
+    {
+      "id": "response-missing",
+      "kind": "ptp-response",
+      "input": {
+        "hex": null,
+        "request": {
+          "operation": 4117,
+          "transaction_id": 41
+        }
+      },
+      "expected": {
+        "accepted": false,
+        "reason": "missing_response",
+        "error_contains": "USB error"
+      },
+      "coverage": {
+        "reference": [
+          "fixture_integrity",
+          "bankprobe_transaction"
+        ]
+      },
+      "policy": {
+        "id": "complete-response-buffer",
+        "scope": "Exactly one complete response buffer; declared length equals buffer length, type is response, payload has at most five 32-bit parameters. Direct USB requires the request transaction ID. USB stream reassembly is tested separately."
+      }
+    },
+    {
+      "id": "response-empty",
+      "kind": "ptp-response",
+      "input": {
+        "hex": "",
+        "request": {
+          "operation": 4117,
+          "transaction_id": 41
+        }
+      },
+      "expected": {
+        "accepted": false,
+        "reason": "missing_response",
+        "error_contains": "USB error"
+      },
+      "coverage": {
+        "reference": [
+          "fixture_integrity",
+          "bankprobe_transaction"
+        ]
+      },
+      "policy": {
+        "id": "complete-response-buffer",
+        "scope": "Exactly one complete response buffer; declared length equals buffer length, type is response, payload has at most five 32-bit parameters. Direct USB requires the request transaction ID. USB stream reassembly is tested separately."
+      }
+    },
+    {
+      "id": "response-truncated-header",
+      "kind": "ptp-response",
+      "input": {
+        "hex": "0c000000030001202900",
+        "request": {
+          "operation": 4117,
+          "transaction_id": 41
+        }
+      },
+      "expected": {
+        "accepted": false,
+        "reason": "truncated_header",
+        "error_contains": "USB error"
+      },
+      "coverage": {
+        "reference": [
+          "fixture_integrity",
+          "bankprobe_transaction"
+        ]
+      },
+      "policy": {
+        "id": "complete-response-buffer",
+        "scope": "Exactly one complete response buffer; declared length equals buffer length, type is response, payload has at most five 32-bit parameters. Direct USB requires the request transaction ID. USB stream reassembly is tested separately."
+      }
+    },
+    {
+      "id": "response-length-below-header",
+      "kind": "ptp-response",
+      "input": {
+        "hex": "0b0000000300012029000000",
+        "request": {
+          "operation": 4117,
+          "transaction_id": 41
+        }
+      },
+      "expected": {
+        "accepted": false,
+        "reason": "invalid_declared_length",
+        "error_contains": "malformed container"
+      },
+      "coverage": {
+        "reference": [
+          "fixture_integrity",
+          "bankprobe_transaction"
+        ]
+      },
+      "policy": {
+        "id": "complete-response-buffer",
+        "scope": "Exactly one complete response buffer; declared length equals buffer length, type is response, payload has at most five 32-bit parameters. Direct USB requires the request transaction ID. USB stream reassembly is tested separately."
+      }
+    },
+    {
+      "id": "response-truncated-parameters",
+      "kind": "ptp-response",
+      "input": {
+        "hex": "1000000003000120290000000100",
+        "request": {
+          "operation": 4117,
+          "transaction_id": 41
+        }
+      },
+      "expected": {
+        "accepted": false,
+        "reason": "truncated_payload",
+        "error_contains": "USB error"
+      },
+      "coverage": {
+        "reference": [
+          "fixture_integrity",
+          "bankprobe_transaction"
+        ]
+      },
+      "policy": {
+        "id": "complete-response-buffer",
+        "scope": "Exactly one complete response buffer; declared length equals buffer length, type is response, payload has at most five 32-bit parameters. Direct USB requires the request transaction ID. USB stream reassembly is tested separately."
+      }
+    },
+    {
+      "id": "response-wrong-type",
+      "kind": "ptp-response",
+      "input": {
+        "hex": "0c0000000100012029000000",
+        "request": {
+          "operation": 4117,
+          "transaction_id": 41
+        }
+      },
+      "expected": {
+        "accepted": false,
+        "reason": "wrong_container_type",
+        "error_contains": "expected a response container"
+      },
+      "coverage": {
+        "reference": [
+          "fixture_integrity",
+          "bankprobe_transaction"
+        ]
+      },
+      "policy": {
+        "id": "complete-response-buffer",
+        "scope": "Exactly one complete response buffer; declared length equals buffer length, type is response, payload has at most five 32-bit parameters. Direct USB requires the request transaction ID. USB stream reassembly is tested separately."
+      }
+    },
+    {
+      "id": "response-unaligned-parameters",
+      "kind": "ptp-response",
+      "input": {
+        "hex": "0d000000030001202900000000",
+        "request": {
+          "operation": 4117,
+          "transaction_id": 41
+        }
+      },
+      "expected": {
+        "accepted": false,
+        "reason": "unaligned_parameters",
+        "error_contains": "malformed or mismatched response"
+      },
+      "coverage": {
+        "reference": [
+          "fixture_integrity",
+          "bankprobe_transaction"
+        ]
+      },
+      "policy": {
+        "id": "complete-response-buffer",
+        "scope": "Exactly one complete response buffer; declared length equals buffer length, type is response, payload has at most five 32-bit parameters. Direct USB requires the request transaction ID. USB stream reassembly is tested separately."
+      }
+    },
+    {
+      "id": "response-direct-usb-wrong-transaction",
+      "kind": "ptp-response",
+      "input": {
+        "hex": "0c000000030001202a000000",
+        "request": {
+          "operation": 4117,
+          "transaction_id": 41
+        }
+      },
+      "expected": {
+        "accepted": false,
+        "reason": "transaction_mismatch",
+        "error_contains": "transaction ID mismatch"
+      },
+      "coverage": {
+        "reference": [
+          "fixture_integrity",
+          "bankprobe_transaction"
+        ]
+      },
+      "policy": {
+        "id": "complete-response-buffer",
+        "scope": "Exactly one complete response buffer; declared length equals buffer length, type is response, payload has at most five 32-bit parameters. Direct USB requires the request transaction ID. USB stream reassembly is tested separately."
+      }
+    },
+    {
+      "id": "usb-fragmented-response",
+      "kind": "ptp-usb-stream",
+      "input": {
+        "chunks_hex": [
+          "0c0000",
+          "00030001202900",
+          "0000"
+        ],
+        "request": {
+          "operation": 4117,
+          "transaction_id": 41
+        }
+      },
+      "expected": {
+        "accepted": true,
+        "response_code": 8193,
+        "parameters": [],
+        "data_hex": null
+      },
+      "coverage": {
+        "reference": [
+          "fixture_integrity",
+          "bankprobe_transaction",
+          "bankprobe_stream"
+        ]
+      },
+      "policy": {
+        "id": "usb-byte-stream",
+        "scope": "A read may return a fragment or multiple containers. Reassemble by declared length and retain following bytes. End-of-stream before the declared length is an error."
+      }
+    },
+    {
+      "id": "usb-coalesced-data-response",
+      "kind": "ptp-usb-stream",
+      "input": {
+        "chunks_hex": [
+          "0e000000020015102900000001000c0000000300012029000000"
+        ],
+        "request": {
+          "operation": 4117,
+          "transaction_id": 41
+        }
+      },
+      "expected": {
+        "accepted": true,
+        "response_code": 8193,
+        "parameters": [],
+        "data_hex": "0100"
+      },
+      "coverage": {
+        "reference": [
+          "fixture_integrity",
+          "bankprobe_transaction",
+          "bankprobe_stream"
+        ]
+      },
+      "policy": {
+        "id": "usb-byte-stream",
+        "scope": "A read may return a fragment or multiple containers. Reassemble by declared length and retain following bytes. End-of-stream before the declared length is an error."
+      }
+    },
+    {
+      "id": "usb-fragmented-data-response",
+      "kind": "ptp-usb-stream",
+      "input": {
+        "chunks_hex": [
+          "0e00000002001510",
+          "2900000001000c0000",
+          "000300012029000000"
+        ],
+        "request": {
+          "operation": 4117,
+          "transaction_id": 41
+        }
+      },
+      "expected": {
+        "accepted": true,
+        "response_code": 8193,
+        "parameters": [],
+        "data_hex": "0100"
+      },
+      "coverage": {
+        "reference": [
+          "fixture_integrity",
+          "bankprobe_transaction",
+          "bankprobe_stream"
+        ]
+      },
+      "policy": {
+        "id": "usb-byte-stream",
+        "scope": "A read may return a fragment or multiple containers. Reassemble by declared length and retain following bytes. End-of-stream before the declared length is an error."
+      }
+    },
+    {
+      "id": "usb-coalesced-two-responses",
+      "kind": "ptp-usb-stream",
+      "input": {
+        "chunks_hex": [
+          "0c00000003000120290000000c000000030001202a000000"
+        ]
+      },
+      "expected": {
+        "containers": [
+          {
+            "type": 3,
+            "code": 8193,
+            "transaction_id": 41,
+            "payload_hex": ""
+          },
+          {
+            "type": 3,
+            "code": 8193,
+            "transaction_id": 42,
+            "payload_hex": ""
+          }
+        ],
+        "pending_hex": ""
+      },
+      "coverage": {
+        "reference": [
+          "fixture_integrity",
+          "bankprobe_stream"
+        ]
+      },
+      "policy": {
+        "id": "usb-byte-stream",
+        "scope": "A read may return a fragment or multiple containers. Reassemble by declared length and retain following bytes. End-of-stream before the declared length is an error."
+      }
+    },
+    {
+      "id": "usb-data-operation-mismatch",
+      "kind": "ptp-usb-stream",
+      "input": {
+        "chunks_hex": [
+          "0e000000020001102900000001000c0000000300012029000000"
+        ],
+        "request": {
+          "operation": 4117,
+          "transaction_id": 41
+        }
+      },
+      "expected": {
+        "accepted": false,
+        "reason": "data_operation_mismatch",
+        "error_contains": "data container operation mismatch"
+      },
+      "coverage": {
+        "reference": [
+          "fixture_integrity",
+          "bankprobe_transaction",
+          "bankprobe_stream"
+        ]
+      },
+      "policy": {
+        "id": "usb-byte-stream",
+        "scope": "A read may return a fragment or multiple containers. Reassemble by declared length and retain following bytes. End-of-stream before the declared length is an error."
+      }
+    },
+    {
+      "id": "usb-response-transaction-mismatch-after-data",
+      "kind": "ptp-usb-stream",
+      "input": {
+        "chunks_hex": [
+          "0e000000020015102900000001000c000000030001202a000000"
+        ],
+        "request": {
+          "operation": 4117,
+          "transaction_id": 41
+        }
+      },
+      "expected": {
+        "accepted": false,
+        "reason": "transaction_mismatch",
+        "error_contains": "malformed or mismatched response"
+      },
+      "coverage": {
+        "reference": [
+          "fixture_integrity",
+          "bankprobe_transaction",
+          "bankprobe_stream"
+        ]
+      },
+      "policy": {
+        "id": "usb-byte-stream",
+        "scope": "A read may return a fragment or multiple containers. Reassemble by declared length and retain following bytes. End-of-stream before the declared length is an error."
+      }
+    },
+    {
+      "id": "ptp-string-empty-zero",
+      "kind": "ptp-string",
+      "input": {
+        "hex": "00"
+      },
+      "expected": {
+        "accepted": true,
+        "text": "",
+        "consumed": 1
+      },
+      "coverage": {
+        "reference": [
+          "fixture_integrity",
+          "ptp_string"
+        ]
+      }
+    },
+    {
+      "id": "ptp-string-empty-one",
+      "kind": "ptp-string",
+      "input": {
+        "hex": "010000"
+      },
+      "expected": {
+        "accepted": true,
+        "text": "",
+        "consumed": 3
+      },
+      "coverage": {
+        "reference": [
+          "fixture_integrity",
+          "ptp_string"
+        ]
+      }
+    },
+    {
+      "id": "ptp-string-count-255",
+      "kind": "ptp-string",
+      "input": {
+        "hex": "ff410041004100410041004100410041004100410041004100410041004100410041004100410041004100410041004100410041004100410041004100410041004100410041004100410041004100410041004100410041004100410041004100410041004100410041004100410041004100410041004100410041004100410041004100410041004100410041004100410041004100410041004100410041004100410041004100410041004100410041004100410041004100410041004100410041004100410041004100410041004100410041004100410041004100410041004100410041004100410041004100410041004100410041004100410041004100410041004100410041004100410041004100410041004100410041004100410041004100410041004100410041004100410041004100410041004100410041004100410041004100410041004100410041004100410041004100410041004100410041004100410041004100410041004100410041004100410041004100410041004100410041004100410041004100410041004100410041004100410041004100410041004100410041004100410041004100410041004100410041004100410041004100410041004100410041004100410041004100410041004100410041004100410041004100410041004100410041004100410041000000"
+      },
+      "expected": {
+        "accepted": true,
+        "text": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+        "consumed": 511
+      },
+      "coverage": {
+        "reference": [
+          "fixture_integrity",
+          "ptp_string"
+        ]
+      }
+    },
+    {
+      "id": "ptp-string-count-exceeds-payload",
+      "kind": "ptp-string",
+      "input": {
+        "hex": "0341000000"
+      },
+      "expected": {
+        "accepted": false,
+        "error_contains": "truncated PTP string"
+      },
+      "coverage": {
+        "reference": [
+          "fixture_integrity",
+          "ptp_string"
+        ]
+      }
+    },
+    {
+      "id": "ptp-string-count-255-truncated",
+      "kind": "ptp-string",
+      "input": {
+        "hex": "ff4100410041004100410041004100410041004100410041004100410041004100410041004100410041004100410041004100410041004100410041004100410041004100410041004100410041004100410041004100410041004100410041004100410041004100410041004100410041004100410041004100410041004100410041004100410041004100410041004100410041004100410041004100410041004100410041004100410041004100410041004100410041004100410041004100410041004100410041004100410041004100410041004100410041004100410041004100410041004100410041004100410041004100410041004100410041004100410041004100410041004100410041004100410041004100410041004100410041004100410041004100410041004100410041004100410041004100410041004100410041004100410041004100410041004100410041004100410041004100410041004100410041004100410041004100410041004100410041004100410041004100410041004100410041004100410041004100410041004100410041004100410041004100410041004100410041004100410041004100410041004100410041004100410041004100410041004100410041004100410041004100410041004100410041004100410041004100410041004100410000"
+      },
+      "expected": {
+        "accepted": false,
+        "error_contains": "truncated PTP string"
+      },
+      "coverage": {
+        "reference": [
+          "fixture_integrity",
+          "ptp_string"
+        ]
+      }
+    },
+    {
+      "id": "ptp-string-missing-terminator",
+      "kind": "ptp-string",
+      "input": {
+        "hex": "0241004200"
+      },
+      "expected": {
+        "accepted": false,
+        "error_contains": "unterminated PTP string"
+      },
+      "coverage": {
+        "reference": [
+          "fixture_integrity",
+          "ptp_string"
+        ]
+      }
+    },
+    {
+      "id": "ptp-string-missing-count",
+      "kind": "ptp-string",
+      "input": {
+        "hex": ""
+      },
+      "expected": {
+        "accepted": false,
+        "error_contains": "missing PTP string length"
+      },
+      "coverage": {
+        "reference": [
+          "fixture_integrity",
+          "ptp_string"
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,116 @@
+{
+  "format": "fuji-bankprobe-sanitized-package-v1",
+  "evidenceId": "xt50-20261019-133848",
+  "evidenceKind": "measured_original_sanitized_derivative",
+  "source": {
+    "access": "private archive",
+    "archivePath": "hardware-runs/bankprobe-x-t50-2026-10-19/logs/bankprobe-20261019-133848.json",
+    "revision": "1d491480ea2e108d45f9e9d0eea0d241ee750e13",
+    "sha256": "e53af100187c140dd8654b60f7e21fab8e9044404fb834e2d9e2cd26a4bc1112",
+    "bytes": 25757,
+    "toolRevision": null
+  },
+  "camera": {
+    "model": "X-T50",
+    "firmware": "1.32",
+    "provenance": "original_report",
+    "usbMode": null
+  },
+  "conditions": {
+    "autoUpdateCustomSetting": "unknown",
+    "lensPresent": null,
+    "iso": null,
+    "imageFormat": "unknown"
+  },
+  "time": {
+    "startedLocal": "2026-10-19T13:38:48",
+    "timezone": null,
+    "perTransactionTimestamps": "absent",
+    "connectionIds": "absent"
+  },
+  "coverage": {
+    "sourceArray": "transactions",
+    "sourceEntries": 145,
+    "retainedEntries": 145,
+    "droppedEntries": 0,
+    "transactionEntries": 142,
+    "eventEntries": 3,
+    "outcomes": {
+      "recorded_ok": 142
+    },
+    "scalarPayloadsRetained": 123,
+    "payloadFieldsOmitted": 9,
+    "emptyNamePayloadsRetained": 8,
+    "beforeSnapshots": 0,
+    "afterSnapshots": 0,
+    "topLevelSnapshotPair": "not_recorded",
+    "sourceCaptureCompleteness": "unknown"
+  },
+  "interpretation": {
+    "sourceIndex": "zero-based original transactions array index; order preserved",
+    "transactionId": "source value; repeats across sessions and is not a unique identifier",
+    "rawPayloadEncoding": "hexadecimal bytes in source order, little-endian scalar interpretation",
+    "snapshotAndFindingNumbers": "unsigned integers unless explicitly labeled; not byte strings",
+    "responseOrigin": "not independently established by this host-generated log",
+    "events": "host-recorded camera_lost/camera_back, not proof of a power cycle; experiment_context keeps the operator's normalized AUTO UPDATE answer; bank_restore_verification keeps per-field statuses, not values",
+    "operatorObservations": "reviewed normalized observations with explicit source pointers; not independent menu or power telemetry",
+    "liveD1A5": "live setting sampled while a bank was selected, not a 24th bank field"
+  },
+  "transform": {
+    "generator": "export.py",
+    "generatorSha256": "071c9f87893ebf0e4485de919d80550c3648575f25de486120a2d24d26c0d5c0",
+    "sharedGenerator": "../bankprobe_package.py",
+    "sharedGeneratorSha256": "cdfbedda21b06b8586c6c59606e3ae6a3b9a588bba62580628a28ed23e81c7cc",
+    "originalUnchanged": true,
+    "publicSchemaV1Compatible": false,
+    "losslessBackup": false,
+    "payloadAllowlist": [
+      "0xD18C",
+      "0xD18E",
+      "0xD18F",
+      "0xD190",
+      "0xD191",
+      "0xD192",
+      "0xD193",
+      "0xD194",
+      "0xD195",
+      "0xD196",
+      "0xD197",
+      "0xD198",
+      "0xD199",
+      "0xD19A",
+      "0xD19B",
+      "0xD19C",
+      "0xD19D",
+      "0xD19E",
+      "0xD19F",
+      "0xD1A0",
+      "0xD1A1",
+      "0xD1A2",
+      "0xD1A3",
+      "0xD1A4",
+      "0xD1A5"
+    ],
+    "maximumPayloadBytes": 4,
+    "omissions": [
+      "command line and paths",
+      "bank names and all D18D payloads except the two empty-name encodings (00 and 010000)",
+      "DeviceInfo and D186/D187 payloads",
+      "identity and device identifiers",
+      "USB error text",
+      "source verdict prose and ok flags",
+      "unrestricted source strings and unknown fields"
+    ],
+    "generatedFacts": "No missing times, connection identifiers, conditions, or hardware observations are invented; finding interpretations are labeled."
+  },
+  "artifacts": {
+    "transactions.jsonl": {
+      "sha256": "7ae61570a316aa6c9427549aedceeaf7879bb2b84f5f2b40a525ae61a5ab89ce",
+      "bytes": 28042
+    },
+    "findings.json": {
+      "sha256": "b48da4d57f2f59de902436943230ef1799131cda54105e90f9ee104d97bb3f07",
+      "bytes": 2638
+    }
+  }
+}

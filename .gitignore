@@ -1,0 +1,18 @@
+# Run output from tools/bankprobe.py: logs, transcripts and bank backups are per-camera data, never published
+bankprobe-*.json
+bankprobe-*.txt
+backups/
+# Raw USB captures and photos: a capture can hold GetDeviceInfo, which ends with the serial number, and a conversion capture holds the photo; publish the decoded transcript instead
+*.pcap
+*.pcapng
+*.pcap.gz
+*.pcapng.gz
+*.[Rr][Aa][Ff]
+__pycache__/
+# Local editor settings and workspace history; keep out of publication
+.obsidian/
+.DS_Store
+.venv/
+venv/
+.pytest_cache/
+*.pyc

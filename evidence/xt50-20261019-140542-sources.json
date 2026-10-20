@@ -1,0 +1,26 @@
+{
+ "format": "private-source-inventory-v1",
+ "inventoryId": "xt50-20261019-client-undo",
+ "retrievalDateLocal": "2026-10-19",
+ "archive": "maintainers' private archive",
+ "revision": "50dabec6c251f39d30a6c962daafd4c71c7bde7d",
+ "directory": "hardware-runs/app-reports-x-t50",
+ "access": "private",
+ "originalsIncluded": false,
+ "retrievedDirectoryFileCount": 64,
+ "inventoryScope": "The camera report and problem report the maintainers' iOS client exported from the 2026-10-19 14:05 Undo check; not the directory's other reports. Hashes identify entire evidence files, not device identities.",
+ "artifacts": [
+  {
+   "path": "camera-reports/fuji-cookbook-camera-report-X-T50-20261019-1405.json",
+   "bytes": 243712,
+   "sha256": "23a8d14188add4d699bcd614d492a2775078a1637fb2f88d94339d864e316430",
+   "gitBlob": "7ccb8d19ba8980dbf8ac3f07a1a3adf49565b64d"
+  },
+  {
+   "path": "problem-reports/fuji-cookbook-problem-report-X-T50-20261019-1406.txt",
+   "bytes": 81749,
+   "sha256": "30761672fa51677f32d12623e187669abb7cb7f8183f3bd381229fd57c693a03",
+   "gitBlob": "fb2b9000427d7426c1ffd32523aa3015f4dc423c"
+  }
+ ]
+}

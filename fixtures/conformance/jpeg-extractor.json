@@ -1,0 +1,1588 @@
+{
+  "schema_version": 1,
+  "provenance": {
+    "kind": "synthetic",
+    "hardware_evidence": false,
+    "source": "Synthetic MakerNote tag sets for tools/jpeg_recipe.py, drawn from client failure patterns and published metadata mappings; not camera measurements."
+  },
+  "cases": [
+    {
+      "id": "wb-mode-missing-shifts",
+      "kind": "jpeg-extractor",
+      "input": {
+        "tags": [
+          {
+            "tag": "0x1002",
+            "type": 3,
+            "value": 256
+          }
+        ],
+        "extractor": {
+          "wb_shift_scale": "unknown"
+        }
+      },
+      "expected": {
+        "extractor": [
+          {
+            "path": [
+              "recipe",
+              "white_balance",
+              "value"
+            ],
+            "equals": "daylight"
+          },
+          {
+            "path": [
+              "recipe",
+              "white_balance_shift",
+              "status"
+            ],
+            "equals": "missing"
+          }
+        ],
+        "absent": [
+          [
+            "recipe",
+            "white_balance_shift",
+            "value"
+          ]
+        ]
+      },
+      "coverage": {
+        "reference": [
+          "fixture_integrity",
+          "jpeg_extractor",
+          "extractor_json_round_trip"
+        ]
+      }
+    },
+    {
+      "id": "wb-kelvin-missing-temperature",
+      "kind": "jpeg-extractor",
+      "input": {
+        "tags": [
+          {
+            "tag": "0x1002",
+            "type": 3,
+            "value": 4080
+          },
+          {
+            "tag": "0x100a",
+            "type": 9,
+            "value": [
+              60,
+              -40
+            ]
+          }
+        ],
+        "extractor": {
+          "wb_shift_scale": "times20"
+        }
+      },
+      "expected": {
+        "extractor": [
+          {
+            "path": [
+              "recipe",
+              "white_balance",
+              "value"
+            ],
+            "equals": "kelvin"
+          },
+          {
+            "path": [
+              "recipe",
+              "white_balance_kelvin",
+              "status"
+            ],
+            "equals": "missing"
+          },
+          {
+            "path": [
+              "recipe",
+              "white_balance_shift",
+              "value"
+            ],
+            "equals": {
+              "red": 3,
+              "blue": -2
+            }
+          }
+        ],
+        "absent": [
+          [
+            "recipe",
+            "white_balance_kelvin",
+            "value"
+          ]
+        ]
+      },
+      "coverage": {
+        "reference": [
+          "fixture_integrity",
+          "jpeg_extractor",
+          "extractor_json_round_trip"
+        ]
+      }
+    },
+    {
+      "id": "wb-shifts-missing-mode",
+      "kind": "jpeg-extractor",
+      "input": {
+        "tags": [
+          {
+            "tag": "0x100a",
+            "type": 9,
+            "value": [
+              60,
+              -40
+            ]
+          }
+        ],
+        "extractor": {
+          "wb_shift_scale": "times20"
+        }
+      },
+      "expected": {
+        "extractor": [
+          {
+            "path": [
+              "recipe",
+              "white_balance",
+              "status"
+            ],
+            "equals": "missing"
+          },
+          {
+            "path": [
+              "recipe",
+              "white_balance_shift",
+              "value"
+            ],
+            "equals": {
+              "red": 3,
+              "blue": -2
+            }
+          }
+        ],
+        "absent": [
+          [
+            "recipe",
+            "white_balance",
+            "value"
+          ]
+        ]
+      },
+      "coverage": {
+        "reference": [
+          "fixture_integrity",
+          "jpeg_extractor",
+          "extractor_json_round_trip"
+        ]
+      }
+    },
+    {
+      "id": "wb-custom-slot-not-measured-balance",
+      "kind": "jpeg-extractor",
+      "input": {
+        "tags": [
+          {
+            "tag": "0x1002",
+            "type": 3,
+            "value": 3842
+          },
+          {
+            "tag": "0x100a",
+            "type": 9,
+            "value": [
+              0,
+              0
+            ]
+          }
+        ],
+        "extractor": {
+          "wb_shift_scale": "direct"
+        }
+      },
+      "expected": {
+        "extractor": [
+          {
+            "path": [
+              "recipe",
+              "white_balance",
+              "value"
+            ],
+            "equals": "custom_3"
+          },
+          {
+            "path": [
+              "recipe",
+              "white_balance",
+              "portability"
+            ],
+            "equals": "slot identity only; measured white balance is not reconstructed"
+          },
+          {
+            "path": [
+              "recipe",
+              "white_balance_shift",
+              "value"
+            ],
+            "equals": {
+              "red": 0,
+              "blue": 0
+            }
+          }
+        ]
+      },
+      "coverage": {
+        "reference": [
+          "fixture_integrity",
+          "jpeg_extractor",
+          "extractor_json_round_trip"
+        ]
+      }
+    },
+    {
+      "id": "wb-unresolved-round-trip",
+      "kind": "jpeg-extractor",
+      "input": {
+        "tags": [
+          {
+            "tag": "0x100a",
+            "type": 9,
+            "value": [
+              60,
+              -40
+            ]
+          }
+        ],
+        "extractor": {
+          "wb_shift_scale": "unknown"
+        }
+      },
+      "expected": {
+        "extractor": [
+          {
+            "path": [
+              "recipe",
+              "white_balance_shift",
+              "status"
+            ],
+            "equals": "unresolved"
+          },
+          {
+            "path": [
+              "recipe",
+              "white_balance_shift",
+              "raw_value"
+            ],
+            "equals": [
+              60,
+              -40
+            ]
+          },
+          {
+            "path": [
+              "recipe",
+              "white_balance_shift",
+              "scale_policy"
+            ],
+            "equals": "unknown"
+          },
+          {
+            "path": [
+              "recipe",
+              "white_balance_shift",
+              "basis"
+            ],
+            "equals": "published_mapping"
+          }
+        ],
+        "absent": [
+          [
+            "recipe",
+            "white_balance_shift",
+            "value"
+          ]
+        ]
+      },
+      "coverage": {
+        "reference": [
+          "fixture_integrity",
+          "jpeg_extractor",
+          "extractor_json_round_trip"
+        ]
+      }
+    },
+    {
+      "id": "wb-explicit-round-trip",
+      "kind": "jpeg-extractor",
+      "input": {
+        "tags": [
+          {
+            "tag": "0x100a",
+            "type": 9,
+            "value": [
+              60,
+              -40
+            ]
+          }
+        ],
+        "extractor": {
+          "wb_shift_scale": "times20"
+        }
+      },
+      "expected": {
+        "extractor": [
+          {
+            "path": [
+              "recipe",
+              "white_balance_shift",
+              "status"
+            ],
+            "equals": "decoded"
+          },
+          {
+            "path": [
+              "recipe",
+              "white_balance_shift",
+              "raw_value"
+            ],
+            "equals": [
+              60,
+              -40
+            ]
+          },
+          {
+            "path": [
+              "recipe",
+              "white_balance_shift",
+              "scale_policy"
+            ],
+            "equals": "times20"
+          },
+          {
+            "path": [
+              "recipe",
+              "white_balance_shift",
+              "basis"
+            ],
+            "equals": "caller_selected_scale"
+          },
+          {
+            "path": [
+              "recipe",
+              "white_balance_shift",
+              "value"
+            ],
+            "equals": {
+              "red": 3,
+              "blue": -2
+            }
+          }
+        ]
+      },
+      "coverage": {
+        "reference": [
+          "fixture_integrity",
+          "jpeg_extractor",
+          "extractor_json_round_trip"
+        ]
+      }
+    },
+    {
+      "id": "wb-heuristic-round-trip",
+      "kind": "jpeg-extractor",
+      "input": {
+        "tags": [
+          {
+            "tag": "0x100a",
+            "type": 9,
+            "value": [
+              60,
+              -40
+            ]
+          }
+        ],
+        "extractor": {
+          "wb_shift_scale": "heuristic"
+        }
+      },
+      "expected": {
+        "extractor": [
+          {
+            "path": [
+              "recipe",
+              "white_balance_shift",
+              "status"
+            ],
+            "equals": "decoded"
+          },
+          {
+            "path": [
+              "recipe",
+              "white_balance_shift",
+              "raw_value"
+            ],
+            "equals": [
+              60,
+              -40
+            ]
+          },
+          {
+            "path": [
+              "recipe",
+              "white_balance_shift",
+              "scale_policy"
+            ],
+            "equals": "heuristic"
+          },
+          {
+            "path": [
+              "recipe",
+              "white_balance_shift",
+              "basis"
+            ],
+            "equals": "explicit_heuristic"
+          },
+          {
+            "path": [
+              "recipe",
+              "white_balance_shift",
+              "value"
+            ],
+            "equals": {
+              "red": 3,
+              "blue": -2
+            }
+          }
+        ]
+      },
+      "coverage": {
+        "reference": [
+          "fixture_integrity",
+          "jpeg_extractor",
+          "extractor_json_round_trip"
+        ]
+      }
+    },
+    {
+      "id": "wb-explicit-invalid-fraction",
+      "kind": "jpeg-extractor",
+      "input": {
+        "tags": [
+          {
+            "tag": "0x100a",
+            "type": 9,
+            "value": [
+              21,
+              0
+            ]
+          }
+        ],
+        "extractor": {
+          "wb_shift_scale": "times20"
+        }
+      },
+      "expected": {
+        "extractor": [
+          {
+            "path": [
+              "recipe",
+              "white_balance_shift",
+              "status"
+            ],
+            "equals": "unresolved"
+          },
+          {
+            "path": [
+              "recipe",
+              "white_balance_shift",
+              "raw_value"
+            ],
+            "equals": [
+              21,
+              0
+            ]
+          },
+          {
+            "path": [
+              "recipe",
+              "white_balance_shift",
+              "scale_policy"
+            ],
+            "equals": "times20"
+          }
+        ],
+        "absent": [
+          [
+            "recipe",
+            "white_balance_shift",
+            "value"
+          ]
+        ]
+      },
+      "coverage": {
+        "reference": [
+          "fixture_integrity",
+          "jpeg_extractor",
+          "extractor_json_round_trip"
+        ]
+      }
+    },
+    {
+      "id": "wb-explicit-invalid-range",
+      "kind": "jpeg-extractor",
+      "input": {
+        "tags": [
+          {
+            "tag": "0x100a",
+            "type": 9,
+            "value": [
+              200,
+              0
+            ]
+          }
+        ],
+        "extractor": {
+          "wb_shift_scale": "times20"
+        }
+      },
+      "expected": {
+        "extractor": [
+          {
+            "path": [
+              "recipe",
+              "white_balance_shift",
+              "status"
+            ],
+            "equals": "unresolved"
+          },
+          {
+            "path": [
+              "recipe",
+              "white_balance_shift",
+              "raw_value"
+            ],
+            "equals": [
+              200,
+              0
+            ]
+          },
+          {
+            "path": [
+              "recipe",
+              "white_balance_shift",
+              "scale_policy"
+            ],
+            "equals": "times20"
+          }
+        ],
+        "absent": [
+          [
+            "recipe",
+            "white_balance_shift",
+            "value"
+          ]
+        ]
+      },
+      "coverage": {
+        "reference": [
+          "fixture_integrity",
+          "jpeg_extractor",
+          "extractor_json_round_trip"
+        ]
+      }
+    },
+    {
+      "id": "wb-heuristic-invalid-mixed-pair",
+      "kind": "jpeg-extractor",
+      "input": {
+        "tags": [
+          {
+            "tag": "0x100a",
+            "type": 9,
+            "value": [
+              9,
+              180
+            ]
+          }
+        ],
+        "extractor": {
+          "wb_shift_scale": "heuristic"
+        }
+      },
+      "expected": {
+        "extractor": [
+          {
+            "path": [
+              "recipe",
+              "white_balance_shift",
+              "status"
+            ],
+            "equals": "unresolved"
+          },
+          {
+            "path": [
+              "recipe",
+              "white_balance_shift",
+              "raw_value"
+            ],
+            "equals": [
+              9,
+              180
+            ]
+          },
+          {
+            "path": [
+              "recipe",
+              "white_balance_shift",
+              "scale_policy"
+            ],
+            "equals": "heuristic"
+          }
+        ],
+        "absent": [
+          [
+            "recipe",
+            "white_balance_shift",
+            "value"
+          ]
+        ]
+      },
+      "coverage": {
+        "reference": [
+          "fixture_integrity",
+          "jpeg_extractor",
+          "extractor_json_round_trip"
+        ]
+      }
+    },
+    {
+      "id": "drp-auto-strength-is-observation",
+      "kind": "jpeg-extractor",
+      "input": {
+        "tags": [
+          {
+            "tag": "0x1443",
+            "type": 3,
+            "value": 0
+          },
+          {
+            "tag": "0x1444",
+            "type": 3,
+            "value": 2
+          },
+          {
+            "tag": "0x1402",
+            "type": 3,
+            "value": 1
+          },
+          {
+            "tag": "0x1403",
+            "type": 3,
+            "value": 400
+          },
+          {
+            "tag": "0x1041",
+            "type": 9,
+            "value": -16
+          },
+          {
+            "tag": "0x1040",
+            "type": 9,
+            "value": 32
+          }
+        ],
+        "extractor": {
+          "wb_shift_scale": "unknown"
+        }
+      },
+      "expected": {
+        "extractor": [
+          {
+            "path": [
+              "recipe",
+              "d_range_priority",
+              "value"
+            ],
+            "equals": {
+              "mode": "auto"
+            }
+          },
+          {
+            "path": [
+              "recipe",
+              "d_range_priority",
+              "strength",
+              "value"
+            ],
+            "equals": "strong"
+          },
+          {
+            "path": [
+              "recipe",
+              "dynamic_range",
+              "value"
+            ],
+            "equals": {
+              "mode": "manual",
+              "percent": 400
+            }
+          },
+          {
+            "path": [
+              "recipe",
+              "dynamic_range",
+              "applicability"
+            ],
+            "equals": "priority-controlled; recorded value is not independent recipe intent"
+          },
+          {
+            "path": [
+              "recipe",
+              "highlight_tone",
+              "applicability"
+            ],
+            "equals": "priority-controlled; recorded value is not independent recipe intent"
+          },
+          {
+            "path": [
+              "recipe",
+              "shadow_tone",
+              "applicability"
+            ],
+            "equals": "priority-controlled; recorded value is not independent recipe intent"
+          }
+        ]
+      },
+      "coverage": {
+        "reference": [
+          "fixture_integrity",
+          "jpeg_extractor",
+          "extractor_json_round_trip"
+        ]
+      }
+    },
+    {
+      "id": "drp-fixed-strength-missing",
+      "kind": "jpeg-extractor",
+      "input": {
+        "tags": [
+          {
+            "tag": "0x1443",
+            "type": 3,
+            "value": 1
+          },
+          {
+            "tag": "0x1402",
+            "type": 3,
+            "value": 0
+          },
+          {
+            "tag": "0x1041",
+            "type": 9,
+            "value": 0
+          },
+          {
+            "tag": "0x1040",
+            "type": 9,
+            "value": 0
+          }
+        ],
+        "extractor": {
+          "wb_shift_scale": "unknown"
+        }
+      },
+      "expected": {
+        "extractor": [
+          {
+            "path": [
+              "recipe",
+              "d_range_priority",
+              "status"
+            ],
+            "equals": "unresolved"
+          },
+          {
+            "path": [
+              "recipe",
+              "d_range_priority",
+              "mode"
+            ],
+            "equals": "fixed"
+          },
+          {
+            "path": [
+              "recipe",
+              "d_range_priority",
+              "strength",
+              "status"
+            ],
+            "equals": "missing"
+          },
+          {
+            "path": [
+              "recipe",
+              "dynamic_range",
+              "applicability"
+            ],
+            "equals": "priority-controlled; recorded value is not independent recipe intent"
+          }
+        ],
+        "absent": [
+          [
+            "recipe",
+            "d_range_priority",
+            "value"
+          ]
+        ]
+      },
+      "coverage": {
+        "reference": [
+          "fixture_integrity",
+          "jpeg_extractor",
+          "extractor_json_round_trip"
+        ]
+      }
+    },
+    {
+      "id": "drp-missing-is-not-off",
+      "kind": "jpeg-extractor",
+      "input": {
+        "tags": [
+          {
+            "tag": "0x1402",
+            "type": 3,
+            "value": 0
+          }
+        ],
+        "extractor": {
+          "wb_shift_scale": "unknown"
+        }
+      },
+      "expected": {
+        "extractor": [
+          {
+            "path": [
+              "recipe",
+              "d_range_priority",
+              "status"
+            ],
+            "equals": "missing"
+          },
+          {
+            "path": [
+              "recipe",
+              "dynamic_range",
+              "value"
+            ],
+            "equals": {
+              "mode": "auto"
+            }
+          }
+        ],
+        "absent": [
+          [
+            "recipe",
+            "d_range_priority",
+            "value"
+          ]
+        ]
+      },
+      "coverage": {
+        "reference": [
+          "fixture_integrity",
+          "jpeg_extractor",
+          "extractor_json_round_trip"
+        ]
+      }
+    },
+    {
+      "id": "grain-off-retains-inactive-size",
+      "kind": "jpeg-extractor",
+      "input": {
+        "tags": [
+          {
+            "tag": "0x1047",
+            "type": 9,
+            "value": 0
+          },
+          {
+            "tag": "0x104c",
+            "type": 3,
+            "value": 32
+          }
+        ],
+        "extractor": {
+          "wb_shift_scale": "unknown"
+        }
+      },
+      "expected": {
+        "extractor": [
+          {
+            "path": [
+              "recipe",
+              "grain_strength",
+              "value"
+            ],
+            "equals": "off"
+          },
+          {
+            "path": [
+              "recipe",
+              "grain_size",
+              "status"
+            ],
+            "equals": "inactive"
+          },
+          {
+            "path": [
+              "recipe",
+              "grain_size",
+              "recorded",
+              "value"
+            ],
+            "equals": "large"
+          }
+        ],
+        "absent": [
+          [
+            "recipe",
+            "grain_size",
+            "value"
+          ]
+        ]
+      },
+      "coverage": {
+        "reference": [
+          "fixture_integrity",
+          "jpeg_extractor",
+          "extractor_json_round_trip"
+        ]
+      }
+    },
+    {
+      "id": "unknown-numeric-and-private-payloads",
+      "kind": "jpeg-extractor",
+      "input": {
+        "tags": [
+          {
+            "tag": "0x1048",
+            "type": 9,
+            "value": 12345
+          },
+          {
+            "tag": "0x0010",
+            "type": 2,
+            "value": "PRIVATE-SERIAL-SENTINEL\u0000"
+          },
+          {
+            "tag": "0x7ffe",
+            "type": 2,
+            "value": "PRIVATE-OWNER-SENTINEL\u0000"
+          },
+          {
+            "tag": "0x104e",
+            "type": 2,
+            "value": "PRIVATE-NUMERIC-TAG-SENTINEL\u0000"
+          }
+        ],
+        "extractor": {
+          "wb_shift_scale": "unknown"
+        }
+      },
+      "expected": {
+        "extractor": [
+          {
+            "path": [
+              "recipe",
+              "color_chrome_effect",
+              "status"
+            ],
+            "equals": "unrecognized"
+          },
+          {
+            "path": [
+              "recipe",
+              "color_chrome_effect",
+              "raw_value"
+            ],
+            "equals": 12345
+          },
+          {
+            "path": [
+              "recipe",
+              "color_chrome_fx_blue",
+              "status"
+            ],
+            "equals": "malformed"
+          }
+        ],
+        "absent": [
+          [
+            "recipe",
+            "color_chrome_effect",
+            "value"
+          ],
+          [
+            "recipe",
+            "color_chrome_fx_blue",
+            "value"
+          ]
+        ],
+        "excluded_text": [
+          "PRIVATE-SERIAL-SENTINEL",
+          "PRIVATE-OWNER-SENTINEL",
+          "PRIVATE-NUMERIC-TAG-SENTINEL"
+        ]
+      },
+      "coverage": {
+        "reference": [
+          "fixture_integrity",
+          "jpeg_extractor",
+          "extractor_json_round_trip"
+        ]
+      }
+    },
+    {
+      "id": "wb-times20-full-range",
+      "kind": "jpeg-extractor",
+      "input": {
+        "tags": [
+          {
+            "tag": "0x100a",
+            "type": 9,
+            "value": [
+              180,
+              -180
+            ]
+          }
+        ],
+        "extractor": {
+          "wb_shift_scale": "times20"
+        },
+        "firmware": "fixture-1"
+      },
+      "expected": {
+        "extractor": [
+          {
+            "path": [
+              "recipe",
+              "white_balance_shift",
+              "status"
+            ],
+            "equals": "decoded"
+          },
+          {
+            "path": [
+              "recipe",
+              "white_balance_shift",
+              "raw_value"
+            ],
+            "equals": [
+              180,
+              -180
+            ]
+          },
+          {
+            "path": [
+              "recipe",
+              "white_balance_shift",
+              "scale_policy"
+            ],
+            "equals": "times20"
+          },
+          {
+            "path": [
+              "recipe",
+              "white_balance_shift",
+              "value"
+            ],
+            "equals": {
+              "red": 9,
+              "blue": -9
+            }
+          },
+          {
+            "path": [
+              "recipe",
+              "white_balance_shift",
+              "basis"
+            ],
+            "equals": "caller_selected_scale"
+          }
+        ]
+      },
+      "coverage": {
+        "reference": [
+          "fixture_integrity",
+          "jpeg_extractor",
+          "extractor_json_round_trip"
+        ]
+      }
+    },
+    {
+      "id": "wb-times20-invalid-fraction",
+      "kind": "jpeg-extractor",
+      "input": {
+        "tags": [
+          {
+            "tag": "0x100a",
+            "type": 9,
+            "value": [
+              21,
+              0
+            ]
+          }
+        ],
+        "extractor": {
+          "wb_shift_scale": "times20"
+        },
+        "firmware": "fixture-1"
+      },
+      "expected": {
+        "extractor": [
+          {
+            "path": [
+              "recipe",
+              "white_balance_shift",
+              "status"
+            ],
+            "equals": "unresolved"
+          },
+          {
+            "path": [
+              "recipe",
+              "white_balance_shift",
+              "raw_value"
+            ],
+            "equals": [
+              21,
+              0
+            ]
+          },
+          {
+            "path": [
+              "recipe",
+              "white_balance_shift",
+              "scale_policy"
+            ],
+            "equals": "times20"
+          }
+        ],
+        "absent": [
+          [
+            "recipe",
+            "white_balance_shift",
+            "value"
+          ]
+        ]
+      },
+      "coverage": {
+        "reference": [
+          "fixture_integrity",
+          "jpeg_extractor",
+          "extractor_json_round_trip"
+        ]
+      }
+    },
+    {
+      "id": "wb-times20-invalid-range",
+      "kind": "jpeg-extractor",
+      "input": {
+        "tags": [
+          {
+            "tag": "0x100a",
+            "type": 9,
+            "value": [
+              200,
+              0
+            ]
+          }
+        ],
+        "extractor": {
+          "wb_shift_scale": "times20"
+        },
+        "firmware": "fixture-1"
+      },
+      "expected": {
+        "extractor": [
+          {
+            "path": [
+              "recipe",
+              "white_balance_shift",
+              "status"
+            ],
+            "equals": "unresolved"
+          },
+          {
+            "path": [
+              "recipe",
+              "white_balance_shift",
+              "raw_value"
+            ],
+            "equals": [
+              200,
+              0
+            ]
+          },
+          {
+            "path": [
+              "recipe",
+              "white_balance_shift",
+              "scale_policy"
+            ],
+            "equals": "times20"
+          }
+        ],
+        "absent": [
+          [
+            "recipe",
+            "white_balance_shift",
+            "value"
+          ]
+        ]
+      },
+      "coverage": {
+        "reference": [
+          "fixture_integrity",
+          "jpeg_extractor",
+          "extractor_json_round_trip"
+        ]
+      }
+    },
+    {
+      "id": "wb-times20-no-direct-fallback",
+      "kind": "jpeg-extractor",
+      "input": {
+        "tags": [
+          {
+            "tag": "0x100a",
+            "type": 9,
+            "value": [
+              9,
+              -9
+            ]
+          }
+        ],
+        "extractor": {
+          "wb_shift_scale": "times20"
+        },
+        "firmware": "fixture-1"
+      },
+      "expected": {
+        "extractor": [
+          {
+            "path": [
+              "recipe",
+              "white_balance_shift",
+              "status"
+            ],
+            "equals": "unresolved"
+          },
+          {
+            "path": [
+              "recipe",
+              "white_balance_shift",
+              "raw_value"
+            ],
+            "equals": [
+              9,
+              -9
+            ]
+          },
+          {
+            "path": [
+              "recipe",
+              "white_balance_shift",
+              "scale_policy"
+            ],
+            "equals": "times20"
+          }
+        ],
+        "absent": [
+          [
+            "recipe",
+            "white_balance_shift",
+            "value"
+          ]
+        ]
+      },
+      "coverage": {
+        "reference": [
+          "fixture_integrity",
+          "jpeg_extractor",
+          "extractor_json_round_trip"
+        ]
+      }
+    },
+    {
+      "id": "wb-times20-zero-pair",
+      "kind": "jpeg-extractor",
+      "input": {
+        "tags": [
+          {
+            "tag": "0x100a",
+            "type": 9,
+            "value": [
+              0,
+              0
+            ]
+          }
+        ],
+        "extractor": {
+          "wb_shift_scale": "times20"
+        },
+        "firmware": "fixture-1"
+      },
+      "expected": {
+        "extractor": [
+          {
+            "path": [
+              "recipe",
+              "white_balance_shift",
+              "status"
+            ],
+            "equals": "decoded"
+          },
+          {
+            "path": [
+              "recipe",
+              "white_balance_shift",
+              "raw_value"
+            ],
+            "equals": [
+              0,
+              0
+            ]
+          },
+          {
+            "path": [
+              "recipe",
+              "white_balance_shift",
+              "scale_policy"
+            ],
+            "equals": "times20"
+          },
+          {
+            "path": [
+              "recipe",
+              "white_balance_shift",
+              "value"
+            ],
+            "equals": {
+              "red": 0,
+              "blue": 0
+            }
+          },
+          {
+            "path": [
+              "recipe",
+              "white_balance_shift",
+              "basis"
+            ],
+            "equals": "caller_selected_scale"
+          }
+        ]
+      },
+      "coverage": {
+        "reference": [
+          "fixture_integrity",
+          "jpeg_extractor",
+          "extractor_json_round_trip"
+        ]
+      }
+    },
+    {
+      "id": "wb-and-toning-independent",
+      "kind": "jpeg-extractor",
+      "input": {
+        "tags": [
+          {
+            "tag": "0x100a",
+            "type": 9,
+            "value": [
+              180,
+              -180
+            ]
+          },
+          {
+            "tag": "0x1003",
+            "type": 3,
+            "value": 1280
+          },
+          {
+            "tag": "0x1049",
+            "type": 1,
+            "value": 18
+          },
+          {
+            "tag": "0x104b",
+            "type": 1,
+            "value": 238
+          }
+        ],
+        "extractor": {
+          "wb_shift_scale": "times20"
+        },
+        "firmware": "fixture-1"
+      },
+      "expected": {
+        "extractor": [
+          {
+            "path": [
+              "recipe",
+              "white_balance_shift",
+              "status"
+            ],
+            "equals": "decoded"
+          },
+          {
+            "path": [
+              "recipe",
+              "white_balance_shift",
+              "raw_value"
+            ],
+            "equals": [
+              180,
+              -180
+            ]
+          },
+          {
+            "path": [
+              "recipe",
+              "white_balance_shift",
+              "scale_policy"
+            ],
+            "equals": "times20"
+          },
+          {
+            "path": [
+              "recipe",
+              "white_balance_shift",
+              "value"
+            ],
+            "equals": {
+              "red": 9,
+              "blue": -9
+            }
+          },
+          {
+            "path": [
+              "recipe",
+              "white_balance_shift",
+              "basis"
+            ],
+            "equals": "caller_selected_scale"
+          },
+          {
+            "path": [
+              "recipe",
+              "monochromatic_color_wc",
+              "value"
+            ],
+            "equals": 18
+          },
+          {
+            "path": [
+              "recipe",
+              "monochromatic_color_mg",
+              "value"
+            ],
+            "equals": -18
+          },
+          {
+            "path": [
+              "recipe",
+              "monochromatic_color_wc",
+              "basis"
+            ],
+            "equals": "published_int8s_override"
+          },
+          {
+            "path": [
+              "recipe",
+              "monochromatic_color_mg",
+              "basis"
+            ],
+            "equals": "published_int8s_override"
+          }
+        ]
+      },
+      "coverage": {
+        "reference": [
+          "fixture_integrity",
+          "jpeg_extractor",
+          "extractor_json_round_trip"
+        ]
+      }
+    },
+    {
+      "id": "wb-unknown-full-range",
+      "kind": "jpeg-extractor",
+      "input": {
+        "tags": [
+          {
+            "tag": "0x100a",
+            "type": 9,
+            "value": [
+              180,
+              -180
+            ]
+          }
+        ],
+        "extractor": {
+          "wb_shift_scale": "unknown"
+        },
+        "firmware": "fixture-1"
+      },
+      "expected": {
+        "extractor": [
+          {
+            "path": [
+              "recipe",
+              "white_balance_shift",
+              "status"
+            ],
+            "equals": "unresolved"
+          },
+          {
+            "path": [
+              "recipe",
+              "white_balance_shift",
+              "raw_value"
+            ],
+            "equals": [
+              180,
+              -180
+            ]
+          },
+          {
+            "path": [
+              "recipe",
+              "white_balance_shift",
+              "scale_policy"
+            ],
+            "equals": "unknown"
+          }
+        ],
+        "absent": [
+          [
+            "recipe",
+            "white_balance_shift",
+            "value"
+          ]
+        ]
+      },
+      "coverage": {
+        "reference": [
+          "fixture_integrity",
+          "jpeg_extractor",
+          "extractor_json_round_trip"
+        ]
+      }
+    }
+  ]
+}

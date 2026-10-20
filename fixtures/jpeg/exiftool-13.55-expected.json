@@ -1,0 +1,115 @@
+{
+  "evidence": "independent software interpretation of synthetic metadata, not camera evidence",
+  "oracle": {
+    "name": "ExifTool",
+    "version": "13.55",
+    "commit": "de11d240cf7e521e939a0575a128ffe01b63be05"
+  },
+  "command_template": [
+    "exiftool",
+    "-j",
+    "-s",
+    "-Sharpness",
+    "-Saturation",
+    "-WhiteBalance",
+    "-WhiteBalanceFineTune",
+    "-NoiseReduction",
+    "-Clarity",
+    "-ShadowTone",
+    "-HighlightTone",
+    "-BWAdjustment",
+    "-BWMagentaGreen",
+    "-GrainEffectRoughness",
+    "-GrainEffectSize",
+    "-ColorChromeEffect",
+    "-ColorChromeFXBlue",
+    "-FilmMode",
+    "-DynamicRangeSetting",
+    "-DevelopmentDynamicRange",
+    "-AutoDynamicRange",
+    "-DRangePriority",
+    "-DRangePriorityAuto",
+    "-DRangePriorityFixed",
+    "-LensModulationOptimizer",
+    "-ColorSpace",
+    "-InteropIndex",
+    "<fixture>"
+  ],
+  "cases": [
+    {
+      "path": "synthetic-be-acros-yellow.jpg",
+      "sha256": "63ebd53da749734a4779115bd54335da006c401f248aa14932ab8a2ac6f88964",
+      "expected": {
+        "Sharpness": "0 (normal)",
+        "Saturation": "Acros Yellow Filter",
+        "WhiteBalance": "Auto (white priority)",
+        "WhiteBalanceFineTune": "Red -2, Blue +5",
+        "ShadowTone": "-2 (soft)",
+        "HighlightTone": "+4 (hardest)",
+        "BWAdjustment": -5,
+        "BWMagentaGreen": "+7",
+        "GrainEffectRoughness": "Off",
+        "GrainEffectSize": "Small",
+        "FilmMode": "F0/Standard (Provia)",
+        "DynamicRangeSetting": "Auto",
+        "DevelopmentDynamicRange": 100,
+        "AutoDynamicRange": "200%",
+        "DRangePriority": "Auto",
+        "DRangePriorityAuto": "Plus",
+        "ColorSpace": "Uncalibrated",
+        "InteropIndex": "R03 - DCF option file (Adobe RGB)"
+      }
+    },
+    {
+      "path": "synthetic-color-and-unknown.jpg",
+      "sha256": "ba49a3e042d1420e019b868a23f2207d1136bb808012bb698612adc0a1909777",
+      "expected": {
+        "Sharpness": "Film Simulation",
+        "Saturation": "-4 (lowest)",
+        "WhiteBalance": "Custom3",
+        "GrainEffectRoughness": "Strong",
+        "ColorChromeEffect": "Unknown (12345)",
+        "FilmMode": "Reala ACE",
+        "DynamicRangeSetting": "Wide1 (230%)",
+        "ColorSpace": "sRGB",
+        "InteropIndex": "R98 - DCF basic file (sRGB)"
+      }
+    },
+    {
+      "path": "synthetic-le-acros-red.jpg",
+      "sha256": "40ee50040159dc446d2845d55ff67cd7a8b02e0c6bed08ddd2bd47dcbc459855",
+      "expected": {
+        "Sharpness": "-1 (medium soft)",
+        "Saturation": "Acros Red Filter",
+        "WhiteBalance": "Kelvin",
+        "WhiteBalanceFineTune": "Red +60, Blue -40",
+        "NoiseReduction": "-4 (weakest)",
+        "Clarity": -3,
+        "ShadowTone": 1.5,
+        "HighlightTone": -0.5,
+        "BWAdjustment": -18,
+        "BWMagentaGreen": "+18",
+        "GrainEffectRoughness": "Weak",
+        "GrainEffectSize": "Large",
+        "ColorChromeEffect": "Strong",
+        "ColorChromeFXBlue": "Weak",
+        "FilmMode": "F0/Standard (Provia)",
+        "DynamicRangeSetting": "Manual",
+        "DevelopmentDynamicRange": 400,
+        "DRangePriority": "Fixed",
+        "DRangePriorityFixed": "Strong",
+        "LensModulationOptimizer": "On",
+        "ColorSpace": "sRGB",
+        "InteropIndex": "R98 - DCF basic file (sRGB)"
+      }
+    },
+    {
+      "path": "synthetic-missing.jpg",
+      "sha256": "a44133f0d11c87cc93cacc62fbc17a14b6ff1fb1c3979a8ac5c8a006b8bec825",
+      "expected": {
+        "ColorSpace": "sRGB",
+        "InteropIndex": "R98 - DCF basic file (sRGB)"
+      }
+    }
+  ]
+}

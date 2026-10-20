@@ -1,0 +1,486 @@
+{
+  "format": "fuji-bankprobe-selected-observations-v1",
+  "evidenceId": "xt50-20261016-094028",
+  "sourceFindingCount": 1,
+  "findings": {
+    "sourceFindingIndex": 0,
+    "test": "name_timing",
+    "selectedBank": 7,
+    "startFilmSimulationUnsigned": 12,
+    "initialReadSourceIndex": 15,
+    "initialOperatorObservation": {
+      "basis": "reviewed_original_operator_response",
+      "sourcePointer": "/findings/0/detail/before_test",
+      "redDot": "absent",
+      "filmSimulationLabelCorrespondsToUnsigned": 12
+    },
+    "procedureSource": {
+      "artifact": "transcripts/bankprobe-20261016-094028.txt",
+      "sha256": "ff9c72dbc6a84dc82d941212a26570ca2986b60c33681e9ecc1be9efedf5d82b",
+      "archivePath": "hardware-runs/bankprobe-x-t50-2026-10-15/transcripts/bankprobe-20261016-094028.txt",
+      "basis": "reviewed_pinned_private_transcript",
+      "includedInPackage": false
+    },
+    "stages": [
+      {
+        "stage": "1-same-session",
+        "condition": "same_ptp_session_immediate",
+        "expectedUnsigned": 2,
+        "trial": {
+          "property": "0xD192",
+          "writeSourceIndex": 35,
+          "writtenUnsigned": 2,
+          "response": "0x2001",
+          "readSourceIndex": 36,
+          "readResponse": "0x2001",
+          "readbackUnsigned": 2
+        },
+        "nameWrite": {
+          "property": "0xD18D",
+          "initialReadSourceIndex": 10,
+          "writeSourceIndex": 37,
+          "response": "0x2001",
+          "equalsInitialBytes": true,
+          "readSourceIndex": null,
+          "readbackEqualsWrittenBytes": null
+        },
+        "operatorObservation": {
+          "basis": "reviewed_original_operator_response",
+          "sourcePointer": "/findings/0/detail/1-same-session/seen",
+          "redDotBeforeSaving": "present",
+          "itemEntryBehavior": "entered_and_backed_out",
+          "redDotAfterItemExit": "absent",
+          "saveAction": "reported_unavailable",
+          "filmSimulationLabelCorrespondsToUnsigned": 2
+        },
+        "procedureTranscriptLines": [
+          46,
+          47
+        ]
+      },
+      {
+        "stage": "2-wait-10s",
+        "condition": "same_ptp_session_reported_delay",
+        "expectedUnsigned": 12,
+        "trial": {
+          "property": "0xD192",
+          "writeSourceIndex": 45,
+          "writtenUnsigned": 12,
+          "response": "0x2001",
+          "readSourceIndex": 46,
+          "readResponse": "0x2001",
+          "readbackUnsigned": 12
+        },
+        "nameWrite": {
+          "property": "0xD18D",
+          "initialReadSourceIndex": 10,
+          "writeSourceIndex": 47,
+          "response": "0x2001",
+          "equalsInitialBytes": true,
+          "readSourceIndex": null,
+          "readbackEqualsWrittenBytes": null
+        },
+        "operatorObservation": {
+          "basis": "reviewed_original_operator_response",
+          "sourcePointer": "/findings/0/detail/2-wait-10s/seen",
+          "redDotBeforeSaving": "present",
+          "itemEntryBehavior": "explicitly_not_entered",
+          "redDotAfterItemExit": "not_applicable",
+          "saveAction": "reported_performed",
+          "filmSimulationLabelCorrespondsToUnsigned": 12
+        },
+        "procedureTranscriptLines": [
+          49,
+          59
+        ],
+        "delay": {
+          "basis": "tool_transcript",
+          "reportedSeconds": 10,
+          "independentlyMeasuredSeconds": null
+        }
+      },
+      {
+        "stage": "3-new-ptp-session",
+        "condition": "new_ptp_session",
+        "expectedUnsigned": 2,
+        "trial": {
+          "property": "0xD192",
+          "writeSourceIndex": 55,
+          "writtenUnsigned": 2,
+          "response": "0x2001",
+          "readSourceIndex": 56,
+          "readResponse": "0x2001",
+          "readbackUnsigned": 2
+        },
+        "nameWrite": {
+          "property": "0xD18D",
+          "initialReadSourceIndex": 10,
+          "writeSourceIndex": 62,
+          "response": "0x2001",
+          "equalsInitialBytes": true,
+          "readSourceIndex": null,
+          "readbackEqualsWrittenBytes": null
+        },
+        "operatorObservation": {
+          "basis": "reviewed_original_operator_response",
+          "sourcePointer": "/findings/0/detail/3-new-ptp-session/seen",
+          "redDotBeforeSaving": "present",
+          "itemEntryBehavior": "not_reported",
+          "redDotAfterItemExit": "not_reported",
+          "saveAction": "reported_performed",
+          "filmSimulationLabelCorrespondsToUnsigned": 2
+        },
+        "procedureTranscriptLines": [
+          61,
+          72
+        ],
+        "sessionBoundary": {
+          "closeSourceIndex": 57,
+          "openSourceIndex": 59,
+          "closeResponse": "0x2001",
+          "openResponse": "0x2001"
+        }
+      },
+      {
+        "stage": "4-reconnect",
+        "condition": "cable_reconnect_instruction",
+        "expectedUnsigned": 12,
+        "trial": {
+          "property": "0xD192",
+          "writeSourceIndex": 70,
+          "writtenUnsigned": 12,
+          "response": "0x2001",
+          "readSourceIndex": 71,
+          "readResponse": "0x2001",
+          "readbackUnsigned": 12
+        },
+        "nameWrite": {
+          "property": "0xD18D",
+          "initialReadSourceIndex": 10,
+          "writeSourceIndex": 76,
+          "response": "0x2001",
+          "equalsInitialBytes": true,
+          "readSourceIndex": null,
+          "readbackEqualsWrittenBytes": null
+        },
+        "operatorObservation": {
+          "basis": "reviewed_original_operator_response",
+          "sourcePointer": "/findings/0/detail/4-reconnect/seen",
+          "redDotBeforeSaving": "present",
+          "itemEntryBehavior": "not_reported",
+          "redDotAfterItemExit": "not_reported",
+          "saveAction": "reported_performed",
+          "filmSimulationLabelCorrespondsToUnsigned": 12
+        },
+        "procedureTranscriptLines": [
+          74,
+          86
+        ],
+        "reconnect": {
+          "basis": "instruction_and_operator_continuation",
+          "instructedWaitSeconds": 5,
+          "independentCableTelemetry": false
+        }
+      }
+    ],
+    "finalCleanup": {
+      "sourceBasis": "numeric_transaction_comparison",
+      "numericWritesAndReadbacks": [
+        {
+          "property": "0xD18E",
+          "writeSourceIndex": 88,
+          "writtenUnsigned": 7,
+          "response": "0x2001",
+          "readSourceIndex": 89,
+          "readResponse": "0x2001",
+          "readbackUnsigned": 7,
+          "scope": "bank",
+          "initialReadSourceIndex": 11,
+          "initialUnsigned": 7
+        },
+        {
+          "property": "0xD18F",
+          "writeSourceIndex": 90,
+          "writtenUnsigned": 4,
+          "response": "0x2001",
+          "readSourceIndex": 91,
+          "readResponse": "0x2001",
+          "readbackUnsigned": 4,
+          "scope": "bank",
+          "initialReadSourceIndex": 12,
+          "initialUnsigned": 4
+        },
+        {
+          "property": "0xD191",
+          "writeSourceIndex": 92,
+          "writtenUnsigned": 0,
+          "response": "0x2001",
+          "readSourceIndex": 93,
+          "readResponse": "0x2001",
+          "readbackUnsigned": 0,
+          "scope": "bank",
+          "initialReadSourceIndex": 14,
+          "initialUnsigned": 0
+        },
+        {
+          "property": "0xD190",
+          "writeSourceIndex": 94,
+          "writtenUnsigned": 200,
+          "response": "0x2001",
+          "readSourceIndex": 95,
+          "readResponse": "0x2001",
+          "readbackUnsigned": 200,
+          "scope": "bank",
+          "initialReadSourceIndex": 13,
+          "initialUnsigned": 200
+        },
+        {
+          "property": "0xD192",
+          "writeSourceIndex": 96,
+          "writtenUnsigned": 12,
+          "response": "0x2001",
+          "readSourceIndex": 97,
+          "readResponse": "0x2001",
+          "readbackUnsigned": 12,
+          "scope": "bank",
+          "initialReadSourceIndex": 15,
+          "initialUnsigned": 12
+        },
+        {
+          "property": "0xD193",
+          "writeSourceIndex": 98,
+          "writtenUnsigned": 0,
+          "response": "0x2001",
+          "readSourceIndex": 99,
+          "readResponse": "0x2001",
+          "readbackUnsigned": 0,
+          "scope": "bank",
+          "initialReadSourceIndex": 16,
+          "initialUnsigned": 0
+        },
+        {
+          "property": "0xD194",
+          "writeSourceIndex": 100,
+          "writtenUnsigned": 0,
+          "response": "0x2001",
+          "readSourceIndex": 101,
+          "readResponse": "0x2001",
+          "readbackUnsigned": 0,
+          "scope": "bank",
+          "initialReadSourceIndex": 17,
+          "initialUnsigned": 0
+        },
+        {
+          "property": "0xD195",
+          "writeSourceIndex": 102,
+          "writtenUnsigned": 5,
+          "response": "0x2001",
+          "readSourceIndex": 103,
+          "readResponse": "0x2001",
+          "readbackUnsigned": 5,
+          "scope": "bank",
+          "initialReadSourceIndex": 18,
+          "initialUnsigned": 5
+        },
+        {
+          "property": "0xD196",
+          "writeSourceIndex": 104,
+          "writtenUnsigned": 3,
+          "response": "0x2001",
+          "readSourceIndex": 105,
+          "readResponse": "0x2001",
+          "readbackUnsigned": 3,
+          "scope": "bank",
+          "initialReadSourceIndex": 19,
+          "initialUnsigned": 3
+        },
+        {
+          "property": "0xD197",
+          "writeSourceIndex": 106,
+          "writtenUnsigned": 1,
+          "response": "0x2001",
+          "readSourceIndex": 107,
+          "readResponse": "0x2001",
+          "readbackUnsigned": 1,
+          "scope": "bank",
+          "initialReadSourceIndex": 20,
+          "initialUnsigned": 1
+        },
+        {
+          "property": "0xD198",
+          "writeSourceIndex": 108,
+          "writtenUnsigned": 1,
+          "response": "0x2001",
+          "readSourceIndex": 109,
+          "readResponse": "0x2001",
+          "readbackUnsigned": 1,
+          "scope": "bank",
+          "initialReadSourceIndex": 21,
+          "initialUnsigned": 1
+        },
+        {
+          "property": "0xD199",
+          "writeSourceIndex": 110,
+          "writtenUnsigned": 32776,
+          "response": "0x2001",
+          "readSourceIndex": 111,
+          "readResponse": "0x2001",
+          "readbackUnsigned": 32776,
+          "scope": "bank",
+          "initialReadSourceIndex": 22,
+          "initialUnsigned": 32776
+        },
+        {
+          "property": "0xD19A",
+          "writeSourceIndex": 112,
+          "writtenUnsigned": 0,
+          "response": "0x2001",
+          "readSourceIndex": 113,
+          "readResponse": "0x2001",
+          "readbackUnsigned": 0,
+          "scope": "bank",
+          "initialReadSourceIndex": 23,
+          "initialUnsigned": 0
+        },
+        {
+          "property": "0xD19B",
+          "writeSourceIndex": 114,
+          "writtenUnsigned": 0,
+          "response": "0x2001",
+          "readSourceIndex": 115,
+          "readResponse": "0x2001",
+          "readbackUnsigned": 0,
+          "scope": "bank",
+          "initialReadSourceIndex": 24,
+          "initialUnsigned": 0
+        },
+        {
+          "property": "0xD19D",
+          "writeSourceIndex": 116,
+          "writtenUnsigned": 0,
+          "response": "0x2001",
+          "readSourceIndex": 117,
+          "readResponse": "0x2001",
+          "readbackUnsigned": 0,
+          "scope": "bank",
+          "initialReadSourceIndex": 26,
+          "initialUnsigned": 0
+        },
+        {
+          "property": "0xD19E",
+          "writeSourceIndex": 118,
+          "writtenUnsigned": 30,
+          "response": "0x2001",
+          "readSourceIndex": 119,
+          "readResponse": "0x2001",
+          "readbackUnsigned": 30,
+          "scope": "bank",
+          "initialReadSourceIndex": 27,
+          "initialUnsigned": 30
+        },
+        {
+          "property": "0xD1A0",
+          "writeSourceIndex": 120,
+          "writtenUnsigned": 10,
+          "response": "0x2001",
+          "readSourceIndex": 121,
+          "readResponse": "0x2001",
+          "readbackUnsigned": 10,
+          "scope": "bank",
+          "initialReadSourceIndex": 29,
+          "initialUnsigned": 10
+        },
+        {
+          "property": "0xD1A1",
+          "writeSourceIndex": 122,
+          "writtenUnsigned": 32768,
+          "response": "0x2001",
+          "readSourceIndex": 123,
+          "readResponse": "0x2001",
+          "readbackUnsigned": 32768,
+          "scope": "bank",
+          "initialReadSourceIndex": 30,
+          "initialUnsigned": 32768
+        },
+        {
+          "property": "0xD1A2",
+          "writeSourceIndex": 124,
+          "writtenUnsigned": 40,
+          "response": "0x2001",
+          "readSourceIndex": 125,
+          "readResponse": "0x2001",
+          "readbackUnsigned": 40,
+          "scope": "bank",
+          "initialReadSourceIndex": 31,
+          "initialUnsigned": 40
+        },
+        {
+          "property": "0xD1A3",
+          "writeSourceIndex": 126,
+          "writtenUnsigned": 2,
+          "response": "0x2001",
+          "readSourceIndex": 127,
+          "readResponse": "0x2001",
+          "readbackUnsigned": 2,
+          "scope": "bank",
+          "initialReadSourceIndex": 32,
+          "initialUnsigned": 2
+        },
+        {
+          "property": "0xD1A4",
+          "writeSourceIndex": 128,
+          "writtenUnsigned": 1,
+          "response": "0x2001",
+          "readSourceIndex": 129,
+          "readResponse": "0x2001",
+          "readbackUnsigned": 1,
+          "scope": "bank",
+          "initialReadSourceIndex": 33,
+          "initialUnsigned": 1
+        },
+        {
+          "property": "0xD1A5",
+          "writeSourceIndex": 130,
+          "writtenUnsigned": 7,
+          "response": "0x2001",
+          "readSourceIndex": 131,
+          "readResponse": "0x2001",
+          "readbackUnsigned": 7,
+          "scope": "live",
+          "initialReadSourceIndex": 34,
+          "initialUnsigned": 7
+        }
+      ],
+      "bankPropertiesNotReadAfterCleanup": [
+        "0xD19C",
+        "0xD19F"
+      ],
+      "initialNameRewrite": {
+        "property": "0xD18D",
+        "initialReadSourceIndex": 10,
+        "writeSourceIndex": 86,
+        "response": "0x2001",
+        "equalsInitialBytes": true,
+        "readSourceIndex": 87,
+        "readbackEqualsWrittenBytes": true,
+        "readResponse": "0x2001"
+      },
+      "finalNameRewrite": {
+        "property": "0xD18D",
+        "initialReadSourceIndex": 10,
+        "writeSourceIndex": 132,
+        "response": "0x2001",
+        "equalsInitialBytes": true,
+        "readSourceIndex": null,
+        "readbackEqualsWrittenBytes": null
+      },
+      "laterPersistenceCheck": "not_recorded",
+      "closeSession": {
+        "sourceIndex": 133,
+        "response": null,
+        "transportErrorRecorded": true
+      },
+      "wholeBankExactRestorationEstablished": false
+    }
+  }
+}

@@ -1,0 +1,26 @@
+{
+ "format": "private-source-inventory-v1",
+ "inventoryId": "xt50-20261019-empty-name-setting-writes",
+ "retrievalDateLocal": "2026-10-19",
+ "archive": "maintainers' private archive",
+ "revision": "1d491480ea2e108d45f9e9d0eea0d241ee750e13",
+ "directory": "hardware-runs/bankprobe-x-t50-2026-10-19",
+ "access": "private",
+ "originalsIncluded": false,
+ "retrievedDirectoryFileCount": 16,
+ "inventoryScope": "The log and transcript of the 13:38:48 empty-name test run; not the bank backup the probe took before writing, the directory's other runs, or the five attempts that opened no session. Hashes identify entire evidence files, not device identities.",
+ "artifacts": [
+  {
+   "path": "logs/bankprobe-20261019-133848.json",
+   "bytes": 25757,
+   "sha256": "e53af100187c140dd8654b60f7e21fab8e9044404fb834e2d9e2cd26a4bc1112",
+   "gitBlob": "743c186951ee583d8bcc79ad1fddb8f1a584f000"
+  },
+  {
+   "path": "transcripts/bankprobe-20261019-133848.txt",
+   "bytes": 3500,
+   "sha256": "5282b00aa338af6b07aaf04e94d7e646fd06341ecdde5b4728445d744dbda5ea",
+   "gitBlob": "90d513fb9dcbfeb8bb1708c933ef65303ef08618"
+  }
+ ]
+}

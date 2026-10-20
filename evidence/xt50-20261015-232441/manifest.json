@@ -1,0 +1,122 @@
+{
+  "format": "fuji-bankprobe-sanitized-package-v1",
+  "evidenceId": "xt50-20261015-232441",
+  "evidenceKind": "measured_original_sanitized_derivative",
+  "source": {
+    "access": "private archive",
+    "archivePath": "hardware-runs/bankprobe-x-t50-2026-10-15/logs/bankprobe-20261015-232441.json",
+    "revision": "803067ca4b4aefaf9849e4bda0209317a9ff2582",
+    "sha256": "eebcebf1f9613e80cc6939c302ff5f2f8ec69abb91131a55efe8e00bb9208975",
+    "bytes": 250964,
+    "toolRevision": null
+  },
+  "camera": {
+    "model": "X-T50",
+    "firmware": "1.32",
+    "provenance": "original_report",
+    "usbMode": null
+  },
+  "conditions": {
+    "autoUpdateCustomSetting": "unknown",
+    "lensPresent": null,
+    "iso": null,
+    "imageFormat": "varied_by_prompted_subtest"
+  },
+  "time": {
+    "startedLocal": "2026-10-15T23:24:41",
+    "timezone": null,
+    "perTransactionTimestamps": "absent",
+    "connectionIds": "absent"
+  },
+  "coverage": {
+    "sourceArray": "transactions",
+    "sourceEntries": 1888,
+    "retainedEntries": 1888,
+    "droppedEntries": 0,
+    "transactionEntries": 1820,
+    "eventEntries": 68,
+    "outcomes": {
+      "outcome_unknown": 68,
+      "recorded_ok": 1743,
+      "recorded_refusal": 9
+    },
+    "scalarPayloadsRetained": 1647,
+    "payloadFieldsOmitted": 97,
+    "emptyNamePayloadsRetained": 0,
+    "beforeSnapshots": 7,
+    "afterSnapshots": 7,
+    "topLevelSnapshotPair": "recorded",
+    "sourceCaptureCompleteness": "unknown"
+  },
+  "interpretation": {
+    "sourceIndex": "zero-based original transactions array index; order preserved",
+    "transactionId": "source value; repeats across sessions and is not a unique identifier",
+    "rawPayloadEncoding": "hexadecimal bytes in source order, little-endian scalar interpretation",
+    "snapshotAndFindingNumbers": "unsigned integers unless explicitly labeled; not byte strings",
+    "responseOrigin": "not independently established by this host-generated log",
+    "events": "host-recorded camera_lost/camera_back, not proof of a power cycle; experiment_context keeps the operator's normalized AUTO UPDATE answer; bank_restore_verification keeps per-field statuses, not values",
+    "operatorObservations": "reviewed normalized observations with explicit source pointers; not independent menu or power telemetry",
+    "liveD1A5": "live setting sampled while a bank was selected, not a 24th bank field"
+  },
+  "transform": {
+    "generator": "export.py",
+    "generatorSha256": "04c0ff83c67e0125520a4f41b518a52841cd81b35a577ce206f4be2baef967ae",
+    "sharedGenerator": "../bankprobe_package.py",
+    "sharedGeneratorSha256": "cdfbedda21b06b8586c6c59606e3ae6a3b9a588bba62580628a28ed23e81c7cc",
+    "originalUnchanged": true,
+    "publicSchemaV1Compatible": false,
+    "losslessBackup": false,
+    "payloadAllowlist": [
+      "0xD18C",
+      "0xD18E",
+      "0xD18F",
+      "0xD190",
+      "0xD191",
+      "0xD192",
+      "0xD193",
+      "0xD194",
+      "0xD195",
+      "0xD196",
+      "0xD197",
+      "0xD198",
+      "0xD199",
+      "0xD19A",
+      "0xD19B",
+      "0xD19C",
+      "0xD19D",
+      "0xD19E",
+      "0xD19F",
+      "0xD1A0",
+      "0xD1A1",
+      "0xD1A2",
+      "0xD1A3",
+      "0xD1A4",
+      "0xD1A5"
+    ],
+    "maximumPayloadBytes": 4,
+    "omissions": [
+      "command line and paths",
+      "bank names and all D18D payloads except the two empty-name encodings (00 and 010000)",
+      "DeviceInfo and D186/D187 payloads",
+      "identity and device identifiers",
+      "USB error text",
+      "source verdict prose and ok flags",
+      "unrestricted source strings and unknown fields"
+    ],
+    "generatedFacts": "No missing times, connection identifiers, conditions, or hardware observations are invented; finding interpretations are labeled."
+  },
+  "artifacts": {
+    "transactions.jsonl": {
+      "sha256": "a5a0e7cdef79972b8a5924982dd50335746c7fabbd4ae592a2e98119a5099251",
+      "bytes": 356377
+    },
+    "findings.json": {
+      "sha256": "6bfd84de0fa9eb0ea9ac588fe3f8348b7714bb54282438e090b3f100cefbd6e6",
+      "bytes": 14884
+    },
+    "snapshots.json": {
+      "sha256": "8da2ec85123f3ce62b84f9f969a3a03a37a6141f7973f274001f8b7ffddc2078",
+      "bytes": 10731
+    }
+  }
+}

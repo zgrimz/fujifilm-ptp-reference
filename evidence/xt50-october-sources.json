@@ -1,0 +1,147 @@
+{
+  "format": "private-source-inventory-v1",
+  "inventoryId": "xt50-october-2026-recovery",
+  "retrievalDateLocal": "2026-10-18",
+  "archive": "maintainers' private archive",
+  "revision": "803067ca4b4aefaf9849e4bda0209317a9ff2582",
+  "directory": "hardware-runs/bankprobe-x-t50-2026-10-15",
+  "access": "private",
+  "originalsIncluded": false,
+  "retrievedDirectoryFileCount": 67,
+  "inventoryScope": "Selected original logs/transcripts supporting the recovery note; not every downloaded file. Hashes identify entire evidence files, not device identities.",
+  "artifacts": [
+    {
+      "path": "README.md",
+      "bytes": 7357,
+      "sha256": "3f6ee0ffea3f7a1d81e30fc66fec20bb2a14d311b2f87220d5d461f7ca8f5fe4",
+      "gitBlob": "c238a72816525bf09fd20192c84f9b8f14847973"
+    },
+    {
+      "path": "logs/bankprobe-20261015-224819.json",
+      "bytes": 228281,
+      "sha256": "cd14cc1d2fee70b7d19706cdc4e5a47e39008c365d475aba42bfb9e054f6b28c",
+      "gitBlob": "987fc3bd490412b54d55eb87dc7c0c51216181c7"
+    },
+    {
+      "path": "logs/bankprobe-20261015-232441.json",
+      "bytes": 250964,
+      "sha256": "eebcebf1f9613e80cc6939c302ff5f2f8ec69abb91131a55efe8e00bb9208975",
+      "gitBlob": "2ab438715864a0280dd4f41e59f1842ba80e67e8"
+    },
+    {
+      "path": "logs/bankprobe-20261015-235633.json",
+      "bytes": 14307,
+      "sha256": "b4392c293c4ed799a9304a36010b02c0e8426c16d49cba01d65e045bf166eff6",
+      "gitBlob": "ab383df2f855de054dae3ecceb39729420a2fd1f"
+    },
+    {
+      "path": "logs/bankprobe-20261015-235805.json",
+      "bytes": 14373,
+      "sha256": "b52bcb9f296409803e90e7d523f97e3b04aede34aaf79f9f7932b5a09ce98cf9",
+      "gitBlob": "ec83c63bbe03dcc887e048a21211db08dfacfa13"
+    },
+    {
+      "path": "logs/bankprobe-20261016-002045.json",
+      "bytes": 24570,
+      "sha256": "5d483a5dbbb8da67eac7041be7ce6f89076e65793758c890dc91d926ffc6c8b3",
+      "gitBlob": "76ba430742859e7acd281717727e0fa59c8f3140"
+    },
+    {
+      "path": "logs/bankprobe-20261016-003651.json",
+      "bytes": 37349,
+      "sha256": "3f9c59500f8f96d2712cff6d7c64e4e2791e2b7da2e9b0a7f1ab9075f1d49e1d",
+      "gitBlob": "00f3f3413f0a0dfcb4b42e531b39a0235387c63c"
+    },
+    {
+      "path": "logs/bankprobe-20261016-090027.json",
+      "bytes": 29264,
+      "sha256": "5f7264d55e34f344f627fdcbbe19a0cf335b62e30eaf55f2219b3675a01d5ae8",
+      "gitBlob": "f40248eecec9eea66a21aac0c8f450a167bed052"
+    },
+    {
+      "path": "logs/bankprobe-20261016-094028.json",
+      "bytes": 18378,
+      "sha256": "96bf39bf6f5b696f902d2ab1e0e60ebb05bff9132fc4562863a04993419a63f8",
+      "gitBlob": "68f5a3f85b07ba859771df736af1ccd9bd00b94d"
+    },
+    {
+      "path": "logs/bankprobe-20261016-095611.json",
+      "bytes": 28702,
+      "sha256": "fafde86c62e91efc75cea8f91d66f29205a899454a5c5618c21ae0cceb847ddb",
+      "gitBlob": "fdd86bd755478e96277433597693d9d07d8b3302"
+    },
+    {
+      "path": "logs/bankprobe-20261016-100752.json",
+      "bytes": 16038,
+      "sha256": "176a885cc91f476decedb6fe4e94ba3df5055c4caee13df8d639adf8df119532",
+      "gitBlob": "39e470ce102d489b49f47709cae77575d2e58efa"
+    },
+    {
+      "path": "transcripts/bankprobe-20261015-224819.txt",
+      "bytes": 57299,
+      "sha256": "7a0baeeab254495082ae137ed87f42c4d987604f7b7bc47ed5c6a9d93e51b8ed",
+      "gitBlob": "51081cc65ed99796d3fc063a9a7aa06549827501"
+    },
+    {
+      "path": "transcripts/bankprobe-20261015-232441.txt",
+      "bytes": 55558,
+      "sha256": "df4f55cd6bddeb12da79ce0e82fb06a18fd06adb089287bcd8d25566d499c9d1",
+      "gitBlob": "510d60d924487957d43c7fc24f63a5e9f26ec8ec"
+    },
+    {
+      "path": "transcripts/bankprobe-20261015-235633.txt",
+      "bytes": 4926,
+      "sha256": "d15c15559e5eda92489cff9a8f012d1668c5ab81f4165abd5bc89bd069900a72",
+      "gitBlob": "fc886a24cc87aa32cdf556845c9e707f479008ec"
+    },
+    {
+      "path": "transcripts/bankprobe-20261015-235805.txt",
+      "bytes": 4851,
+      "sha256": "63fd80b92b3190e75ba996d402bef95e0e3d6d5f065e495376952777ed315136",
+      "gitBlob": "9a4b50b71b91c3834718a2132724a410886fe1e2"
+    },
+    {
+      "path": "transcripts/bankprobe-20261016-000308.txt",
+      "bytes": 3211,
+      "sha256": "d38ddf35406ef3643beddc6582d948d4e681abdce54fc3428224393ec56aa3a1",
+      "gitBlob": "5dfdb8ab4c1d8eff5d6fbad8b3fed6e87263dd3e"
+    },
+    {
+      "path": "transcripts/bankprobe-20261016-002045.txt",
+      "bytes": 7630,
+      "sha256": "9f58573f2456fbd1c848c5c1e96492ff4389902e1c2e1446be3521b645e78a39",
+      "gitBlob": "538ccc7c50da3abf24f4025bd0c72a0fcd528672"
+    },
+    {
+      "path": "transcripts/bankprobe-20261016-003651.txt",
+      "bytes": 15322,
+      "sha256": "e2e092578a782cf74a290f49e0c6cb6b63f21a922e2c93e7a51dbd9f14da48cd",
+      "gitBlob": "be2dde140b596de0e80b1cbf7618b25699fb6aa6"
+    },
+    {
+      "path": "transcripts/bankprobe-20261016-090027.txt",
+      "bytes": 10812,
+      "sha256": "affca46d409e86262b388dc4a8ab53a7c9ee034105052fccc41f904ae9d59511",
+      "gitBlob": "600983d24027c04e5f0e7ceae68fec9352ab1b87"
+    },
+    {
+      "path": "transcripts/bankprobe-20261016-094028.txt",
+      "bytes": 10651,
+      "sha256": "ff9c72dbc6a84dc82d941212a26570ca2986b60c33681e9ecc1be9efedf5d82b",
+      "gitBlob": "c140f82cd8357eace5873c553b5c5211912cf120"
+    },
+    {
+      "path": "transcripts/bankprobe-20261016-095611.txt",
+      "bytes": 8363,
+      "sha256": "631b7b9b4971567d29d934622097b2423e7bca277feb60cbaf9dc57cfa24ed95",
+      "gitBlob": "d50d51eb98b7a3a71abf27b4370afc80bbe26043"
+    },
+    {
+      "path": "transcripts/bankprobe-20261016-100752.txt",
+      "bytes": 6783,
+      "sha256": "b784bb15a799cd897a1a443e60e7185ad17938eb4e8966b75dd9f6cb1f486563",
+      "gitBlob": "993b88337ee9969726ab9473ebd2a939344bf1d1"
+    }
+  ],
+  "retrievedOnUtc": "2026-10-19"
+}

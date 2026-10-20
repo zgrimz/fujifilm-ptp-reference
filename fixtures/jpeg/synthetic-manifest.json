@@ -1,0 +1,58 @@
+{
+  "schema": "jpeg-fixture-manifest/1",
+  "evidence": "synthetic",
+  "camera_or_firmware": null,
+  "pixels": "absent; metadata-only JPEG envelopes",
+  "generator": "generate_synthetic.py",
+  "files": [
+    {
+      "path": "synthetic-le-acros-red.jpg",
+      "bytes": 430,
+      "sha256": "40ee50040159dc446d2845d55ff67cd7a8b02e0c6bed08ddd2bd47dcbc459855",
+      "covers": [
+        "little-endian TIFF",
+        "ACROS Red",
+        "unsigned-declared signed8 toning",
+        "half tones",
+        "indirect signed WB pair",
+        "grain strength and size",
+        "manual DR",
+        "fixed priority"
+      ]
+    },
+    {
+      "path": "synthetic-be-acros-yellow.jpg",
+      "bytes": 370,
+      "sha256": "63ebd53da749734a4779115bd54335da006c401f248aa14932ab8a2ac6f88964",
+      "covers": [
+        "big-endian TIFF with little-endian MakerNote",
+        "ACROS Yellow",
+        "signed-byte toning",
+        "Auto DR separate from stale manual percentage",
+        "Auto priority Plus",
+        "Adobe RGB Interop"
+      ]
+    },
+    {
+      "path": "synthetic-color-and-unknown.jpg",
+      "bytes": 336,
+      "sha256": "ba49a3e042d1420e019b868a23f2207d1136bb808012bb698612adc0a1909777",
+      "covers": [
+        "color film",
+        "custom WB slot only",
+        "missing grain size",
+        "unknown effect value",
+        "legacy Wide1 ambiguity",
+        "serial and unknown-text suppression"
+      ]
+    },
+    {
+      "path": "synthetic-missing.jpg",
+      "bytes": 170,
+      "sha256": "a44133f0d11c87cc93cacc62fbc17a14b6ff1fb1c3979a8ac5c8a006b8bec825",
+      "covers": [
+        "all Fuji recipe tags missing; no defaults"
+      ]
+    }
+  ]
+}
