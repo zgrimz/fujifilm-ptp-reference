@@ -1,0 +1,388 @@
+{
+  "format": "fuji-owner-client-report-observations-v1",
+  "evidenceId": "gfx100s-20260929-225137",
+  "observations": {
+    "getDeviceInfo": [
+      {
+        "sequence": 1,
+        "response": "0x2001",
+        "durationMs": 4
+      }
+    ],
+    "selector": [
+      {
+        "sequence": 2,
+        "operation": "read",
+        "valueUnsigned": 6,
+        "response": "0x2001"
+      },
+      {
+        "sequence": 3,
+        "operation": "write",
+        "valueUnsigned": 1,
+        "response": "0x2001"
+      },
+      {
+        "sequence": 4,
+        "operation": "read",
+        "valueUnsigned": 1,
+        "response": "0x2001"
+      },
+      {
+        "sequence": 30,
+        "operation": "write",
+        "valueUnsigned": 2,
+        "response": "0x2001"
+      },
+      {
+        "sequence": 31,
+        "operation": "read",
+        "valueUnsigned": 2,
+        "response": "0x2001"
+      },
+      {
+        "sequence": 57,
+        "operation": "write",
+        "valueUnsigned": 3,
+        "response": "0x2001"
+      },
+      {
+        "sequence": 58,
+        "operation": "read",
+        "valueUnsigned": 3,
+        "response": "0x2001"
+      },
+      {
+        "sequence": 84,
+        "operation": "write",
+        "valueUnsigned": 4,
+        "response": "0x2001"
+      },
+      {
+        "sequence": 85,
+        "operation": "read",
+        "valueUnsigned": 4,
+        "response": "0x2001"
+      },
+      {
+        "sequence": 111,
+        "operation": "write",
+        "valueUnsigned": 5,
+        "response": "0x2001"
+      },
+      {
+        "sequence": 112,
+        "operation": "read",
+        "valueUnsigned": 5,
+        "response": "0x2001"
+      },
+      {
+        "sequence": 138,
+        "operation": "write",
+        "valueUnsigned": 6,
+        "response": "0x2001"
+      },
+      {
+        "sequence": 139,
+        "operation": "read",
+        "valueUnsigned": 6,
+        "response": "0x2001"
+      },
+      {
+        "sequence": 165,
+        "operation": "read",
+        "valueUnsigned": 6,
+        "response": "0x2001"
+      }
+    ],
+    "writes": [],
+    "descriptorResponses": {},
+    "conversionProfileReads": [],
+    "objectOperations": [],
+    "acceptedSettingWriteDurationsMs": null
+  },
+  "reviewed": {
+    "bankPass": [
+      {
+        "bank": 1,
+        "selectSequence": 3,
+        "readSequences": [
+          6,
+          29
+        ],
+        "nameForm": "named_contents_omitted",
+        "bankSettingsUnsigned": {
+          "0xD18E": 14,
+          "0xD18F": 2,
+          "0xD190": 65535,
+          "0xD191": 32768,
+          "0xD192": 1,
+          "0xD193": 0,
+          "0xD194": 0,
+          "0xD195": 6,
+          "0xD196": 1,
+          "0xD197": 1,
+          "0xD198": 1,
+          "0xD199": 2,
+          "0xD19A": 0,
+          "0xD19B": 0,
+          "0xD19C": 10000,
+          "0xD19D": 0,
+          "0xD19E": 0,
+          "0xD19F": 0,
+          "0xD1A0": 0,
+          "0xD1A1": 8192,
+          "0xD1A2": 0,
+          "0xD1A3": 1,
+          "0xD1A4": 1
+        },
+        "liveD1A5Unsigned": 14
+      },
+      {
+        "bank": 2,
+        "selectSequence": 30,
+        "readSequences": [
+          33,
+          56
+        ],
+        "nameForm": "named_contents_omitted",
+        "bankSettingsUnsigned": {
+          "0xD18E": 14,
+          "0xD18F": 2,
+          "0xD190": 400,
+          "0xD191": 0,
+          "0xD192": 1,
+          "0xD193": 20,
+          "0xD194": 65526,
+          "0xD195": 6,
+          "0xD196": 1,
+          "0xD197": 1,
+          "0xD198": 1,
+          "0xD199": 2,
+          "0xD19A": 0,
+          "0xD19B": 0,
+          "0xD19C": 10000,
+          "0xD19D": 15,
+          "0xD19E": 65526,
+          "0xD19F": 0,
+          "0xD1A0": 0,
+          "0xD1A1": 8192,
+          "0xD1A2": 0,
+          "0xD1A3": 1,
+          "0xD1A4": 1
+        },
+        "liveD1A5Unsigned": 14
+      },
+      {
+        "bank": 3,
+        "selectSequence": 57,
+        "readSequences": [
+          60,
+          83
+        ],
+        "nameForm": "named_contents_omitted",
+        "bankSettingsUnsigned": {
+          "0xD18E": 14,
+          "0xD18F": 2,
+          "0xD190": 100,
+          "0xD191": 0,
+          "0xD192": 11,
+          "0xD193": 0,
+          "0xD194": 0,
+          "0xD195": 6,
+          "0xD196": 3,
+          "0xD197": 2,
+          "0xD198": 1,
+          "0xD199": 4,
+          "0xD19A": 2,
+          "0xD19B": 65532,
+          "0xD19C": 10000,
+          "0xD19D": 5,
+          "0xD19E": 65531,
+          "0xD19F": 10,
+          "0xD1A0": 30,
+          "0xD1A1": 32768,
+          "0xD1A2": 30,
+          "0xD1A3": 1,
+          "0xD1A4": 1
+        },
+        "liveD1A5Unsigned": 14
+      },
+      {
+        "bank": 4,
+        "selectSequence": 84,
+        "readSequences": [
+          87,
+          110
+        ],
+        "nameForm": "named_contents_omitted",
+        "bankSettingsUnsigned": {
+          "0xD18E": 14,
+          "0xD18F": 2,
+          "0xD190": 100,
+          "0xD191": 0,
+          "0xD192": 11,
+          "0xD193": 0,
+          "0xD194": 0,
+          "0xD195": 3,
+          "0xD196": 2,
+          "0xD197": 1,
+          "0xD198": 1,
+          "0xD199": 4,
+          "0xD19A": 4,
+          "0xD19B": 65531,
+          "0xD19C": 10000,
+          "0xD19D": 65521,
+          "0xD19E": 5,
+          "0xD19F": 30,
+          "0xD1A0": 65516,
+          "0xD1A1": 32768,
+          "0xD1A2": 65516,
+          "0xD1A3": 1,
+          "0xD1A4": 1
+        },
+        "liveD1A5Unsigned": 14
+      },
+      {
+        "bank": 5,
+        "selectSequence": 111,
+        "readSequences": [
+          114,
+          137
+        ],
+        "nameForm": "empty:010000",
+        "bankSettingsUnsigned": {
+          "0xD18E": 14,
+          "0xD18F": 2,
+          "0xD190": 100,
+          "0xD191": 0,
+          "0xD192": 1,
+          "0xD193": 0,
+          "0xD194": 0,
+          "0xD195": 6,
+          "0xD196": 1,
+          "0xD197": 1,
+          "0xD198": 1,
+          "0xD199": 2,
+          "0xD19A": 0,
+          "0xD19B": 0,
+          "0xD19C": 10000,
+          "0xD19D": 0,
+          "0xD19E": 0,
+          "0xD19F": 0,
+          "0xD1A0": 0,
+          "0xD1A1": 8192,
+          "0xD1A2": 0,
+          "0xD1A3": 1,
+          "0xD1A4": 1
+        },
+        "liveD1A5Unsigned": 14
+      },
+      {
+        "bank": 6,
+        "selectSequence": 138,
+        "readSequences": [
+          141,
+          164
+        ],
+        "nameForm": "empty:010000",
+        "bankSettingsUnsigned": {
+          "0xD18E": 14,
+          "0xD18F": 2,
+          "0xD190": 100,
+          "0xD191": 0,
+          "0xD192": 1,
+          "0xD193": 0,
+          "0xD194": 0,
+          "0xD195": 6,
+          "0xD196": 1,
+          "0xD197": 1,
+          "0xD198": 1,
+          "0xD199": 2,
+          "0xD19A": 0,
+          "0xD19B": 0,
+          "0xD19C": 10000,
+          "0xD19D": 0,
+          "0xD19E": 0,
+          "0xD19F": 0,
+          "0xD1A0": 0,
+          "0xD1A1": 8192,
+          "0xD1A2": 0,
+          "0xD1A3": 1,
+          "0xD1A4": 1
+        },
+        "liveD1A5Unsigned": 14
+      }
+    ],
+    "dRangePriorityInTrace": {
+      "c1ReadSequence": 9,
+      "c1Unsigned": 32768,
+      "c1DynamicRangeUnsigned": 65535,
+      "otherBanksUnsigned": 0
+    },
+    "dRangePriorityHistory": {
+      "basis": "the client's comparison and push records, carried forward from earlier sessions; the owner's camera readings are as entered, not photographs",
+      "comparisons": [
+        {
+          "bank": 1,
+          "checkedUtc": "2026-09-19T00:53:11Z",
+          "dRangePriority": {
+            "clientShowed": "Auto",
+            "differs": true,
+            "ownerReportedCamera": "OFF"
+          },
+          "dynamicRangeClientShowed": "DR Auto \u00b7 overridden by D-Range Priority"
+        },
+        {
+          "bank": 2,
+          "checkedUtc": "2026-09-19T00:55:22Z",
+          "dRangePriority": {
+            "clientShowed": "Auto",
+            "differs": false
+          },
+          "dynamicRangeClientShowed": "DR400 \u00b7 overridden by D-Range Priority"
+        },
+        {
+          "bank": 1,
+          "checkedUtc": "2026-09-30T02:18:22Z",
+          "dRangePriority": {
+            "clientShowed": "Auto",
+            "differs": true,
+            "ownerReportedCamera": "OFF"
+          },
+          "dynamicRangeClientShowed": "DR Auto \u00b7 overridden by D-Range Priority"
+        },
+        {
+          "bank": 2,
+          "checkedUtc": "2026-09-30T02:19:58Z",
+          "dRangePriority": {
+            "clientShowed": "Off",
+            "differs": false
+          },
+          "dynamicRangeClientShowed": "DR400"
+        }
+      ],
+      "d191Refusals": [
+        {
+          "recordedUtc": "2026-09-19T01:08:59Z",
+          "bank": 1,
+          "outcome": "partiallyApplied",
+          "response": "0x201C"
+        },
+        {
+          "recordedUtc": "2026-09-30T02:22:27Z",
+          "bank": 1,
+          "outcome": "partiallyApplied",
+          "response": "0x201C"
+        }
+      ]
+    },
+    "notEstablished": [
+      "each bank's ISO, which the client did not read",
+      "whether the owner's reported ISO change on C1 was saved to the bank",
+      "the 2026-09-19 session's transactions",
+      "USB mode",
+      "AUTO UPDATE CUSTOM SETTING, lens and image format"
+    ]
+  }
+}

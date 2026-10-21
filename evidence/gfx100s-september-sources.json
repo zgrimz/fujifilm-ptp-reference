@@ -1,0 +1,152 @@
+{
+ "format": "private-source-inventory-v1",
+ "inventoryId": "gfx100s-september-owner-reports",
+ "retrievalDateLocal": "2026-10-20",
+ "archive": "maintainers' private archive",
+ "revision": "a9c1bf66fd0ad7f7383540c0d35b4629f3c948a9",
+ "directory": "hardware-runs/app-reports-gfx100s",
+ "access": "private",
+ "originalsIncluded": false,
+ "retrievedDirectoryFileCount": 28,
+ "inventoryScope": "The GFX100S owner's September 2026 exports from the maintainers' iOS client: the ten camera reports the packages derive from, the ten problem reports and the Camera Test result exported beside them, which aren't used here, and the 2026-09-29 JPEG pair whose hashes SOURCES already gives. Not the directory's README or the 2026-10-18 menu photographs, which stay private with their file names and hashes. Hashes identify entire evidence files, not device identities.",
+ "artifacts": [
+  {
+   "path": "2026-09-15/fuji-cookbook-camera-report-GFX100S-20260915-1810.json",
+   "bytes": 49881,
+   "sha256": "87f8055ed3a98368bec8fdb43e258a44fc6f6afb80addf63cf31c979d9cd508e",
+   "gitBlob": "e35acc6f7451a192fd1987fdd07886dbaf7f6e5f"
+  },
+  {
+   "path": "2026-09-15/fuji-cookbook-camera-report-GFX100S-20260915-1945.json",
+   "bytes": 124183,
+   "sha256": "144c2951b93280c5c1c29761e7f51dac166da6b0cabaf6ba91418cd2a9ec9c94",
+   "gitBlob": "051e2b9e279a6b1a562630426e41da7e9f427651"
+  },
+  {
+   "path": "2026-09-15/fuji-cookbook-camera-report-GFX100S-20260915-1953.json",
+   "bytes": 136266,
+   "sha256": "f79dd70084a0ad1a040c3d4c5e1101ae7f8e934dc7b46db9949937f2eb2a03a9",
+   "gitBlob": "e51819c13bfa9e421869f8c3d2a54094df35286f"
+  },
+  {
+   "path": "2026-09-15/fuji-cookbook-problem-report-GFX100S-20260915-1811.txt",
+   "bytes": 60651,
+   "sha256": "decd4982c13ffb557e9395e21be5dc3cfaa63a33cebb80d7b3678b7dd1f4968c",
+   "gitBlob": "46992d3755eeb1fdd018aae18346b11cf5b80164"
+  },
+  {
+   "path": "2026-09-15/fuji-cookbook-problem-report-GFX100S-20260915-1946.txt",
+   "bytes": 89991,
+   "sha256": "f9656c4f64b60ab0d499464c4e0b686f3eddaa90c62edeac383e7cd5ec4d2443",
+   "gitBlob": "76343325ed38bd4a7548c698f6a0bbeab39fe354"
+  },
+  {
+   "path": "2026-09-15/fuji-cookbook-problem-report-GFX100S-20260915-1954.txt",
+   "bytes": 101714,
+   "sha256": "63bc60e3d665d53c1f589be17495e99edfe88714ac6886dedd3a5ed05493a51f",
+   "gitBlob": "0e679acf6dc4c0d9fbc9227900cf229c524c9047"
+  },
+  {
+   "path": "2026-09-17/fuji-cookbook-camera-report-GFX100S-20260917-2111 2.json",
+   "bytes": 181897,
+   "sha256": "2be55bb14c39ac592a94ebf2f8f36eb9fcc6dd2e5e99f138b6988fbca0823be8",
+   "gitBlob": "cbc23f5d3ea5171bc8d1054080f919deab4b399c"
+  },
+  {
+   "path": "2026-09-17/fuji-cookbook-camera-report-GFX100S-20260917-2111.json",
+   "bytes": 105141,
+   "sha256": "459d958f5023140c9530d9e901f877067c94f28fabddb9cd9da6933a59e12278",
+   "gitBlob": "0117658ec32f64157d7dc669ff56c31846725765"
+  },
+  {
+   "path": "2026-09-17/fuji-cookbook-problem-report-GFX100S-20260917-2117.txt",
+   "bytes": 44657,
+   "sha256": "7c5b8823064326fc049bb3fbcd60c57761f986020c55b2467117573a5e4b6956",
+   "gitBlob": "df5df7d6ade092943c63b8d95d31bdae1548e3f5"
+  },
+  {
+   "path": "2026-09-17/fuji-cookbook-problem-report-GFX100S-20260917-2152.txt",
+   "bytes": 67585,
+   "sha256": "b6ecbd911ab0ba90771d516a3effd08d1878704f64b6f38c4e69a386790bf836",
+   "gitBlob": "98a7b38ed74a1d316f9b30da1a7b4268921e8fac"
+  },
+  {
+   "path": "2026-09-29/C1 PROPERTY REPORT fuji-cookbook-camera-report-GFX100S-20260929-2216.json",
+   "bytes": 137693,
+   "sha256": "78ca6335b5500cc9e9706098ac8f7edbe0da35c2294e6ae21c655bb42dbcb381",
+   "gitBlob": "0d5f27e51cb0d2b5ec0f28d7d191ef741838fb3c"
+  },
+  {
+   "path": "2026-09-29/C1 PROPERTY REPORT fuji-cookbook-problem-report-GFX100S-20260929-2218.txt",
+   "bytes": 75192,
+   "sha256": "028a205c7275a26b9107914daf9b8597ace215987e9f34d6698482db8669052e",
+   "gitBlob": "6ef97d2f228a58a3cfe5686d670074f67cd5ddd4"
+  },
+  {
+   "path": "2026-09-29/C1 REPORT WITH DIAGNOSTIC MODE - fuji-cookbook-camera-report-GFX100S-20260929-2309.json",
+   "bytes": 146734,
+   "sha256": "1744358b1c8534ecdf18ef6c459e5a389034168cffbf77c90f97d15f51d697f9",
+   "gitBlob": "1a4336b67668a6fd8b94583a475158dc92cefe45"
+  },
+  {
+   "path": "2026-09-29/C1 REPORT WITH DIAGNOSTIC MODE - fuji-cookbook-problem-report-GFX100S-20260929-2315.txt",
+   "bytes": 40868,
+   "sha256": "ce88d1009ad9045686b65702e3619897f29ffeb16aa1bd872d55203060dd997b",
+   "gitBlob": "345c8754a5921a25d88b5078076e7be8955b67d5"
+  },
+  {
+   "path": "2026-09-29/C2 PROPERTY REPORT fuji-cookbook-camera-report-GFX100S-20260929-2219.json",
+   "bytes": 140322,
+   "sha256": "7c178d6b6aa03bce81abf5b147349c3e90e31431bac1d5d23472136e6a7d7959",
+   "gitBlob": "b8a24cfc78e4e3452d36983d38b276e4f5f1b50d"
+  },
+  {
+   "path": "2026-09-29/C2 PROPERTY REPORT fuji-cookbook-problem-report-GFX100S-20260929-2220.txt",
+   "bytes": 79126,
+   "sha256": "379896b56d5c1a16bd7ab548d6f3f95d986f7f62319ae4d47c4f970c8705ea1a",
+   "gitBlob": "675c9b1db64b5e5cda76abd050e752cb40e7d53c"
+  },
+  {
+   "path": "2026-09-29/C2 REPORT WITH DIAGNOSTIC MODE - fuji-cookbook-camera-report-GFX100S-20260929-2316.json",
+   "bytes": 150022,
+   "sha256": "7d202f1cd92e821d791ef0fbc520938ddc7dcbfd483d22b155f215acced6e737",
+   "gitBlob": "6aaa81d57c47836361f3b334d9b4f7d60431a2e2"
+  },
+  {
+   "path": "2026-09-29/C2 REPORT WITH DIAGNOSTIC MODE - fuji-cookbook-problem-report-GFX100S-20260929-2317.txt",
+   "bytes": 44730,
+   "sha256": "28778fde1068fbcc698fea8fd393dca53e3f37dbfbe0d92f79e0fa1c796cd44f",
+   "gitBlob": "2cbaa31c71f243f6839116fe17a8089eeabe40cb"
+  },
+  {
+   "path": "2026-09-29/Final log export - ffuji-cookbook-camera-report-GFX100S-20260929-2251.json",
+   "bytes": 143896,
+   "sha256": "15332ed8c23fac48e48e2f8fe1e9a1399fd3f81e6fab8e18434dafc68aed3eb9",
+   "gitBlob": "b521dddf47c5ba8abecd5fa2fb9d669a29b2e3c8"
+  },
+  {
+   "path": "2026-09-29/Final log export - fuji-cookbook-problem-report-GFX100S-20260929-2253.txt",
+   "bytes": 49363,
+   "sha256": "90314a8a5d28029cee0ae0c0061e511828e12e2241d33718aa2385069b35a840",
+   "gitBlob": "b5fb139b233e80623fbb80508f63c3b11f9bf69e"
+  },
+  {
+   "path": "2026-09-29/JPEG FROM FUJI COOKBOOK DEVELOP.jpeg",
+   "bytes": 8143591,
+   "sha256": "10be9221c1100d970dbc7f7b595eb99d2ac23183554d65be351ec781f9b5bcf3",
+   "gitBlob": "a9341bb3859d4b9e871a7e29f7f98f33860b2dcb"
+  },
+  {
+   "path": "2026-09-29/JPEG FROM IN-CAMERA SETTINGS MATCH.jpeg",
+   "bytes": 8143127,
+   "sha256": "29605b16ed9f571f4ac5d3da917883d7eeb9b27218cd534279e74a2b84f28ef6",
+   "gitBlob": "778f1f9dea8b81f3db74420498ae396c5c4b9e35"
+  },
+  {
+   "path": "2026-09-29/STEP 2 RESULTS.txt",
+   "bytes": 1428,
+   "sha256": "00ba48ecd8c6f0ac98ae4f28b043c7505fec0acf78ce69bbe0d63f3d9e78be46",
+   "gitBlob": "11f29ecddd208c03f2308f5db7bc33f684f28bac"
+  }
+ ]
+}

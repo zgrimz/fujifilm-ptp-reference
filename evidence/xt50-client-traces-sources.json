@@ -1,0 +1,188 @@
+{
+ "format": "private-source-inventory-v1",
+ "inventoryId": "xt50-client-traces",
+ "retrievalDateLocal": "2026-10-20",
+ "archive": "maintainers' private archive",
+ "revision": "a9c1bf66fd0ad7f7383540c0d35b4629f3c948a9",
+ "directory": "hardware-runs/app-reports-x-t50",
+ "access": "private",
+ "originalsIncluded": false,
+ "retrievedDirectoryFileCount": 64,
+ "inventoryScope": "The 29 camera reports the maintainers' iOS client exported from the X-T50 between 2026-09-06 and 2026-10-19 that the client-trace packages derive from: every camera report in the directory except the 12:50 and 14:05 reports of 2026-10-19, which the client-report packages and their own inventories cover. Not the directory's problem reports, test results, or README. Hashes identify entire evidence files, not device identities.",
+ "artifacts": [
+  {
+   "path": "camera-reports/fuji-cookbook-camera-report-X-T50-20260906-1806.json",
+   "bytes": 91457,
+   "sha256": "aa203923cf7dcf289a9240ba85ea1b21815863ffb702152636dd1295b8cc1f8c",
+   "gitBlob": "09c98fa1ef59cad0ce4fe33c291a2ceff9cb4107"
+  },
+  {
+   "path": "camera-reports/fuji-cookbook-camera-report-X-T50-20260906-1822.json",
+   "bytes": 95671,
+   "sha256": "aa0b26b32ad8eab30df66fe95f933c7a1efcfc3aab8f839c1f4ffc23df5d6452",
+   "gitBlob": "b28a0183fcedb502e1fc4667c4bf6c0e60c5da04"
+  },
+  {
+   "path": "camera-reports/fuji-cookbook-camera-report-X-T50-20260906-1915.json",
+   "bytes": 130869,
+   "sha256": "e4907fa5365ffc4468a9ea93a63ed30c9833e2f7b9a8ef32f8bcb60b989d1cc7",
+   "gitBlob": "ce89df2fdc00084136b52bf56ea3c93808edb39d"
+  },
+  {
+   "path": "camera-reports/fuji-cookbook-camera-report-X-T50-20260906-1951.json",
+   "bytes": 122704,
+   "sha256": "49328c64d5e6991c5e733fbd49916baddd1fceba352833400678a03499f42815",
+   "gitBlob": "91db87ac4cc379ec750ce6cbef3ecdbe8114f55b"
+  },
+  {
+   "path": "camera-reports/fuji-cookbook-camera-report-X-T50-20260906-2004.json",
+   "bytes": 122669,
+   "sha256": "f0c2f7cb3e48cf8f837a743d7a49b12c47786b1a10cd9afd6e173a5e655219c7",
+   "gitBlob": "12ec14c702f42827d5583654316b3698b4e88bff"
+  },
+  {
+   "path": "camera-reports/fuji-cookbook-camera-report-X-T50-20260907-1631.json",
+   "bytes": 334456,
+   "sha256": "a81693a3aa1f578bb768ab91695689a59be70aac424e92110b46ecdcd41b06e3",
+   "gitBlob": "c19c5318fd66fe83d50c36ff903de71ba542c20b"
+  },
+  {
+   "path": "camera-reports/fuji-cookbook-camera-report-X-T50-20260914-2001.json",
+   "bytes": 221277,
+   "sha256": "28fa59e0ca983107eec3ee193d9e301b195b3119510db476ec2fc0184072a10f",
+   "gitBlob": "1becfb03c2d095b6a56f3ff754e52e868acb5536"
+  },
+  {
+   "path": "camera-reports/fuji-cookbook-camera-report-X-T50-20260914-2034.json",
+   "bytes": 129566,
+   "sha256": "8ddbb6eac79cac5ec18174b2511190f62ab14e1650282e9d2fce614cadfab3f3",
+   "gitBlob": "d13538ff84904c5e260219f86d8c94433b45ed1e"
+  },
+  {
+   "path": "camera-reports/fuji-cookbook-camera-report-X-T50-20260914-2038.json",
+   "bytes": 145125,
+   "sha256": "8cc86d1906df4bc1c14d4de3f94ff21275572e344b0c91caf855b20e67f4e384",
+   "gitBlob": "82be56b318fd5384195f76f180f5ee33b0a170b1"
+  },
+  {
+   "path": "camera-reports/fuji-cookbook-camera-report-X-T50-20260914-2056.json",
+   "bytes": 128998,
+   "sha256": "33a42f24dd3cae8520e8a8644ee3d45c97a1d831dd5bb7a08c2c10b9ba44635f",
+   "gitBlob": "153e0a6226919fc26e571ce0c2c8dc17a85b3965"
+  },
+  {
+   "path": "camera-reports/fuji-cookbook-camera-report-X-T50-20260914-2058.json",
+   "bytes": 145058,
+   "sha256": "8bcb542406ba661fa16b9e1f99420296fef365f2cec01aae88d687b157283a89",
+   "gitBlob": "ccd3f5455e3e484c8bd5ecfc2c2a6f80fc8b19ce"
+  },
+  {
+   "path": "camera-reports/fuji-cookbook-camera-report-X-T50-20260914-2104.json",
+   "bytes": 136211,
+   "sha256": "397e230a80bb83a6a289a4167d43d9930602fad806828f6d110d97fe10db9f62",
+   "gitBlob": "8e4f0879f089b9b022d25aa81c5e5f87de82caca"
+  },
+  {
+   "path": "camera-reports/fuji-cookbook-camera-report-X-T50-20260914-2106.json",
+   "bytes": 143773,
+   "sha256": "495fc734510016aeb92b2ab4b036d3e3c71bd763cde2b5491e9761fb3fa34427",
+   "gitBlob": "041c8078051355278cfa17a043175aad933bfeff"
+  },
+  {
+   "path": "camera-reports/fuji-cookbook-camera-report-X-T50-20260915-2259.json",
+   "bytes": 274075,
+   "sha256": "fd13b0e6c0afa0ff39910e02e6d809d9b976a2d149ec422daa1214d96ff48943",
+   "gitBlob": "0de5c62671ebdbde8487d0a03796a744ddd00113"
+  },
+  {
+   "path": "camera-reports/fuji-cookbook-camera-report-X-T50-20260920-1652.json",
+   "bytes": 453355,
+   "sha256": "afbf287ac1ef0029ea9883cee9af09cd0f42a3aff774f1f28666067e3b0250df",
+   "gitBlob": "7bcab869ddd3cdaf6075ee9846255a2e60e007dc"
+  },
+  {
+   "path": "camera-reports/fuji-cookbook-camera-report-X-T50-20260920-1707.json",
+   "bytes": 149762,
+   "sha256": "c969287c6c01c61b45dbfc5a2f17e84fca62f07a9d42efd163e549d6568da6cd",
+   "gitBlob": "028fa48e04c3cec79c75cbb936ce310d5269b3fb"
+  },
+  {
+   "path": "camera-reports/fuji-cookbook-camera-report-X-T50-20260920-1717.json",
+   "bytes": 137414,
+   "sha256": "32855ba084c333dc8c5e0a6818a2e48c8bdec1b5a51e16105e262d9d1f8a8fca",
+   "gitBlob": "5495b2bd78b6971f3052c2fc20b4143d21421ff6"
+  },
+  {
+   "path": "camera-reports/fuji-cookbook-camera-report-X-T50-20260920-1738.json",
+   "bytes": 147198,
+   "sha256": "9088988c6578325b1aac7aa6b2f32c738a96900ac4eb6d127399e27411e7f44b",
+   "gitBlob": "3d07625fb698e8f570fe4713daa87854a8b3d446"
+  },
+  {
+   "path": "camera-reports/fuji-cookbook-camera-report-X-T50-20261003-1320.json",
+   "bytes": 124560,
+   "sha256": "a8bb9549189caae538dd689c57f9d888725a7261bef28024ac6e6dd651d7c944",
+   "gitBlob": "6a4cb07e2b9efe79945ee46c426700df3a919682"
+  },
+  {
+   "path": "camera-reports/fuji-cookbook-camera-report-X-T50-20261003-1334.json",
+   "bytes": 146004,
+   "sha256": "35965c183a2ab8d26415f054a10725e4dcc607f2e7aebd441c70010f092c0478",
+   "gitBlob": "34f3b2e82d238e71dfbe4e5569a240dfa4be005c"
+  },
+  {
+   "path": "camera-reports/fuji-cookbook-camera-report-X-T50-20261003-1435.json",
+   "bytes": 197013,
+   "sha256": "a8cd18878fe38ec50096d1937b8c8fb45d23ee59123e470ffff1b3e15b8705e6",
+   "gitBlob": "e8bcdae05881f31789e7c6e75b067878a2ca64a2"
+  },
+  {
+   "path": "camera-reports/fuji-cookbook-camera-report-X-T50-20261003-2140.json",
+   "bytes": 160115,
+   "sha256": "b36cd30cddba24dd1ab1bd7124294f323bf1fabfdad274a9a2375913d4a4c547",
+   "gitBlob": "5d2bc9b21e228507b81323d90a7a0b71771ae113"
+  },
+  {
+   "path": "camera-reports/fuji-cookbook-camera-report-X-T50-20261003-2220.json",
+   "bytes": 224634,
+   "sha256": "3bfe4b6082b6702b3eed7d0f641f227ddef294c2cd18b2493045b40b3625db34",
+   "gitBlob": "f46148eb9ada70b0ede87c03584e4d12f3e8fdc6"
+  },
+  {
+   "path": "camera-reports/fuji-cookbook-camera-report-X-T50-20261015-1720.json",
+   "bytes": 169830,
+   "sha256": "aeb780d17c7cf0ef0aae41237dc140101e7bf8067dc5ac0ab91d73e5d9d897ce",
+   "gitBlob": "23761d5cbcce7ddbfcaaab00c45e830520106848"
+  },
+  {
+   "path": "camera-reports/fuji-cookbook-camera-report-X-T50-20261017-1752.json",
+   "bytes": 121713,
+   "sha256": "0cbf0802a0611da4db1cc14ef27cbda26949c72232a83c8bd4eb7ab3c7c68225",
+   "gitBlob": "9be2332da65c639a08bafcdd6e3b5a07bd6d55b7"
+  },
+  {
+   "path": "camera-reports/fuji-cookbook-camera-report-X-T50-20261018-1737.json",
+   "bytes": 132156,
+   "sha256": "3b531f0e07902445398390484140a0187ecefb01b63d7fcf2e85c13212102107",
+   "gitBlob": "7c4b8e891403be32d093563e205c1e24cb3bbd53"
+  },
+  {
+   "path": "camera-reports/fuji-cookbook-camera-report-X-T50-20261018-1744.json",
+   "bytes": 122445,
+   "sha256": "f276113f1e38b7b2e9c0ff428137577f201033e704234ee8781a07ba1518589a",
+   "gitBlob": "51f09a76132d63f6370b55e53744ef948db61804"
+  },
+  {
+   "path": "camera-reports/fuji-cookbook-camera-report-X-T50-20261019-1019.json",
+   "bytes": 121364,
+   "sha256": "7bf7445df2def9844914cfb0d38ab62c076a121592146e85d2b71a67dd9ac909",
+   "gitBlob": "b494291d721b4dcfa11f77deca80b1d78683a0c8"
+  },
+  {
+   "path": "camera-reports/fuji-cookbook-camera-report-X-T50-20261019-1021.json",
+   "bytes": 105229,
+   "sha256": "4cda57b1a8c98b13f4480984d0d7e433963ca67b055b2f1bc3a02e1a99a5f8bd",
+   "gitBlob": "67d3070dfadc14f09a44457b4cb86ea31616261d"
+  }
+ ]
+}

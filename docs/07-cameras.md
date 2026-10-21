@@ -62,7 +62,7 @@ The October 15–16 runs behind these measurements are published as [sanitized p
 
 ## GFX100S
 
-The first medium-format, Bayer-sensor body with any evidence, from its owner's diagnostic sessions. [Owner report: fw 2.13, 2026-09-15 to 2026-09-29]
+The first medium-format, Bayer-sensor body with any evidence, from its owner's diagnostic sessions. [Owner report: fw 2.13, 2026-09-15 to 2026-09-29] The owner's ten camera reports are published as [sanitized packages](../evidence/README.md#available-owner-report-packages); the [September records note](../evidence/gfx100s-september-records.md) gives the package and rows behind each statement in this section, and the statements no package covers.
 
 `GetDeviceInfo`: 601 bytes in **USB RAW CONV.** mode, advertising 168 properties: `0x5001`–`0x501C` (sparse), `0xD001`–`0xD01C`, `0xD100`–`0xD161`, `0xD200`–`0xD21B`, `0xD406`, and `0xD407`. The bank block `0xD18C`–`0xD1A5` isn't advertised, but answers. In storage mode the same body gave 261 bytes and four properties; see [the wrong USB mode](01-transport.md#recognizing-the-wrong-usb-mode). It advertises no RAF image format (`0x3800 0x3801 0xB103 0x380D`, no `0xF802`) and takes RAF uploads anyway. A [libgphoto2 dump of another GFX100S at fw 1.10](https://github.com/gphoto/libgphoto2/blob/92171a382f185f617e95cb9acecf2d43688b19ab/camlibs/ptp2/cameras/fuji-gfx-100s.txt) answered `0x200A` to a descriptor for `0xD15D`, the code libfuji and libgphoto2 name SetUSBMode. [Published: libgphoto2 camera dump, paraphrased]
 
@@ -88,7 +88,7 @@ grawji's bank-enablement guide assigns the GFX100S to the settings-backup path b
 
 ## X-T20
 
-The first X-Trans III / X-Processor Pro dataset. [Owner report: fw 2.01, received 2026-09-14; the log carries no date]
+The first X-Trans III / X-Processor Pro dataset. [Owner report: fw 2.01, received 2026-09-14; the log carries no date] The log is published as a [sanitized package](../evidence/xt20-undated-172851/README.md).
 
 `GetDeviceInfo`: 595 bytes, same vendor extension as the X-T50.
 

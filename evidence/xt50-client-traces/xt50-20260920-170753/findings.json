@@ -1,0 +1,513 @@
+{
+  "format": "fuji-client-trace-observations-v1",
+  "evidenceId": "xt50-20260920-170753",
+  "observations": {
+    "getDeviceInfo": [
+      {
+        "sequence": 1,
+        "response": "0x2001",
+        "durationMs": 9
+      }
+    ],
+    "selector": [
+      {
+        "sequence": 2,
+        "operation": "read",
+        "valueUnsigned": 1,
+        "response": "0x2001"
+      },
+      {
+        "sequence": 3,
+        "operation": "write",
+        "valueUnsigned": 1,
+        "response": "0x2001"
+      },
+      {
+        "sequence": 4,
+        "operation": "read",
+        "valueUnsigned": 1,
+        "response": "0x2001"
+      },
+      {
+        "sequence": 30,
+        "operation": "write",
+        "valueUnsigned": 2,
+        "response": "0x2001"
+      },
+      {
+        "sequence": 31,
+        "operation": "read",
+        "valueUnsigned": 2,
+        "response": "0x2001"
+      },
+      {
+        "sequence": 57,
+        "operation": "write",
+        "valueUnsigned": 3,
+        "response": "0x2001"
+      },
+      {
+        "sequence": 58,
+        "operation": "read",
+        "valueUnsigned": 3,
+        "response": "0x2001"
+      },
+      {
+        "sequence": 84,
+        "operation": "write",
+        "valueUnsigned": 4,
+        "response": "0x2001"
+      },
+      {
+        "sequence": 85,
+        "operation": "read",
+        "valueUnsigned": 4,
+        "response": "0x2001"
+      },
+      {
+        "sequence": 111,
+        "operation": "write",
+        "valueUnsigned": 5,
+        "response": "0x2001"
+      },
+      {
+        "sequence": 112,
+        "operation": "read",
+        "valueUnsigned": 5,
+        "response": "0x2001"
+      },
+      {
+        "sequence": 138,
+        "operation": "write",
+        "valueUnsigned": 6,
+        "response": "0x2001"
+      },
+      {
+        "sequence": 139,
+        "operation": "read",
+        "valueUnsigned": 6,
+        "response": "0x2001"
+      },
+      {
+        "sequence": 165,
+        "operation": "write",
+        "valueUnsigned": 7,
+        "response": "0x2001"
+      },
+      {
+        "sequence": 166,
+        "operation": "read",
+        "valueUnsigned": 7,
+        "response": "0x2001"
+      },
+      {
+        "sequence": 192,
+        "operation": "read",
+        "valueUnsigned": 7,
+        "response": "0x2001"
+      },
+      {
+        "sequence": 193,
+        "operation": "write",
+        "valueUnsigned": 1,
+        "response": "0x2001"
+      },
+      {
+        "sequence": 194,
+        "operation": "read",
+        "valueUnsigned": 1,
+        "response": "0x2001"
+      },
+      {
+        "sequence": 195,
+        "operation": "read",
+        "valueUnsigned": 1,
+        "response": "0x2001"
+      },
+      {
+        "sequence": 196,
+        "operation": "write",
+        "valueUnsigned": 1,
+        "response": "0x2001"
+      },
+      {
+        "sequence": 197,
+        "operation": "read",
+        "valueUnsigned": 1,
+        "response": "0x2001"
+      },
+      {
+        "sequence": 269,
+        "operation": "write",
+        "valueUnsigned": 1,
+        "response": "0x2001"
+      },
+      {
+        "sequence": 270,
+        "operation": "read",
+        "valueUnsigned": 1,
+        "response": "0x2001"
+      }
+    ],
+    "writes": [
+      {
+        "sequence": 223,
+        "addressedBank": 1,
+        "property": "0xD18D",
+        "nameForm": "name_omitted",
+        "response": "0x2001",
+        "durationMs": 103
+      },
+      {
+        "sequence": 224,
+        "addressedBank": 1,
+        "property": "0xD18E",
+        "writtenUnsigned": 7,
+        "response": "0x2001",
+        "durationMs": 107
+      },
+      {
+        "sequence": 225,
+        "addressedBank": 1,
+        "property": "0xD18F",
+        "writtenUnsigned": 4,
+        "response": "0x2001",
+        "durationMs": 109
+      },
+      {
+        "sequence": 226,
+        "addressedBank": 1,
+        "property": "0xD190",
+        "writtenUnsigned": 400,
+        "response": "0x2001",
+        "durationMs": 118
+      },
+      {
+        "sequence": 227,
+        "addressedBank": 1,
+        "property": "0xD192",
+        "writtenUnsigned": 11,
+        "response": "0x2001",
+        "durationMs": 137
+      },
+      {
+        "sequence": 228,
+        "addressedBank": 1,
+        "property": "0xD195",
+        "writtenUnsigned": 1,
+        "response": "0x2001",
+        "durationMs": 107
+      },
+      {
+        "sequence": 229,
+        "addressedBank": 1,
+        "property": "0xD196",
+        "writtenUnsigned": 3,
+        "response": "0x2001",
+        "durationMs": 107
+      },
+      {
+        "sequence": 230,
+        "addressedBank": 1,
+        "property": "0xD197",
+        "writtenUnsigned": 1,
+        "response": "0x2001",
+        "durationMs": 140
+      },
+      {
+        "sequence": 231,
+        "addressedBank": 1,
+        "property": "0xD198",
+        "writtenUnsigned": 1,
+        "response": "0x2001",
+        "durationMs": 108
+      },
+      {
+        "sequence": 232,
+        "addressedBank": 1,
+        "property": "0xD199",
+        "writtenUnsigned": 32775,
+        "response": "0x2001",
+        "durationMs": 132
+      },
+      {
+        "sequence": 233,
+        "addressedBank": 1,
+        "property": "0xD19C",
+        "writtenUnsigned": 7100,
+        "response": "0x2001",
+        "durationMs": 106
+      },
+      {
+        "sequence": 234,
+        "addressedBank": 1,
+        "property": "0xD19A",
+        "writtenUnsigned": 65532,
+        "response": "0x2001",
+        "durationMs": 119
+      },
+      {
+        "sequence": 235,
+        "addressedBank": 1,
+        "property": "0xD19B",
+        "writtenUnsigned": 65534,
+        "response": "0x2001",
+        "durationMs": 109
+      },
+      {
+        "sequence": 236,
+        "addressedBank": 1,
+        "property": "0xD19D",
+        "writtenUnsigned": 65516,
+        "response": "0x2001",
+        "durationMs": 107
+      },
+      {
+        "sequence": 237,
+        "addressedBank": 1,
+        "property": "0xD19E",
+        "writtenUnsigned": 65516,
+        "response": "0x2001",
+        "durationMs": 131
+      },
+      {
+        "sequence": 238,
+        "addressedBank": 1,
+        "property": "0xD19F",
+        "writtenUnsigned": 40,
+        "response": "0x2001",
+        "durationMs": 146
+      },
+      {
+        "sequence": 239,
+        "addressedBank": 1,
+        "property": "0xD1A0",
+        "writtenUnsigned": 0,
+        "response": "0x2001",
+        "durationMs": 108
+      },
+      {
+        "sequence": 240,
+        "addressedBank": 1,
+        "property": "0xD1A1",
+        "writtenUnsigned": 32768,
+        "response": "0x2001",
+        "durationMs": 104
+      },
+      {
+        "sequence": 241,
+        "addressedBank": 1,
+        "property": "0xD1A2",
+        "writtenUnsigned": 0,
+        "response": "0x2001",
+        "durationMs": 107
+      },
+      {
+        "sequence": 242,
+        "addressedBank": 1,
+        "property": "0xD1A3",
+        "writtenUnsigned": 1,
+        "response": "0x2001",
+        "durationMs": 102
+      },
+      {
+        "sequence": 243,
+        "addressedBank": 1,
+        "property": "0xD1A4",
+        "writtenUnsigned": 1,
+        "response": "0x2001",
+        "durationMs": 115
+      },
+      {
+        "sequence": 244,
+        "addressedBank": 1,
+        "property": "0xD1A5",
+        "writtenUnsigned": 7,
+        "response": "0x2001",
+        "durationMs": 35
+      },
+      {
+        "sequence": 296,
+        "addressedBank": 1,
+        "property": "0xD18D",
+        "nameForm": "name_omitted",
+        "response": "0x2001",
+        "durationMs": 266
+      },
+      {
+        "sequence": 297,
+        "addressedBank": 1,
+        "property": "0xD18E",
+        "writtenUnsigned": 7,
+        "response": "0x2001",
+        "durationMs": 107
+      },
+      {
+        "sequence": 298,
+        "addressedBank": 1,
+        "property": "0xD18F",
+        "writtenUnsigned": 4,
+        "response": "0x2001",
+        "durationMs": 106
+      },
+      {
+        "sequence": 299,
+        "addressedBank": 1,
+        "property": "0xD190",
+        "writtenUnsigned": 400,
+        "response": "0x2001",
+        "durationMs": 110
+      },
+      {
+        "sequence": 300,
+        "addressedBank": 1,
+        "property": "0xD192",
+        "writtenUnsigned": 4,
+        "response": "0x2001",
+        "durationMs": 142
+      },
+      {
+        "sequence": 301,
+        "addressedBank": 1,
+        "property": "0xD195",
+        "writtenUnsigned": 1,
+        "response": "0x2001",
+        "durationMs": 111
+      },
+      {
+        "sequence": 302,
+        "addressedBank": 1,
+        "property": "0xD196",
+        "writtenUnsigned": 3,
+        "response": "0x2001",
+        "durationMs": 110
+      },
+      {
+        "sequence": 303,
+        "addressedBank": 1,
+        "property": "0xD197",
+        "writtenUnsigned": 3,
+        "response": "0x2001",
+        "durationMs": 133
+      },
+      {
+        "sequence": 304,
+        "addressedBank": 1,
+        "property": "0xD198",
+        "writtenUnsigned": 1,
+        "response": "0x2001",
+        "durationMs": 119
+      },
+      {
+        "sequence": 305,
+        "addressedBank": 1,
+        "property": "0xD199",
+        "writtenUnsigned": 2,
+        "response": "0x2001",
+        "durationMs": 132
+      },
+      {
+        "sequence": 306,
+        "addressedBank": 1,
+        "property": "0xD19A",
+        "writtenUnsigned": 3,
+        "response": "0x2001",
+        "durationMs": 108
+      },
+      {
+        "sequence": 307,
+        "addressedBank": 1,
+        "property": "0xD19B",
+        "writtenUnsigned": 65531,
+        "response": "0x2001",
+        "durationMs": 107
+      },
+      {
+        "sequence": 308,
+        "addressedBank": 1,
+        "property": "0xD19D",
+        "writtenUnsigned": 65516,
+        "response": "0x2001",
+        "durationMs": 118
+      },
+      {
+        "sequence": 309,
+        "addressedBank": 1,
+        "property": "0xD19E",
+        "writtenUnsigned": 10,
+        "response": "0x2001",
+        "durationMs": 133
+      },
+      {
+        "sequence": 310,
+        "addressedBank": 1,
+        "property": "0xD19F",
+        "writtenUnsigned": 30,
+        "response": "0x2001",
+        "durationMs": 132
+      },
+      {
+        "sequence": 311,
+        "addressedBank": 1,
+        "property": "0xD1A0",
+        "writtenUnsigned": 0,
+        "response": "0x2001",
+        "durationMs": 107
+      },
+      {
+        "sequence": 312,
+        "addressedBank": 1,
+        "property": "0xD1A1",
+        "writtenUnsigned": 32768,
+        "response": "0x2001",
+        "durationMs": 114
+      },
+      {
+        "sequence": 313,
+        "addressedBank": 1,
+        "property": "0xD1A2",
+        "writtenUnsigned": 0,
+        "response": "0x2001",
+        "durationMs": 110
+      },
+      {
+        "sequence": 314,
+        "addressedBank": 1,
+        "property": "0xD1A3",
+        "writtenUnsigned": 1,
+        "response": "0x2001",
+        "durationMs": 102
+      },
+      {
+        "sequence": 315,
+        "addressedBank": 1,
+        "property": "0xD1A4",
+        "writtenUnsigned": 1,
+        "response": "0x2001",
+        "durationMs": 102
+      },
+      {
+        "sequence": 316,
+        "addressedBank": 1,
+        "property": "0xD1A5",
+        "writtenUnsigned": 7,
+        "response": "0x2001",
+        "durationMs": 34
+      }
+    ],
+    "descriptorResponses": {},
+    "conversionProfileReads": [],
+    "objectOperations": [],
+    "acceptedSettingWriteDurationsMs": {
+      "count": 41,
+      "minimum": 34,
+      "median": 109,
+      "maximum": 146
+    }
+  },
+  "propertyReads": {
+    "basis": "every GetDevicePropValue except the 0xD185 profile",
+    "count": 286,
+    "maximumMs": 37
+  }
+}

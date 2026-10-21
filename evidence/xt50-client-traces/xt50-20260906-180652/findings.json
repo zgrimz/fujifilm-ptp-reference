@@ -1,0 +1,67 @@
+{
+  "format": "fuji-client-trace-observations-v1",
+  "evidenceId": "xt50-20260906-180652",
+  "observations": {
+    "getDeviceInfo": [
+      {
+        "sequence": 1,
+        "response": "0x2001",
+        "durationMs": 10
+      }
+    ],
+    "selector": [
+      {
+        "sequence": 2,
+        "operation": "write",
+        "valueUnsigned": 1,
+        "response": "0x2001"
+      },
+      {
+        "sequence": 28,
+        "operation": "write",
+        "valueUnsigned": 2,
+        "response": "0x2001"
+      },
+      {
+        "sequence": 54,
+        "operation": "write",
+        "valueUnsigned": 3,
+        "response": "0x2001"
+      },
+      {
+        "sequence": 80,
+        "operation": "write",
+        "valueUnsigned": 4,
+        "response": "0x2001"
+      },
+      {
+        "sequence": 106,
+        "operation": "write",
+        "valueUnsigned": 5,
+        "response": "0x2001"
+      },
+      {
+        "sequence": 132,
+        "operation": "write",
+        "valueUnsigned": 6,
+        "response": "0x2001"
+      },
+      {
+        "sequence": 158,
+        "operation": "write",
+        "valueUnsigned": 7,
+        "response": "0x2001"
+      }
+    ],
+    "writes": [],
+    "descriptorResponses": {},
+    "conversionProfileReads": [],
+    "objectOperations": [],
+    "acceptedSettingWriteDurationsMs": null
+  },
+  "propertyReads": {
+    "basis": "every GetDevicePropValue except the 0xD185 profile",
+    "count": 175,
+    "maximumMs": 16
+  }
+}

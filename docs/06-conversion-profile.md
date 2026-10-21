@@ -191,4 +191,4 @@ On every profile seen, `0x1FD` passes with the highest score. On the GFX100S's f
 | X-H1, X-Pro3, and an unconfirmed body consistent with X100F (`xt5_*`) — camera reads and host writes | [petabyt/libfuji](https://github.com/petabyt/libfuji) `fp/d185/` (MIT) |
 | X-T50 fw 1.31 and X-T30 fw 2.01 — camera reads and X RAW Studio writes, inside USB captures | [FilmKit issues #12 and #13](../captures/README.md#public-captures) (public attachments) |
 | X-T50 fw 1.32 — camera read (625 B) and X RAW Studio write (629 B) | Maintainers' captures, not published; see [captures](../captures/README.md) |
-| GFX100S — camera read (621 B), header and first 64 bytes | Owner report; see [captures](../captures/README.md) |
+| GFX100S — camera read (621 B), header and first 64 bytes | Owner report; the first 64 bytes are in the [owner-report package](../evidence/gfx100s-20260917-211657/README.md) |

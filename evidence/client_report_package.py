@@ -7,9 +7,10 @@ it handed to ImageCaptureCore on one connection: each command's operation and pa
 data it supplied or received (bytes only up to the client's dump limit), the response code and a
 host-measured duration. Run-specific exporters select and normalize findings; this module keeps
 transaction order and headers, the scalar payloads of the bank allowlist, and the two empty-name
-encodings. It never copies bank names, DeviceInfo, identity or connection identifiers, error
-text, push and develop records, or log lines, and it does not turn a client report into a
-schema-v1 report.
+encodings. It never copies bank names, DeviceInfo, connection identifiers, error text, push and
+develop records, or log lines, and it does not turn a client report into a schema-v1 report. Of
+the camera's identity it keeps only the client's keyed identifier, which a guessed serial can't be
+checked against; an unkeyed serial hash is never copied.
 """
 
 import argparse
@@ -30,12 +31,31 @@ REPORT_VERSION = 6
 PROPERTY_OPERATIONS = frozenset({0x1014, 0x1015, 0x1016})
 UTC_TIME = re.compile(r"\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}Z\Z")
 IDENTIFIER = re.compile(r"xt50-20261019-[0-9]{6}\Z")
+KEYED_SCHEME = "hmac-sha256"
 
 
 def utc_time(value):
     if not isinstance(value, str) or not UTC_TIME.fullmatch(value):
         raise ValueError("expected a UTC timestamp")
     return value
+
+
+def keyed_identifier(camera):
+    """The client's keyed camera identifier, or None when the report carries any other kind.
+
+    Builds from 2026-10-15 record HMAC-SHA256 of the serial under a random 256-bit key that stays in
+    the reporting phone's Keychain, truncated to 8 bytes, and mark it `hmac-sha256`. Without the key a
+    guessed serial can't be checked against it. Earlier builds recorded an unkeyed hash, which a
+    guessed serial can be checked against; that is never returned.
+    """
+    if camera.get("serialHashScheme") != KEYED_SCHEME:
+        return None
+    value = camera.get("serialHash")
+    if not isinstance(value, str) or not re.fullmatch(r"[0-9a-f]{16}", value):
+        raise ValueError("unexpected keyed camera identifier")
+    return {"scheme": KEYED_SCHEME, "value": value,
+            "basis": "HMAC-SHA256 of the serial under a random key that stays on the reporting phone, "
+                     "truncated to 8 bytes; the same body reported through another phone has another value"}
 
 
 def payload_bytes(original, direction):
@@ -126,7 +146,7 @@ def build_package(original_bytes, spec, build_findings, exporter_path):
                    "revision": spec["sourceRevision"], "sha256": spec["sourceSha256"], "bytes": len(original_bytes),
                    "reportFormatVersion": REPORT_VERSION},
         "camera": {"model": "X-T50", "firmware": "1.32", "provenance": "original_report",
-                   "identification": "exact", "usbMode": None},
+                   "identification": "exact", "usbMode": None, "identifier": keyed_identifier(camera)},
         "host": {"client": "the maintainers' iOS client, debug build", "operatingSystem": "iOS",
                  "systemVersion": host["systemVersion"], "transport": "ImageCaptureCore"},
         "conditions": {"autoUpdateCustomSetting": "unknown", "lensPresent": None, "iso": None,
@@ -161,7 +181,8 @@ def build_package(original_bytes, spec, build_findings, exporter_path):
                                     "lengths of every omitted payload",
                                     "DeviceInfo, D186/D187, conversion-profile and object payloads",
                                     "parameters of operations other than property get, set and describe",
-                                    "serial hash, USB identifiers, connection identifier and phone model",
+                                    "unkeyed serial hashes, USB identifiers, connection identifier and phone model; "
+                                    "only the keyed hmac-sha256 camera identifier is kept",
                                     "error text, push, develop and camera-test records, slot reads and log lines"],
                       "generatedFacts": "No missing times, conditions, or hardware observations are invented; finding interpretations are labeled."},
         "artifacts": {name: {"sha256": sha256(value), "bytes": len(value)} for name, value in outputs.items()},

@@ -1,0 +1,129 @@
+{
+  "format": "fuji-client-trace-sanitized-package-v1",
+  "evidenceId": "xt50-20260914-210650",
+  "evidenceKind": "measured_original_sanitized_derivative",
+  "source": {
+    "access": "private archive",
+    "archivePath": "hardware-runs/app-reports-x-t50/camera-reports/fuji-cookbook-camera-report-X-T50-20260914-2106.json",
+    "revision": "a9c1bf66fd0ad7f7383540c0d35b4629f3c948a9",
+    "sha256": "495fc734510016aeb92b2ab4b036d3e3c71bd763cde2b5491e9761fb3fa34427",
+    "bytes": 143773,
+    "reportFormatVersion": 4
+  },
+  "camera": {
+    "model": "X-T50",
+    "firmware": "1.32",
+    "provenance": "original_report",
+    "identification": "exact",
+    "usbMode": null,
+    "identifier": null
+  },
+  "host": {
+    "client": "the maintainers' iOS client, debug build 2",
+    "operatingSystem": "iOS or iPadOS",
+    "systemVersion": "26.6.2",
+    "deviceModel": "omitted",
+    "transport": "ImageCaptureCore"
+  },
+  "conditions": {
+    "autoUpdateCustomSetting": "unknown",
+    "lensPresent": null,
+    "iso": null,
+    "imageFormat": "unknown"
+  },
+  "time": {
+    "reportGeneratedUtc": "2026-09-15T01:06:50Z",
+    "reportUpdatedUtc": "2026-09-15T01:07:14Z",
+    "traceStartedUtc": null,
+    "identifierClock": "the report's generatedAt in the maintainers' local time, UTC-4, which the archive file names use",
+    "perTransactionTimestamps": "absent",
+    "connectionIds": "omitted"
+  },
+  "coverage": {
+    "sourceArray": "transactions",
+    "traceScope": "not recorded in this report version",
+    "sourceEntries": 263,
+    "retainedEntries": 263,
+    "droppedEntries": 0,
+    "sourceTransactionsDropped": 0,
+    "outcomes": {
+      "recorded_ok": 263
+    },
+    "scalarPayloadsRetained": 253,
+    "payloadFieldsOmitted": 10,
+    "emptyNamePayloadsRetained": 0,
+    "clientRecords": "not projected",
+    "privateStringsChecked": 36,
+    "sourceCaptureCompleteness": "client_trace_only"
+  },
+  "interpretation": {
+    "sourceIndex": "zero-based original transactions array index; order preserved",
+    "sequence": "the client's own count within its trace; not a PTP transaction ID",
+    "rawPayloadEncoding": "hexadecimal bytes in source order, little-endian scalar interpretation",
+    "dataPhase": "the bytes the client handed to ImageCaptureCore or received from it; the USB wire is not observed",
+    "responseOrigin": "the response code ImageCaptureCore returned to the client; not an independent bus capture",
+    "durationMs": "host-measured time from handing over the command to its completion",
+    "findingNumbers": "unsigned integers unless explicitly labeled; not byte strings"
+  },
+  "transform": {
+    "generator": "../export.py",
+    "generatorSha256": "e256c569154765f51fca4917ef8a2a57d967b42cd8f32b5ba088f968590806b6",
+    "ledgerModule": "../../client_report_package.py",
+    "ledgerModuleSha256": "bc7a4c34d454f334429152ffdecf85047751d5061541c00e69a36218645a0776",
+    "observationModule": "../../owner_report_package.py",
+    "observationModuleSha256": "2db0888269635310cce1ac8ac4c4d1b192775bdcefd10c8bedb620d7fd94b64a",
+    "helperModule": "../../bankprobe_package.py",
+    "helperModuleSha256": "cdfbedda21b06b8586c6c59606e3ae6a3b9a588bba62580628a28ed23e81c7cc",
+    "originalUnchanged": true,
+    "publicSchemaV1Compatible": false,
+    "losslessBackup": false,
+    "payloadAllowlist": [
+      "0xD18C",
+      "0xD18E",
+      "0xD18F",
+      "0xD190",
+      "0xD191",
+      "0xD192",
+      "0xD193",
+      "0xD194",
+      "0xD195",
+      "0xD196",
+      "0xD197",
+      "0xD198",
+      "0xD199",
+      "0xD19A",
+      "0xD19B",
+      "0xD19C",
+      "0xD19D",
+      "0xD19E",
+      "0xD19F",
+      "0xD1A0",
+      "0xD1A1",
+      "0xD1A2",
+      "0xD1A3",
+      "0xD1A4",
+      "0xD1A5"
+    ],
+    "maximumPayloadBytes": 4,
+    "omissions": [
+      "every client record: bank reads, pushes, guided tests, develops, property sweeps and notes",
+      "unkeyed serial hashes, host device model, connection, session, run and result identifiers, and USB identifiers; only the keyed hmac-sha256 camera identifier is kept",
+      "bank and recipe names, and all D18D payloads except the two empty-name encodings (00 and 010000)",
+      "lengths of every omitted payload",
+      "DeviceInfo, descriptor, conversion-profile and object payloads",
+      "parameters of operations other than property get, set and describe"
+    ],
+    "disclosureCheck": "every output searched for each private string of the original, plain, JSON-escaped and UTF-16 hex",
+    "generatedFacts": "No missing times, conditions, or hardware observations are invented."
+  },
+  "artifacts": {
+    "transactions.jsonl": {
+      "sha256": "e18c7c349880eb1b8b7502c19190c11a1bfe91296f7cd65e9524c78828d87b20",
+      "bytes": 53375
+    },
+    "findings.json": {
+      "sha256": "2a1eeea5f3b7ce0338c4b225357dbc1dcc93c6e85b0fd566d9b5eb504f134c58",
+      "bytes": 6799
+    }
+  }
+}

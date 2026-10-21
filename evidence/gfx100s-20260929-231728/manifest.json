@@ -1,0 +1,140 @@
+{
+  "format": "fuji-owner-client-report-sanitized-package-v1",
+  "evidenceId": "gfx100s-20260929-231728",
+  "evidenceKind": "owner_report_original_sanitized_derivative",
+  "source": {
+    "access": "private archive",
+    "archivePath": "hardware-runs/app-reports-gfx100s/2026-09-29/C2 REPORT WITH DIAGNOSTIC MODE - fuji-cookbook-camera-report-GFX100S-20260929-2316.json",
+    "revision": "a9c1bf66fd0ad7f7383540c0d35b4629f3c948a9",
+    "sha256": "7d202f1cd92e821d791ef0fbc520938ddc7dcbfd483d22b155f215acced6e737",
+    "bytes": 150022,
+    "reportFormatVersion": 5
+  },
+  "camera": {
+    "model": "GFX100S",
+    "firmware": "2.13",
+    "provenance": "owner_report",
+    "identification": "exact",
+    "usbMode": null
+  },
+  "host": {
+    "client": "the maintainers' iOS client, TestFlight build 8",
+    "operatingSystem": "iOS or iPadOS",
+    "systemVersion": "26.3",
+    "deviceModel": "omitted",
+    "transport": "ImageCaptureCore"
+  },
+  "conditions": {
+    "autoUpdateCustomSetting": "unknown",
+    "lensPresent": null,
+    "iso": null,
+    "imageFormat": "unknown"
+  },
+  "time": {
+    "reportGeneratedUtc": "2026-09-30T03:16:40Z",
+    "reportUpdatedUtc": "2026-09-30T03:17:28Z",
+    "identifierClock": "the report's updatedAt in the owner's local time, UTC-4, which the archive file names use",
+    "perTransactionTimestamps": "absent",
+    "connectionIds": "omitted"
+  },
+  "coverage": {
+    "sourceArray": "transactions",
+    "traceScope": "the client's trace of its connection at export",
+    "sourceEntries": 167,
+    "retainedEntries": 167,
+    "droppedEntries": 0,
+    "sourceTransactionsDropped": 0,
+    "outcomes": {
+      "recorded_ok": 167
+    },
+    "scalarPayloadsRetained": 160,
+    "payloadFieldsOmitted": 5,
+    "emptyNamePayloadsRetained": 2,
+    "clientRecords": {
+      "bankReads": 6,
+      "pushes": 9,
+      "guidedTests": 5,
+      "profileHarvests": 1,
+      "notes": 0
+    },
+    "privateStringsChecked": 36,
+    "sourceCaptureCompleteness": "client_trace_only"
+  },
+  "interpretation": {
+    "sourceIndex": "zero-based original transactions array index; order preserved",
+    "sequence": "the client's own count within its trace; not a PTP transaction ID",
+    "rawPayloadEncoding": "hexadecimal bytes in source order, little-endian scalar interpretation",
+    "dataPhase": "the bytes the client handed to ImageCaptureCore or received from it; the USB wire is not observed",
+    "responseOrigin": "the response code ImageCaptureCore returned to the client; not an independent bus capture",
+    "durationMs": "host-measured time from handing over the command to its completion",
+    "clientRecords": "the client's own derived records, allowlisted; its interpretation, not camera responses",
+    "ownerReportedCamera": "what the owner entered as the camera's menu reading; not a photograph",
+    "findingNumbers": "unsigned integers unless explicitly labeled; not byte strings"
+  },
+  "transform": {
+    "generator": "export.py",
+    "generatorSha256": "dcfff894af36176003549bb364e7e34bb9bd7a3d55e87d0dd8a9a7e3c48c4229",
+    "sharedGenerator": "../owner_report_package.py",
+    "sharedGeneratorSha256": "2db0888269635310cce1ac8ac4c4d1b192775bdcefd10c8bedb620d7fd94b64a",
+    "ledgerModule": "../client_report_package.py",
+    "ledgerModuleSha256": "bc7a4c34d454f334429152ffdecf85047751d5061541c00e69a36218645a0776",
+    "helperModule": "../bankprobe_package.py",
+    "helperModuleSha256": "cdfbedda21b06b8586c6c59606e3ae6a3b9a588bba62580628a28ed23e81c7cc",
+    "originalUnchanged": true,
+    "publicSchemaV1Compatible": false,
+    "losslessBackup": false,
+    "payloadAllowlist": [
+      "0xD18C",
+      "0xD18E",
+      "0xD18F",
+      "0xD190",
+      "0xD191",
+      "0xD192",
+      "0xD193",
+      "0xD194",
+      "0xD195",
+      "0xD196",
+      "0xD197",
+      "0xD198",
+      "0xD199",
+      "0xD19A",
+      "0xD19B",
+      "0xD19C",
+      "0xD19D",
+      "0xD19E",
+      "0xD19F",
+      "0xD1A0",
+      "0xD1A1",
+      "0xD1A2",
+      "0xD1A3",
+      "0xD1A4",
+      "0xD1A5"
+    ],
+    "maximumPayloadBytes": 4,
+    "omissions": [
+      "serial hash, host device model, guided-test session identifiers and USB identifiers",
+      "bank and recipe names wherever they occur, and all D18D payloads except the two empty-name encodings (00 and 010000)",
+      "lengths of every omitted payload",
+      "DeviceInfo, descriptor, conversion-profile and object payloads in the ledger",
+      "parameters of operations other than property get, set and describe",
+      "the client's property labels, free-text notes and messages except reviewed forms parsed into typed fields",
+      "the backup's share-sheet activity, problem reports, app logs, photographs and JPEGs"
+    ],
+    "disclosureCheck": "every output searched for each private string of the original, plain, JSON-escaped and UTF-16 hex",
+    "generatedFacts": "No missing times, conditions, or hardware observations are invented; finding interpretations are labeled."
+  },
+  "artifacts": {
+    "transactions.jsonl": {
+      "sha256": "ed206b586979c8aaade20512bf23f99cd080662ba8a4171d83cd81024ad98965",
+      "bytes": 33774
+    },
+    "client-records.json": {
+      "sha256": "f258f198372c0698267d3c225d63d3b0467713b5811b4e7f0abe40a914e8cac8",
+      "bytes": 74193
+    },
+    "findings.json": {
+      "sha256": "af55e5e2d5399f5cbb648c03aecd9ee9232c127ee02475cac81743728936a2f1",
+      "bytes": 10081
+    }
+  }
+}

@@ -38,7 +38,7 @@ This record publishes only the decoded transcripts of the raw captures made for 
 | X RAW Studio converting with Monochromatic Color on an X-T50, fw 1.32, three captures (2026-10-17) | Held by the maintainers. They contain the photo, so only the [decoded transcript](x-rawstudio-toning-xt50.md) is published. |
 | X RAW Studio converting one RAF four ways on an X-T50, fw 1.32 (2026-06-24) | Held by the maintainers. They contain the photo; their cell values agree with the transcripts listed earlier (cell 21 = `1` for a frame shot with LMO On; cell 29 = `0` in every write) and nothing else from them is published yet. |
 | The cell-6 probe previews, four develops of one RAF by the maintainers' client (2026-09-07) | The JPEGs behind the DR Auto finding, held by the maintainers; their MakerNotes are summarized in [RAW conversion](../docs/05-raw-conversion.md#dynamic-range). |
-| GFX100S `0xD185` profile, 621 bytes (2026-09-17) | Header and first 64 bytes recorded in the owner's report. Publishing it requires the owner's agreement. |
+| GFX100S `0xD185` profile, 621 bytes (2026-09-17) | The owner agreed to publication. The first 64 bytes, which hold the cell count, IOPCode, and padding, are in the [owner-report package](../evidence/gfx100s-20260917-211657/README.md); the owner's report records no more of the profile. |
 
 ## Decoding a capture
 

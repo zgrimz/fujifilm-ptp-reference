@@ -37,7 +37,7 @@ Writing changes your saved settings. No clearing operation is characterized in t
 
 ## Privacy
 
-- Don't send serial numbers, or hashes of them. A serial is short enough to recover from its hash.
+- Don't send serial numbers, or hashes of them. A serial is short enough to recover from its hash. The maintainers' iOS client's keyed identifier, marked `hmac-sha256`, is the exception: it's computed under a key that never leaves your phone, so a guessed serial can't be checked against it.
 - Don't send raw captures. Any capture can include `GetDeviceInfo`, which ends with your serial number, and a capture of a RAW conversion also contains your photo. Send the decoded command stream instead: [`tools/ptpcap.py`](tools/README.md) suppresses the `GetDeviceInfo` payload and raw photo data. The operation name and payload length can still appear.
 
 ## How claims are recorded

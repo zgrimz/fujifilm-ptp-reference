@@ -1,0 +1,2452 @@
+{
+  "format": "fuji-owner-client-records-v1",
+  "evidenceId": "gfx100s-20260929-222001",
+  "records": {
+    "app": {
+      "version": "1.0",
+      "build": "8",
+      "channel": "testflight"
+    },
+    "deviceInfo": {
+      "datasetBytes": 601,
+      "standardVersion": 100,
+      "vendorExtensionID": "0x00000006",
+      "vendorExtensionVersion": 100,
+      "vendorExtensionDesc": "fujifilm.co.jp: 1.0; ",
+      "functionalMode": 0,
+      "manufacturer": "FUJIFILM",
+      "model": "GFX100S",
+      "deviceVersion": "2.13",
+      "operationsSupported": [
+        "0x1001",
+        "0x1002",
+        "0x1003",
+        "0x1004",
+        "0x1005",
+        "0x1006",
+        "0x1007",
+        "0x1008",
+        "0x1009",
+        "0x100A",
+        "0x100B",
+        "0x100E",
+        "0x100F",
+        "0x1014",
+        "0x1015",
+        "0x1016",
+        "0x1017",
+        "0x1018",
+        "0x101B",
+        "0x101C",
+        "0x900C",
+        "0x900D",
+        "0x901D",
+        "0x9801",
+        "0x9802",
+        "0x9803",
+        "0x9805"
+      ],
+      "eventsSupported": [
+        "0x4002",
+        "0x4003",
+        "0x4004",
+        "0x4005",
+        "0x400D",
+        "0xC006"
+      ],
+      "devicePropertiesSupported": [
+        "0x5001",
+        "0x5003",
+        "0x5005",
+        "0x500A",
+        "0x500B",
+        "0x500C",
+        "0x500E",
+        "0x500F",
+        "0x5011",
+        "0x5012",
+        "0x5015",
+        "0x5018",
+        "0x5019",
+        "0x501C",
+        "0xD001",
+        "0xD002",
+        "0xD003",
+        "0xD004",
+        "0xD005",
+        "0xD007",
+        "0xD008",
+        "0xD009",
+        "0xD00A",
+        "0xD00B",
+        "0xD00C",
+        "0xD00D",
+        "0xD00E",
+        "0xD00F",
+        "0xD010",
+        "0xD011",
+        "0xD012",
+        "0xD013",
+        "0xD014",
+        "0xD015",
+        "0xD016",
+        "0xD017",
+        "0xD018",
+        "0xD019",
+        "0xD01A",
+        "0xD01B",
+        "0xD01C",
+        "0xD100",
+        "0xD101",
+        "0xD102",
+        "0xD103",
+        "0xD104",
+        "0xD105",
+        "0xD106",
+        "0xD107",
+        "0xD108",
+        "0xD109",
+        "0xD10A",
+        "0xD10B",
+        "0xD10C",
+        "0xD10D",
+        "0xD10E",
+        "0xD10F",
+        "0xD110",
+        "0xD111",
+        "0xD112",
+        "0xD113",
+        "0xD114",
+        "0xD115",
+        "0xD116",
+        "0xD117",
+        "0xD118",
+        "0xD119",
+        "0xD11A",
+        "0xD11B",
+        "0xD11C",
+        "0xD11D",
+        "0xD11E",
+        "0xD11F",
+        "0xD120",
+        "0xD121",
+        "0xD122",
+        "0xD123",
+        "0xD124",
+        "0xD125",
+        "0xD126",
+        "0xD127",
+        "0xD128",
+        "0xD129",
+        "0xD12A",
+        "0xD12B",
+        "0xD12C",
+        "0xD12D",
+        "0xD12E",
+        "0xD12F",
+        "0xD130",
+        "0xD131",
+        "0xD132",
+        "0xD133",
+        "0xD134",
+        "0xD135",
+        "0xD136",
+        "0xD137",
+        "0xD138",
+        "0xD139",
+        "0xD13A",
+        "0xD13B",
+        "0xD13C",
+        "0xD13D",
+        "0xD13E",
+        "0xD13F",
+        "0xD140",
+        "0xD141",
+        "0xD142",
+        "0xD143",
+        "0xD144",
+        "0xD145",
+        "0xD146",
+        "0xD147",
+        "0xD148",
+        "0xD149",
+        "0xD14A",
+        "0xD14B",
+        "0xD14C",
+        "0xD14D",
+        "0xD14E",
+        "0xD14F",
+        "0xD150",
+        "0xD151",
+        "0xD152",
+        "0xD153",
+        "0xD154",
+        "0xD155",
+        "0xD157",
+        "0xD158",
+        "0xD159",
+        "0xD15A",
+        "0xD15B",
+        "0xD15C",
+        "0xD15D",
+        "0xD15E",
+        "0xD15F",
+        "0xD160",
+        "0xD161",
+        "0xD200",
+        "0xD201",
+        "0xD202",
+        "0xD203",
+        "0xD204",
+        "0xD205",
+        "0xD206",
+        "0xD207",
+        "0xD208",
+        "0xD209",
+        "0xD20A",
+        "0xD20B",
+        "0xD20C",
+        "0xD20D",
+        "0xD20E",
+        "0xD20F",
+        "0xD210",
+        "0xD211",
+        "0xD212",
+        "0xD213",
+        "0xD214",
+        "0xD215",
+        "0xD216",
+        "0xD217",
+        "0xD218",
+        "0xD219",
+        "0xD21A",
+        "0xD21B",
+        "0xD406",
+        "0xD407"
+      ],
+      "captureFormats": [
+        "0x3800",
+        "0x3801",
+        "0xB103"
+      ],
+      "imageFormats": [
+        "0x3800",
+        "0x3801",
+        "0xB103",
+        "0x380D"
+      ]
+    },
+    "bankReads": {
+      "assumedSlotCount": 6,
+      "documentedSlotCount": 6,
+      "probedSlotCount": 6,
+      "selectorBeforeRead": 1,
+      "selectorRestored": true,
+      "readUtc": "2026-09-30T02:19:26Z",
+      "reads": [
+        {
+          "bank": 1,
+          "selected": true,
+          "nameEmpty": false,
+          "occupied": true,
+          "bankSettingsUnsigned": {
+            "0xD18E": 14,
+            "0xD18F": 2,
+            "0xD190": 65535,
+            "0xD191": 32768,
+            "0xD192": 1,
+            "0xD193": 0,
+            "0xD194": 0,
+            "0xD195": 6,
+            "0xD196": 1,
+            "0xD197": 1,
+            "0xD198": 1,
+            "0xD199": 2,
+            "0xD19A": 0,
+            "0xD19B": 0,
+            "0xD19C": 10000,
+            "0xD19D": 0,
+            "0xD19E": 0,
+            "0xD19F": 0,
+            "0xD1A0": 0,
+            "0xD1A1": 8192,
+            "0xD1A2": 0,
+            "0xD1A3": 1,
+            "0xD1A4": 1
+          },
+          "liveSettingsUnsigned": {
+            "0xD1A5": 14
+          }
+        },
+        {
+          "bank": 2,
+          "selected": true,
+          "nameEmpty": false,
+          "occupied": true,
+          "bankSettingsUnsigned": {
+            "0xD18E": 14,
+            "0xD18F": 2,
+            "0xD190": 400,
+            "0xD191": 0,
+            "0xD192": 1,
+            "0xD193": 20,
+            "0xD194": 65526,
+            "0xD195": 6,
+            "0xD196": 1,
+            "0xD197": 1,
+            "0xD198": 1,
+            "0xD199": 2,
+            "0xD19A": 0,
+            "0xD19B": 0,
+            "0xD19C": 10000,
+            "0xD19D": 15,
+            "0xD19E": 65526,
+            "0xD19F": 0,
+            "0xD1A0": 0,
+            "0xD1A1": 8192,
+            "0xD1A2": 0,
+            "0xD1A3": 1,
+            "0xD1A4": 1
+          },
+          "liveSettingsUnsigned": {
+            "0xD1A5": 14
+          }
+        },
+        {
+          "bank": 3,
+          "selected": true,
+          "nameEmpty": false,
+          "occupied": true,
+          "bankSettingsUnsigned": {
+            "0xD18E": 14,
+            "0xD18F": 2,
+            "0xD190": 100,
+            "0xD191": 0,
+            "0xD192": 11,
+            "0xD193": 0,
+            "0xD194": 0,
+            "0xD195": 6,
+            "0xD196": 3,
+            "0xD197": 2,
+            "0xD198": 1,
+            "0xD199": 4,
+            "0xD19A": 2,
+            "0xD19B": 65532,
+            "0xD19C": 10000,
+            "0xD19D": 5,
+            "0xD19E": 65531,
+            "0xD19F": 10,
+            "0xD1A0": 30,
+            "0xD1A1": 32768,
+            "0xD1A2": 30,
+            "0xD1A3": 1,
+            "0xD1A4": 1
+          },
+          "liveSettingsUnsigned": {
+            "0xD1A5": 14
+          }
+        },
+        {
+          "bank": 4,
+          "selected": true,
+          "nameEmpty": false,
+          "occupied": true,
+          "bankSettingsUnsigned": {
+            "0xD18E": 14,
+            "0xD18F": 2,
+            "0xD190": 100,
+            "0xD191": 0,
+            "0xD192": 11,
+            "0xD193": 0,
+            "0xD194": 0,
+            "0xD195": 3,
+            "0xD196": 2,
+            "0xD197": 1,
+            "0xD198": 1,
+            "0xD199": 4,
+            "0xD19A": 4,
+            "0xD19B": 65531,
+            "0xD19C": 10000,
+            "0xD19D": 65521,
+            "0xD19E": 5,
+            "0xD19F": 30,
+            "0xD1A0": 65516,
+            "0xD1A1": 32768,
+            "0xD1A2": 65516,
+            "0xD1A3": 1,
+            "0xD1A4": 1
+          },
+          "liveSettingsUnsigned": {
+            "0xD1A5": 14
+          }
+        },
+        {
+          "bank": 5,
+          "selected": true,
+          "nameEmpty": true,
+          "occupied": true,
+          "bankSettingsUnsigned": {
+            "0xD18E": 14,
+            "0xD18F": 2,
+            "0xD190": 100,
+            "0xD191": 0,
+            "0xD192": 1,
+            "0xD193": 0,
+            "0xD194": 0,
+            "0xD195": 6,
+            "0xD196": 1,
+            "0xD197": 1,
+            "0xD198": 1,
+            "0xD199": 2,
+            "0xD19A": 0,
+            "0xD19B": 0,
+            "0xD19C": 10000,
+            "0xD19D": 0,
+            "0xD19E": 0,
+            "0xD19F": 0,
+            "0xD1A0": 0,
+            "0xD1A1": 8192,
+            "0xD1A2": 0,
+            "0xD1A3": 1,
+            "0xD1A4": 1
+          },
+          "liveSettingsUnsigned": {
+            "0xD1A5": 14
+          }
+        },
+        {
+          "bank": 6,
+          "selected": true,
+          "nameEmpty": true,
+          "occupied": true,
+          "bankSettingsUnsigned": {
+            "0xD18E": 14,
+            "0xD18F": 2,
+            "0xD190": 100,
+            "0xD191": 0,
+            "0xD192": 1,
+            "0xD193": 0,
+            "0xD194": 0,
+            "0xD195": 6,
+            "0xD196": 1,
+            "0xD197": 1,
+            "0xD198": 1,
+            "0xD199": 2,
+            "0xD19A": 0,
+            "0xD19B": 0,
+            "0xD19C": 10000,
+            "0xD19D": 0,
+            "0xD19E": 0,
+            "0xD19F": 0,
+            "0xD1A0": 0,
+            "0xD1A1": 8192,
+            "0xD1A2": 0,
+            "0xD1A3": 1,
+            "0xD1A4": 1
+          },
+          "liveSettingsUnsigned": {
+            "0xD1A5": 14
+          }
+        }
+      ]
+    },
+    "propertySweep": {
+      "bank": 1,
+      "readOnly": false,
+      "entries": [
+        {
+          "property": "0xD18C",
+          "valueUnsigned": 1,
+          "descriptorResponse": "0x200A"
+        },
+        {
+          "property": "0xD18D",
+          "valueOmitted": true,
+          "descriptorResponse": "0x200A"
+        },
+        {
+          "property": "0xD18E",
+          "valueUnsigned": 14,
+          "descriptorResponse": "0x200A"
+        },
+        {
+          "property": "0xD18F",
+          "valueUnsigned": 2,
+          "descriptorResponse": "0x200A"
+        },
+        {
+          "property": "0xD190",
+          "valueUnsigned": 65535,
+          "descriptorResponse": "0x200A"
+        },
+        {
+          "property": "0xD191",
+          "valueUnsigned": 0,
+          "descriptorResponse": "0x200A"
+        },
+        {
+          "property": "0xD192",
+          "valueUnsigned": 1,
+          "descriptorResponse": "0x200A"
+        },
+        {
+          "property": "0xD193",
+          "valueUnsigned": 0,
+          "descriptorResponse": "0x200A"
+        },
+        {
+          "property": "0xD194",
+          "valueUnsigned": 0,
+          "descriptorResponse": "0x200A"
+        },
+        {
+          "property": "0xD195",
+          "valueUnsigned": 3,
+          "descriptorResponse": "0x200A"
+        },
+        {
+          "property": "0xD196",
+          "valueUnsigned": 3,
+          "descriptorResponse": "0x200A"
+        },
+        {
+          "property": "0xD197",
+          "valueUnsigned": 1,
+          "descriptorResponse": "0x200A"
+        },
+        {
+          "property": "0xD198",
+          "valueUnsigned": 1,
+          "descriptorResponse": "0x200A"
+        },
+        {
+          "property": "0xD199",
+          "valueUnsigned": 32770,
+          "descriptorResponse": "0x200A"
+        },
+        {
+          "property": "0xD19A",
+          "valueUnsigned": 65534,
+          "descriptorResponse": "0x200A"
+        },
+        {
+          "property": "0xD19B",
+          "valueUnsigned": 65534,
+          "descriptorResponse": "0x200A"
+        },
+        {
+          "property": "0xD19C",
+          "valueUnsigned": 10000,
+          "descriptorResponse": "0x200A"
+        },
+        {
+          "property": "0xD19D",
+          "valueUnsigned": 0,
+          "descriptorResponse": "0x200A"
+        },
+        {
+          "property": "0xD19E",
+          "valueUnsigned": 0,
+          "descriptorResponse": "0x200A"
+        },
+        {
+          "property": "0xD19F",
+          "valueUnsigned": 0,
+          "descriptorResponse": "0x200A"
+        },
+        {
+          "property": "0xD1A0",
+          "valueUnsigned": 65516,
+          "descriptorResponse": "0x200A"
+        },
+        {
+          "property": "0xD1A1",
+          "valueUnsigned": 32768,
+          "descriptorResponse": "0x200A"
+        },
+        {
+          "property": "0xD1A2",
+          "valueUnsigned": 0,
+          "descriptorResponse": "0x200A"
+        },
+        {
+          "property": "0xD1A3",
+          "valueUnsigned": 1,
+          "descriptorResponse": "0x200A"
+        },
+        {
+          "property": "0xD1A4",
+          "valueUnsigned": 1,
+          "descriptorResponse": "0x200A"
+        },
+        {
+          "property": "0xD1A5",
+          "valueUnsigned": 14,
+          "descriptorResponse": "0x200A"
+        },
+        {
+          "property": "0xD185",
+          "valueResponse": "0x2002",
+          "descriptorResponse": "0x200A"
+        },
+        {
+          "property": "0xD183",
+          "valueResponse": "0x200A",
+          "descriptor": {
+            "dataType": "UINT16",
+            "form": "enumeration",
+            "enumeration": [
+              0,
+              1
+            ],
+            "factoryDefault": 65535,
+            "current": 65535,
+            "writable": true
+          }
+        }
+      ]
+    },
+    "unsupportedProperties": [],
+    "pushes": [
+      {
+        "recordedUtc": "2026-09-15T23:49:13Z",
+        "bank": 2,
+        "kind": "push",
+        "outcome": "applied",
+        "firmware": "2.13",
+        "nameWritten": false,
+        "baselineOnly": true,
+        "fields": [
+          {
+            "property": "0xD192",
+            "outcome": "written",
+            "writtenUnsigned": 14,
+            "isRecipeField": true
+          }
+        ]
+      },
+      {
+        "recordedUtc": "2026-09-15T23:54:10Z",
+        "bank": 2,
+        "kind": "push",
+        "outcome": "applied",
+        "firmware": "2.13",
+        "nameWritten": false,
+        "baselineOnly": true,
+        "fields": [
+          {
+            "property": "0xD192",
+            "outcome": "written",
+            "writtenUnsigned": 1,
+            "isRecipeField": true
+          }
+        ]
+      },
+      {
+        "recordedUtc": "2026-09-18T01:49:47Z",
+        "bank": 2,
+        "kind": "push",
+        "outcome": "applied",
+        "firmware": "2.13",
+        "nameWritten": true,
+        "bankWasEmpty": false,
+        "selectorReadBack": 2,
+        "nameBeforeEmpty": false,
+        "nameAppliedEmpty": false,
+        "fields": [
+          {
+            "property": "0xD18E",
+            "outcome": "written",
+            "writtenUnsigned": 14,
+            "isRecipeField": false
+          },
+          {
+            "property": "0xD18F",
+            "outcome": "written",
+            "writtenUnsigned": 2,
+            "isRecipeField": false
+          },
+          {
+            "property": "0xD190",
+            "outcome": "written",
+            "writtenUnsigned": 400,
+            "isRecipeField": true
+          },
+          {
+            "property": "0xD192",
+            "outcome": "written",
+            "writtenUnsigned": 3,
+            "isRecipeField": true
+          },
+          {
+            "property": "0xD195",
+            "outcome": "written",
+            "writtenUnsigned": 2,
+            "isRecipeField": true
+          },
+          {
+            "property": "0xD196",
+            "outcome": "written",
+            "writtenUnsigned": 3,
+            "isRecipeField": true
+          },
+          {
+            "property": "0xD197",
+            "outcome": "written",
+            "writtenUnsigned": 2,
+            "isRecipeField": true
+          },
+          {
+            "property": "0xD198",
+            "outcome": "written",
+            "writtenUnsigned": 1,
+            "isRecipeField": false
+          },
+          {
+            "property": "0xD199",
+            "outcome": "written",
+            "writtenUnsigned": 32800,
+            "isRecipeField": true
+          },
+          {
+            "property": "0xD19A",
+            "outcome": "written",
+            "writtenUnsigned": 2,
+            "isRecipeField": true
+          },
+          {
+            "property": "0xD19B",
+            "outcome": "written",
+            "writtenUnsigned": 65532,
+            "isRecipeField": true
+          },
+          {
+            "property": "0xD19D",
+            "outcome": "written",
+            "writtenUnsigned": 65521,
+            "isRecipeField": true
+          },
+          {
+            "property": "0xD19E",
+            "outcome": "written",
+            "writtenUnsigned": 65526,
+            "isRecipeField": true
+          },
+          {
+            "property": "0xD19F",
+            "outcome": "written",
+            "writtenUnsigned": 30,
+            "isRecipeField": true
+          },
+          {
+            "property": "0xD1A0",
+            "outcome": "written",
+            "writtenUnsigned": 65526,
+            "isRecipeField": true
+          },
+          {
+            "property": "0xD1A1",
+            "outcome": "written",
+            "writtenUnsigned": 32768,
+            "isRecipeField": true
+          },
+          {
+            "property": "0xD1A2",
+            "outcome": "written",
+            "writtenUnsigned": 65516,
+            "isRecipeField": true
+          },
+          {
+            "property": "0xD1A3",
+            "outcome": "written",
+            "writtenUnsigned": 1,
+            "isRecipeField": false
+          },
+          {
+            "property": "0xD1A4",
+            "outcome": "written",
+            "writtenUnsigned": 1,
+            "isRecipeField": false
+          }
+        ],
+        "bankBeforeUnsigned": {
+          "0xD18E": 14,
+          "0xD18F": 2,
+          "0xD190": 100,
+          "0xD191": 0,
+          "0xD192": 1,
+          "0xD193": 20,
+          "0xD194": 65526,
+          "0xD195": 7,
+          "0xD196": 1,
+          "0xD197": 1,
+          "0xD198": 1,
+          "0xD199": 2,
+          "0xD19A": 0,
+          "0xD19B": 0,
+          "0xD19C": 10000,
+          "0xD19D": 0,
+          "0xD19E": 0,
+          "0xD19F": 0,
+          "0xD1A0": 0,
+          "0xD1A1": 8192,
+          "0xD1A2": 0,
+          "0xD1A3": 1,
+          "0xD1A4": 1
+        },
+        "liveBeforeUnsigned": {
+          "0xD1A5": 14
+        }
+      },
+      {
+        "recordedUtc": "2026-09-18T01:50:02Z",
+        "bank": 3,
+        "kind": "push",
+        "outcome": "partiallyApplied",
+        "firmware": "2.13",
+        "nameWritten": true,
+        "bankWasEmpty": false,
+        "selectorReadBack": 3,
+        "nameBeforeEmpty": true,
+        "nameAppliedEmpty": false,
+        "fields": [
+          {
+            "property": "0xD18E",
+            "outcome": "written",
+            "writtenUnsigned": 14,
+            "isRecipeField": false
+          },
+          {
+            "property": "0xD18F",
+            "outcome": "written",
+            "writtenUnsigned": 2,
+            "isRecipeField": false
+          },
+          {
+            "property": "0xD190",
+            "outcome": "rejected",
+            "writtenUnsigned": 400,
+            "isRecipeField": true,
+            "response": "0x201C"
+          },
+          {
+            "property": "0xD192",
+            "outcome": "written",
+            "writtenUnsigned": 11,
+            "isRecipeField": true
+          },
+          {
+            "property": "0xD195",
+            "outcome": "written",
+            "writtenUnsigned": 1,
+            "isRecipeField": true
+          },
+          {
+            "property": "0xD196",
+            "outcome": "written",
+            "writtenUnsigned": 3,
+            "isRecipeField": true
+          },
+          {
+            "property": "0xD197",
+            "outcome": "written",
+            "writtenUnsigned": 2,
+            "isRecipeField": true
+          },
+          {
+            "property": "0xD198",
+            "outcome": "written",
+            "writtenUnsigned": 1,
+            "isRecipeField": false
+          },
+          {
+            "property": "0xD199",
+            "outcome": "written",
+            "writtenUnsigned": 4,
+            "isRecipeField": true
+          },
+          {
+            "property": "0xD19A",
+            "outcome": "written",
+            "writtenUnsigned": 2,
+            "isRecipeField": true
+          },
+          {
+            "property": "0xD19B",
+            "outcome": "written",
+            "writtenUnsigned": 65532,
+            "isRecipeField": true
+          },
+          {
+            "property": "0xD19D",
+            "outcome": "written",
+            "writtenUnsigned": 5,
+            "isRecipeField": true
+          },
+          {
+            "property": "0xD19E",
+            "outcome": "written",
+            "writtenUnsigned": 65531,
+            "isRecipeField": true
+          },
+          {
+            "property": "0xD19F",
+            "outcome": "written",
+            "writtenUnsigned": 10,
+            "isRecipeField": true
+          },
+          {
+            "property": "0xD1A0",
+            "outcome": "written",
+            "writtenUnsigned": 30,
+            "isRecipeField": true
+          },
+          {
+            "property": "0xD1A1",
+            "outcome": "written",
+            "writtenUnsigned": 32768,
+            "isRecipeField": true
+          },
+          {
+            "property": "0xD1A2",
+            "outcome": "written",
+            "writtenUnsigned": 30,
+            "isRecipeField": true
+          },
+          {
+            "property": "0xD1A3",
+            "outcome": "written",
+            "writtenUnsigned": 1,
+            "isRecipeField": false
+          },
+          {
+            "property": "0xD1A4",
+            "outcome": "written",
+            "writtenUnsigned": 1,
+            "isRecipeField": false
+          }
+        ],
+        "bankBeforeUnsigned": {
+          "0xD18E": 14,
+          "0xD18F": 2,
+          "0xD190": 100,
+          "0xD191": 0,
+          "0xD192": 1,
+          "0xD193": 0,
+          "0xD194": 0,
+          "0xD195": 6,
+          "0xD196": 1,
+          "0xD197": 1,
+          "0xD198": 1,
+          "0xD199": 2,
+          "0xD19A": 0,
+          "0xD19B": 0,
+          "0xD19C": 10000,
+          "0xD19D": 0,
+          "0xD19E": 0,
+          "0xD19F": 0,
+          "0xD1A0": 0,
+          "0xD1A1": 8192,
+          "0xD1A2": 0,
+          "0xD1A3": 1,
+          "0xD1A4": 1
+        },
+        "liveBeforeUnsigned": {
+          "0xD1A5": 14
+        }
+      },
+      {
+        "recordedUtc": "2026-09-18T01:51:01Z",
+        "bank": 4,
+        "kind": "push",
+        "outcome": "partiallyApplied",
+        "firmware": "2.13",
+        "nameWritten": true,
+        "bankWasEmpty": false,
+        "selectorReadBack": 4,
+        "nameBeforeEmpty": true,
+        "nameAppliedEmpty": false,
+        "fields": [
+          {
+            "property": "0xD18E",
+            "outcome": "written",
+            "writtenUnsigned": 14,
+            "isRecipeField": false
+          },
+          {
+            "property": "0xD18F",
+            "outcome": "written",
+            "writtenUnsigned": 2,
+            "isRecipeField": false
+          },
+          {
+            "property": "0xD190",
+            "outcome": "rejected",
+            "writtenUnsigned": 400,
+            "isRecipeField": true,
+            "response": "0x201C"
+          },
+          {
+            "property": "0xD192",
+            "outcome": "written",
+            "writtenUnsigned": 11,
+            "isRecipeField": true
+          },
+          {
+            "property": "0xD195",
+            "outcome": "written",
+            "writtenUnsigned": 3,
+            "isRecipeField": true
+          },
+          {
+            "property": "0xD196",
+            "outcome": "written",
+            "writtenUnsigned": 2,
+            "isRecipeField": true
+          },
+          {
+            "property": "0xD197",
+            "outcome": "written",
+            "writtenUnsigned": 1,
+            "isRecipeField": true
+          },
+          {
+            "property": "0xD198",
+            "outcome": "written",
+            "writtenUnsigned": 1,
+            "isRecipeField": false
+          },
+          {
+            "property": "0xD199",
+            "outcome": "written",
+            "writtenUnsigned": 4,
+            "isRecipeField": true
+          },
+          {
+            "property": "0xD19A",
+            "outcome": "written",
+            "writtenUnsigned": 4,
+            "isRecipeField": true
+          },
+          {
+            "property": "0xD19B",
+            "outcome": "written",
+            "writtenUnsigned": 65531,
+            "isRecipeField": true
+          },
+          {
+            "property": "0xD19D",
+            "outcome": "written",
+            "writtenUnsigned": 65521,
+            "isRecipeField": true
+          },
+          {
+            "property": "0xD19E",
+            "outcome": "written",
+            "writtenUnsigned": 5,
+            "isRecipeField": true
+          },
+          {
+            "property": "0xD19F",
+            "outcome": "written",
+            "writtenUnsigned": 30,
+            "isRecipeField": true
+          },
+          {
+            "property": "0xD1A0",
+            "outcome": "written",
+            "writtenUnsigned": 65516,
+            "isRecipeField": true
+          },
+          {
+            "property": "0xD1A1",
+            "outcome": "written",
+            "writtenUnsigned": 32768,
+            "isRecipeField": true
+          },
+          {
+            "property": "0xD1A2",
+            "outcome": "written",
+            "writtenUnsigned": 65516,
+            "isRecipeField": true
+          },
+          {
+            "property": "0xD1A3",
+            "outcome": "written",
+            "writtenUnsigned": 1,
+            "isRecipeField": false
+          },
+          {
+            "property": "0xD1A4",
+            "outcome": "written",
+            "writtenUnsigned": 1,
+            "isRecipeField": false
+          }
+        ],
+        "bankBeforeUnsigned": {
+          "0xD18E": 14,
+          "0xD18F": 2,
+          "0xD190": 100,
+          "0xD191": 0,
+          "0xD192": 1,
+          "0xD193": 0,
+          "0xD194": 0,
+          "0xD195": 6,
+          "0xD196": 1,
+          "0xD197": 1,
+          "0xD198": 1,
+          "0xD199": 2,
+          "0xD19A": 0,
+          "0xD19B": 0,
+          "0xD19C": 10000,
+          "0xD19D": 0,
+          "0xD19E": 0,
+          "0xD19F": 0,
+          "0xD1A0": 0,
+          "0xD1A1": 8192,
+          "0xD1A2": 0,
+          "0xD1A3": 1,
+          "0xD1A4": 1
+        },
+        "liveBeforeUnsigned": {
+          "0xD1A5": 14
+        }
+      },
+      {
+        "recordedUtc": "2026-09-19T00:58:24Z",
+        "bank": 2,
+        "kind": "push",
+        "outcome": "applied",
+        "firmware": "2.13",
+        "nameWritten": true,
+        "bankWasEmpty": false,
+        "selectorReadBack": 2,
+        "nameBeforeEmpty": false,
+        "nameAppliedEmpty": false,
+        "fields": [
+          {
+            "property": "0xD18E",
+            "outcome": "written",
+            "writtenUnsigned": 14,
+            "isRecipeField": false
+          },
+          {
+            "property": "0xD18F",
+            "outcome": "written",
+            "writtenUnsigned": 2,
+            "isRecipeField": false
+          },
+          {
+            "property": "0xD191",
+            "outcome": "written",
+            "writtenUnsigned": 2,
+            "isRecipeField": true
+          },
+          {
+            "property": "0xD192",
+            "outcome": "written",
+            "writtenUnsigned": 1,
+            "isRecipeField": true
+          },
+          {
+            "property": "0xD195",
+            "outcome": "written",
+            "writtenUnsigned": 1,
+            "isRecipeField": true
+          },
+          {
+            "property": "0xD196",
+            "outcome": "written",
+            "writtenUnsigned": 1,
+            "isRecipeField": true
+          },
+          {
+            "property": "0xD197",
+            "outcome": "written",
+            "writtenUnsigned": 1,
+            "isRecipeField": true
+          },
+          {
+            "property": "0xD198",
+            "outcome": "written",
+            "writtenUnsigned": 1,
+            "isRecipeField": false
+          },
+          {
+            "property": "0xD199",
+            "outcome": "written",
+            "writtenUnsigned": 2,
+            "isRecipeField": true
+          },
+          {
+            "property": "0xD19A",
+            "outcome": "written",
+            "writtenUnsigned": 0,
+            "isRecipeField": true
+          },
+          {
+            "property": "0xD19B",
+            "outcome": "written",
+            "writtenUnsigned": 0,
+            "isRecipeField": true
+          },
+          {
+            "property": "0xD19F",
+            "outcome": "written",
+            "writtenUnsigned": 0,
+            "isRecipeField": true
+          },
+          {
+            "property": "0xD1A0",
+            "outcome": "written",
+            "writtenUnsigned": 0,
+            "isRecipeField": true
+          },
+          {
+            "property": "0xD1A1",
+            "outcome": "written",
+            "writtenUnsigned": 8192,
+            "isRecipeField": true
+          },
+          {
+            "property": "0xD1A2",
+            "outcome": "written",
+            "writtenUnsigned": 0,
+            "isRecipeField": true
+          },
+          {
+            "property": "0xD1A3",
+            "outcome": "written",
+            "writtenUnsigned": 1,
+            "isRecipeField": false
+          },
+          {
+            "property": "0xD1A4",
+            "outcome": "written",
+            "writtenUnsigned": 1,
+            "isRecipeField": false
+          }
+        ],
+        "bankBeforeUnsigned": {
+          "0xD18E": 14,
+          "0xD18F": 2,
+          "0xD190": 400,
+          "0xD191": 32768,
+          "0xD192": 3,
+          "0xD193": 20,
+          "0xD194": 65526,
+          "0xD195": 2,
+          "0xD196": 3,
+          "0xD197": 2,
+          "0xD198": 1,
+          "0xD199": 32800,
+          "0xD19A": 2,
+          "0xD19B": 65532,
+          "0xD19C": 10000,
+          "0xD19D": 65521,
+          "0xD19E": 65526,
+          "0xD19F": 30,
+          "0xD1A0": 65526,
+          "0xD1A1": 32768,
+          "0xD1A2": 65516,
+          "0xD1A3": 1,
+          "0xD1A4": 1
+        },
+        "liveBeforeUnsigned": {
+          "0xD1A5": 14
+        }
+      },
+      {
+        "recordedUtc": "2026-09-19T01:06:41Z",
+        "bank": 2,
+        "kind": "push",
+        "outcome": "applied",
+        "firmware": "2.13",
+        "nameWritten": true,
+        "bankWasEmpty": false,
+        "selectorReadBack": 2,
+        "nameBeforeEmpty": false,
+        "nameAppliedEmpty": false,
+        "fields": [
+          {
+            "property": "0xD18E",
+            "outcome": "written",
+            "writtenUnsigned": 14,
+            "isRecipeField": false
+          },
+          {
+            "property": "0xD18F",
+            "outcome": "written",
+            "writtenUnsigned": 2,
+            "isRecipeField": false
+          },
+          {
+            "property": "0xD191",
+            "outcome": "written",
+            "writtenUnsigned": 0,
+            "isRecipeField": true
+          },
+          {
+            "property": "0xD190",
+            "outcome": "written",
+            "writtenUnsigned": 400,
+            "isRecipeField": true
+          },
+          {
+            "property": "0xD192",
+            "outcome": "written",
+            "writtenUnsigned": 1,
+            "isRecipeField": true
+          },
+          {
+            "property": "0xD195",
+            "outcome": "written",
+            "writtenUnsigned": 1,
+            "isRecipeField": true
+          },
+          {
+            "property": "0xD196",
+            "outcome": "written",
+            "writtenUnsigned": 1,
+            "isRecipeField": true
+          },
+          {
+            "property": "0xD197",
+            "outcome": "written",
+            "writtenUnsigned": 1,
+            "isRecipeField": true
+          },
+          {
+            "property": "0xD198",
+            "outcome": "written",
+            "writtenUnsigned": 1,
+            "isRecipeField": false
+          },
+          {
+            "property": "0xD199",
+            "outcome": "written",
+            "writtenUnsigned": 2,
+            "isRecipeField": true
+          },
+          {
+            "property": "0xD19A",
+            "outcome": "written",
+            "writtenUnsigned": 0,
+            "isRecipeField": true
+          },
+          {
+            "property": "0xD19B",
+            "outcome": "written",
+            "writtenUnsigned": 0,
+            "isRecipeField": true
+          },
+          {
+            "property": "0xD19D",
+            "outcome": "written",
+            "writtenUnsigned": 15,
+            "isRecipeField": true
+          },
+          {
+            "property": "0xD19E",
+            "outcome": "written",
+            "writtenUnsigned": 65526,
+            "isRecipeField": true
+          },
+          {
+            "property": "0xD19F",
+            "outcome": "written",
+            "writtenUnsigned": 0,
+            "isRecipeField": true
+          },
+          {
+            "property": "0xD1A0",
+            "outcome": "written",
+            "writtenUnsigned": 0,
+            "isRecipeField": true
+          },
+          {
+            "property": "0xD1A1",
+            "outcome": "written",
+            "writtenUnsigned": 8192,
+            "isRecipeField": true
+          },
+          {
+            "property": "0xD1A2",
+            "outcome": "written",
+            "writtenUnsigned": 0,
+            "isRecipeField": true
+          },
+          {
+            "property": "0xD1A3",
+            "outcome": "written",
+            "writtenUnsigned": 1,
+            "isRecipeField": false
+          },
+          {
+            "property": "0xD1A4",
+            "outcome": "written",
+            "writtenUnsigned": 1,
+            "isRecipeField": false
+          }
+        ],
+        "bankBeforeUnsigned": {
+          "0xD18E": 14,
+          "0xD18F": 2,
+          "0xD190": 400,
+          "0xD191": 2,
+          "0xD192": 1,
+          "0xD193": 20,
+          "0xD194": 65526,
+          "0xD195": 6,
+          "0xD196": 1,
+          "0xD197": 1,
+          "0xD198": 1,
+          "0xD199": 2,
+          "0xD19A": 0,
+          "0xD19B": 0,
+          "0xD19C": 10000,
+          "0xD19D": 65521,
+          "0xD19E": 65526,
+          "0xD19F": 0,
+          "0xD1A0": 0,
+          "0xD1A1": 8192,
+          "0xD1A2": 0,
+          "0xD1A3": 1,
+          "0xD1A4": 1
+        },
+        "liveBeforeUnsigned": {
+          "0xD1A5": 14
+        }
+      },
+      {
+        "recordedUtc": "2026-09-19T01:08:59Z",
+        "bank": 1,
+        "kind": "push",
+        "outcome": "partiallyApplied",
+        "firmware": "2.13",
+        "nameWritten": true,
+        "bankWasEmpty": false,
+        "selectorReadBack": 1,
+        "nameBeforeEmpty": false,
+        "nameAppliedEmpty": false,
+        "fields": [
+          {
+            "property": "0xD18E",
+            "outcome": "written",
+            "writtenUnsigned": 14,
+            "isRecipeField": false
+          },
+          {
+            "property": "0xD18F",
+            "outcome": "written",
+            "writtenUnsigned": 2,
+            "isRecipeField": false
+          },
+          {
+            "property": "0xD191",
+            "outcome": "rejected",
+            "writtenUnsigned": 2,
+            "isRecipeField": true,
+            "response": "0x201C"
+          },
+          {
+            "property": "0xD192",
+            "outcome": "written",
+            "writtenUnsigned": 1,
+            "isRecipeField": true
+          },
+          {
+            "property": "0xD195",
+            "outcome": "written",
+            "writtenUnsigned": 1,
+            "isRecipeField": true
+          },
+          {
+            "property": "0xD196",
+            "outcome": "written",
+            "writtenUnsigned": 1,
+            "isRecipeField": true
+          },
+          {
+            "property": "0xD197",
+            "outcome": "written",
+            "writtenUnsigned": 1,
+            "isRecipeField": true
+          },
+          {
+            "property": "0xD198",
+            "outcome": "written",
+            "writtenUnsigned": 1,
+            "isRecipeField": false
+          },
+          {
+            "property": "0xD199",
+            "outcome": "written",
+            "writtenUnsigned": 2,
+            "isRecipeField": true
+          },
+          {
+            "property": "0xD19A",
+            "outcome": "written",
+            "writtenUnsigned": 0,
+            "isRecipeField": true
+          },
+          {
+            "property": "0xD19B",
+            "outcome": "written",
+            "writtenUnsigned": 0,
+            "isRecipeField": true
+          },
+          {
+            "property": "0xD19F",
+            "outcome": "written",
+            "writtenUnsigned": 0,
+            "isRecipeField": true
+          },
+          {
+            "property": "0xD1A0",
+            "outcome": "written",
+            "writtenUnsigned": 0,
+            "isRecipeField": true
+          },
+          {
+            "property": "0xD1A1",
+            "outcome": "written",
+            "writtenUnsigned": 8192,
+            "isRecipeField": true
+          },
+          {
+            "property": "0xD1A2",
+            "outcome": "written",
+            "writtenUnsigned": 0,
+            "isRecipeField": true
+          },
+          {
+            "property": "0xD1A3",
+            "outcome": "written",
+            "writtenUnsigned": 1,
+            "isRecipeField": false
+          },
+          {
+            "property": "0xD1A4",
+            "outcome": "written",
+            "writtenUnsigned": 1,
+            "isRecipeField": false
+          }
+        ],
+        "bankBeforeUnsigned": {
+          "0xD18E": 14,
+          "0xD18F": 2,
+          "0xD190": 65535,
+          "0xD191": 32768,
+          "0xD192": 1,
+          "0xD193": 0,
+          "0xD194": 0,
+          "0xD195": 3,
+          "0xD196": 3,
+          "0xD197": 1,
+          "0xD198": 1,
+          "0xD199": 32770,
+          "0xD19A": 65534,
+          "0xD19B": 65534,
+          "0xD19C": 10000,
+          "0xD19D": 0,
+          "0xD19E": 0,
+          "0xD19F": 0,
+          "0xD1A0": 65516,
+          "0xD1A1": 32768,
+          "0xD1A2": 0,
+          "0xD1A3": 1,
+          "0xD1A4": 1
+        },
+        "liveBeforeUnsigned": {
+          "0xD1A5": 14
+        }
+      }
+    ],
+    "guidedTests": [
+      {
+        "wave": 1,
+        "startedUtc": "2026-09-18T00:56:57Z",
+        "updatedUtc": "2026-09-18T01:16:57Z",
+        "outcome": "completed",
+        "transport": "usb",
+        "stepsCompleted": [
+          "intro",
+          "connect",
+          "confirmIdentity",
+          "readSlots",
+          "compareSlots",
+          "propertyReport",
+          "grainProbe",
+          "develop",
+          "review",
+          "send"
+        ],
+        "identity": {
+          "clientShowedModel": "GFX100S",
+          "identification": "exact",
+          "ownerConfirmed": true,
+          "badge": "Read & Write \u00b7 owner-verified"
+        },
+        "propertyReport": {
+          "bank": 1,
+          "readOnly": false,
+          "count": 26,
+          "state": "ran"
+        },
+        "grainProbe": {
+          "state": "ran",
+          "bank": 1,
+          "count": 10,
+          "steps": [
+            {
+              "writtenUnsigned": 0,
+              "result": "refused",
+              "response": "0x201C"
+            },
+            {
+              "writtenUnsigned": 2,
+              "result": "accepted"
+            },
+            {
+              "writtenUnsigned": 1,
+              "result": "accepted_and_read_back",
+              "readbackUnsigned": 6
+            },
+            {
+              "writtenUnsigned": 3,
+              "result": "accepted"
+            },
+            {
+              "writtenUnsigned": 6,
+              "result": "refused",
+              "response": "0x201C"
+            },
+            {
+              "writtenUnsigned": 4,
+              "result": "accepted"
+            },
+            {
+              "writtenUnsigned": 7,
+              "result": "refused",
+              "response": "0x201C"
+            },
+            {
+              "writtenUnsigned": 5,
+              "result": "accepted"
+            },
+            {
+              "writtenUnsigned": 1,
+              "result": "accepted_and_read_back",
+              "readbackUnsigned": 7
+            },
+            {
+              "writtenUnsigned": 8,
+              "result": "refused",
+              "response": "0x201C"
+            }
+          ]
+        },
+        "develop": {
+          "state": "notWritable",
+          "detail": "conversion_not_enabled_for_body"
+        },
+        "profileHarvest": {
+          "state": "ran",
+          "profileBytes": 621,
+          "tableOffset": 509
+        },
+        "bankComparisons": [
+          {
+            "bank": 1,
+            "checkedUtc": "2026-09-18T00:57:27Z",
+            "filmSimulation": "PROVIA / Standard",
+            "verdict": "matches",
+            "rows": [
+              {
+                "field": "Film Simulation",
+                "clientShowed": "PROVIA / Standard",
+                "differs": false
+              },
+              {
+                "field": "Grain Effect",
+                "clientShowed": "Strong, Small",
+                "differs": false
+              },
+              {
+                "field": "Color Chrome Effect",
+                "clientShowed": "Strong",
+                "differs": false
+              },
+              {
+                "field": "Color Chrome FX Blue",
+                "clientShowed": "Off",
+                "differs": false
+              },
+              {
+                "field": "White Balance",
+                "clientShowed": "Fluorescent 2 \u00b7 R\u22122 B\u22122",
+                "differs": false
+              },
+              {
+                "field": "Dynamic Range",
+                "clientShowed": "DR Auto",
+                "differs": false
+              },
+              {
+                "field": "Highlight Tone",
+                "clientShowed": "+0",
+                "differs": false
+              },
+              {
+                "field": "Shadow Tone",
+                "clientShowed": "+0",
+                "differs": false
+              },
+              {
+                "field": "Color",
+                "clientShowed": "+0",
+                "differs": false
+              },
+              {
+                "field": "Sharpness",
+                "clientShowed": "\u22122",
+                "differs": false
+              },
+              {
+                "field": "High ISO NR",
+                "clientShowed": "\u22124",
+                "differs": false
+              },
+              {
+                "field": "Clarity",
+                "clientShowed": "+0",
+                "differs": false
+              }
+            ]
+          },
+          {
+            "bank": 2,
+            "checkedUtc": "2026-09-18T01:14:57Z",
+            "filmSimulation": "PROVIA / Standard",
+            "verdict": "matches",
+            "rows": [
+              {
+                "field": "Film Simulation",
+                "clientShowed": "PROVIA / Standard",
+                "differs": false
+              },
+              {
+                "field": "Grain Effect",
+                "clientShowed": "Off",
+                "differs": false
+              },
+              {
+                "field": "Color Chrome Effect",
+                "clientShowed": "Off",
+                "differs": false
+              },
+              {
+                "field": "Color Chrome FX Blue",
+                "clientShowed": "Off",
+                "differs": false
+              },
+              {
+                "field": "White Balance",
+                "clientShowed": "Auto",
+                "differs": false
+              },
+              {
+                "field": "Dynamic Range",
+                "clientShowed": "DR100",
+                "differs": false
+              },
+              {
+                "field": "Highlight Tone",
+                "clientShowed": "+0",
+                "differs": false
+              },
+              {
+                "field": "Shadow Tone",
+                "clientShowed": "+0",
+                "differs": false
+              },
+              {
+                "field": "Color",
+                "clientShowed": "+0",
+                "differs": false
+              },
+              {
+                "field": "Sharpness",
+                "clientShowed": "+0",
+                "differs": false
+              },
+              {
+                "field": "High ISO NR",
+                "clientShowed": "+0",
+                "differs": false
+              },
+              {
+                "field": "Clarity",
+                "clientShowed": "+0",
+                "differs": false
+              }
+            ]
+          },
+          {
+            "bank": 3,
+            "checkedUtc": "2026-09-18T00:57:30Z",
+            "filmSimulation": "PROVIA / Standard",
+            "verdict": "matches",
+            "rows": [
+              {
+                "field": "Film Simulation",
+                "clientShowed": "PROVIA / Standard",
+                "differs": false
+              },
+              {
+                "field": "Grain Effect",
+                "clientShowed": "Off",
+                "differs": false
+              },
+              {
+                "field": "Color Chrome Effect",
+                "clientShowed": "Off",
+                "differs": false
+              },
+              {
+                "field": "Color Chrome FX Blue",
+                "clientShowed": "Off",
+                "differs": false
+              },
+              {
+                "field": "White Balance",
+                "clientShowed": "Auto",
+                "differs": false
+              },
+              {
+                "field": "Dynamic Range",
+                "clientShowed": "DR100",
+                "differs": false
+              },
+              {
+                "field": "Highlight Tone",
+                "clientShowed": "+0",
+                "differs": false
+              },
+              {
+                "field": "Shadow Tone",
+                "clientShowed": "+0",
+                "differs": false
+              },
+              {
+                "field": "Color",
+                "clientShowed": "+0",
+                "differs": false
+              },
+              {
+                "field": "Sharpness",
+                "clientShowed": "+0",
+                "differs": false
+              },
+              {
+                "field": "High ISO NR",
+                "clientShowed": "+0",
+                "differs": false
+              },
+              {
+                "field": "Clarity",
+                "clientShowed": "+0",
+                "differs": false
+              }
+            ]
+          },
+          {
+            "bank": 4,
+            "checkedUtc": "2026-09-18T00:57:31Z",
+            "filmSimulation": "PROVIA / Standard",
+            "verdict": "matches",
+            "rows": [
+              {
+                "field": "Film Simulation",
+                "clientShowed": "PROVIA / Standard",
+                "differs": false
+              },
+              {
+                "field": "Grain Effect",
+                "clientShowed": "Off",
+                "differs": false
+              },
+              {
+                "field": "Color Chrome Effect",
+                "clientShowed": "Off",
+                "differs": false
+              },
+              {
+                "field": "Color Chrome FX Blue",
+                "clientShowed": "Off",
+                "differs": false
+              },
+              {
+                "field": "White Balance",
+                "clientShowed": "Auto",
+                "differs": false
+              },
+              {
+                "field": "Dynamic Range",
+                "clientShowed": "DR100",
+                "differs": false
+              },
+              {
+                "field": "Highlight Tone",
+                "clientShowed": "+0",
+                "differs": false
+              },
+              {
+                "field": "Shadow Tone",
+                "clientShowed": "+0",
+                "differs": false
+              },
+              {
+                "field": "Color",
+                "clientShowed": "+0",
+                "differs": false
+              },
+              {
+                "field": "Sharpness",
+                "clientShowed": "+0",
+                "differs": false
+              },
+              {
+                "field": "High ISO NR",
+                "clientShowed": "+0",
+                "differs": false
+              },
+              {
+                "field": "Clarity",
+                "clientShowed": "+0",
+                "differs": false
+              }
+            ]
+          },
+          {
+            "bank": 5,
+            "checkedUtc": "2026-09-18T00:57:32Z",
+            "filmSimulation": "PROVIA / Standard",
+            "verdict": "matches",
+            "rows": [
+              {
+                "field": "Film Simulation",
+                "clientShowed": "PROVIA / Standard",
+                "differs": false
+              },
+              {
+                "field": "Grain Effect",
+                "clientShowed": "Off",
+                "differs": false
+              },
+              {
+                "field": "Color Chrome Effect",
+                "clientShowed": "Off",
+                "differs": false
+              },
+              {
+                "field": "Color Chrome FX Blue",
+                "clientShowed": "Off",
+                "differs": false
+              },
+              {
+                "field": "White Balance",
+                "clientShowed": "Auto",
+                "differs": false
+              },
+              {
+                "field": "Dynamic Range",
+                "clientShowed": "DR100",
+                "differs": false
+              },
+              {
+                "field": "Highlight Tone",
+                "clientShowed": "+0",
+                "differs": false
+              },
+              {
+                "field": "Shadow Tone",
+                "clientShowed": "+0",
+                "differs": false
+              },
+              {
+                "field": "Color",
+                "clientShowed": "+0",
+                "differs": false
+              },
+              {
+                "field": "Sharpness",
+                "clientShowed": "+0",
+                "differs": false
+              },
+              {
+                "field": "High ISO NR",
+                "clientShowed": "+0",
+                "differs": false
+              },
+              {
+                "field": "Clarity",
+                "clientShowed": "+0",
+                "differs": false
+              }
+            ]
+          },
+          {
+            "bank": 6,
+            "checkedUtc": "2026-09-18T00:57:34Z",
+            "filmSimulation": "PROVIA / Standard",
+            "verdict": "matches",
+            "rows": [
+              {
+                "field": "Film Simulation",
+                "clientShowed": "PROVIA / Standard",
+                "differs": false
+              },
+              {
+                "field": "Grain Effect",
+                "clientShowed": "Off",
+                "differs": false
+              },
+              {
+                "field": "Color Chrome Effect",
+                "clientShowed": "Off",
+                "differs": false
+              },
+              {
+                "field": "Color Chrome FX Blue",
+                "clientShowed": "Off",
+                "differs": false
+              },
+              {
+                "field": "White Balance",
+                "clientShowed": "Auto",
+                "differs": false
+              },
+              {
+                "field": "Dynamic Range",
+                "clientShowed": "DR100",
+                "differs": false
+              },
+              {
+                "field": "Highlight Tone",
+                "clientShowed": "+0",
+                "differs": false
+              },
+              {
+                "field": "Shadow Tone",
+                "clientShowed": "+0",
+                "differs": false
+              },
+              {
+                "field": "Color",
+                "clientShowed": "+0",
+                "differs": false
+              },
+              {
+                "field": "Sharpness",
+                "clientShowed": "+0",
+                "differs": false
+              },
+              {
+                "field": "High ISO NR",
+                "clientShowed": "+0",
+                "differs": false
+              },
+              {
+                "field": "Clarity",
+                "clientShowed": "+0",
+                "differs": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "wave": 1,
+        "startedUtc": "2026-09-19T00:50:11Z",
+        "updatedUtc": "2026-09-19T00:55:25Z",
+        "outcome": "sentEarly",
+        "transport": "usb",
+        "stepsCompleted": [
+          "intro",
+          "connect",
+          "confirmIdentity",
+          "readSlots"
+        ],
+        "outcomeStep": "compareSlots",
+        "identity": {
+          "clientShowedModel": "GFX100S",
+          "identification": "exact",
+          "ownerConfirmed": true,
+          "badge": "Read & Write \u00b7 owner-verified"
+        },
+        "bankComparisons": [
+          {
+            "bank": 1,
+            "checkedUtc": "2026-09-19T00:53:11Z",
+            "filmSimulation": "PROVIA / Standard",
+            "verdict": "differs",
+            "rows": [
+              {
+                "field": "Film Simulation",
+                "clientShowed": "PROVIA / Standard",
+                "differs": false
+              },
+              {
+                "field": "Grain Effect",
+                "clientShowed": "Strong, Small",
+                "differs": false
+              },
+              {
+                "field": "Color Chrome Effect",
+                "clientShowed": "Strong",
+                "differs": false
+              },
+              {
+                "field": "Color Chrome FX Blue",
+                "clientShowed": "Off",
+                "differs": false
+              },
+              {
+                "field": "White Balance",
+                "clientShowed": "Fluorescent 2 \u00b7 R\u22122 B\u22122",
+                "differs": false
+              },
+              {
+                "field": "Dynamic Range",
+                "clientShowed": "DR Auto \u00b7 overridden by D-Range Priority",
+                "differs": false
+              },
+              {
+                "field": "D-Range Priority",
+                "clientShowed": "Auto",
+                "differs": true,
+                "ownerReportedCamera": "OFF"
+              },
+              {
+                "field": "Highlight Tone",
+                "clientShowed": "+0 \u00b7 overridden by D-Range Priority",
+                "differs": false
+              },
+              {
+                "field": "Shadow Tone",
+                "clientShowed": "+0 \u00b7 overridden by D-Range Priority",
+                "differs": false
+              },
+              {
+                "field": "Color",
+                "clientShowed": "+0",
+                "differs": false
+              },
+              {
+                "field": "Sharpness",
+                "clientShowed": "\u22122",
+                "differs": false
+              },
+              {
+                "field": "High ISO NR",
+                "clientShowed": "\u22124",
+                "differs": false
+              },
+              {
+                "field": "Clarity",
+                "clientShowed": "+0",
+                "differs": false
+              }
+            ]
+          },
+          {
+            "bank": 2,
+            "checkedUtc": "2026-09-19T00:55:22Z",
+            "filmSimulation": "ASTIA / Soft",
+            "verdict": "matches",
+            "rows": [
+              {
+                "field": "Film Simulation",
+                "clientShowed": "ASTIA / Soft",
+                "differs": false
+              },
+              {
+                "field": "Grain Effect",
+                "clientShowed": "Weak, Small",
+                "differs": false
+              },
+              {
+                "field": "Color Chrome Effect",
+                "clientShowed": "Strong",
+                "differs": false
+              },
+              {
+                "field": "Color Chrome FX Blue",
+                "clientShowed": "Weak",
+                "differs": false
+              },
+              {
+                "field": "White Balance",
+                "clientShowed": "Auto (White Priority) \u00b7 R+2 B\u22124",
+                "differs": false
+              },
+              {
+                "field": "Dynamic Range",
+                "clientShowed": "DR400 \u00b7 overridden by D-Range Priority",
+                "differs": false
+              },
+              {
+                "field": "D-Range Priority",
+                "clientShowed": "Auto",
+                "differs": false
+              },
+              {
+                "field": "Highlight Tone",
+                "clientShowed": "\u22121.5 \u00b7 overridden by D-Range Priority",
+                "differs": false
+              },
+              {
+                "field": "Shadow Tone",
+                "clientShowed": "\u22121 \u00b7 overridden by D-Range Priority",
+                "differs": false
+              },
+              {
+                "field": "Color",
+                "clientShowed": "+3",
+                "differs": false
+              },
+              {
+                "field": "Sharpness",
+                "clientShowed": "\u22121",
+                "differs": false
+              },
+              {
+                "field": "High ISO NR",
+                "clientShowed": "\u22124",
+                "differs": false
+              },
+              {
+                "field": "Clarity",
+                "clientShowed": "\u22122",
+                "differs": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "wave": 1,
+        "startedUtc": "2026-09-30T02:16:49Z",
+        "updatedUtc": "2026-09-30T02:20:01Z",
+        "outcome": "sentEarly",
+        "transport": "usb",
+        "stepsCompleted": [
+          "intro",
+          "connect",
+          "confirmIdentity",
+          "readSlots"
+        ],
+        "outcomeStep": "compareSlots",
+        "identity": {
+          "clientShowedModel": "GFX100S",
+          "identification": "exact",
+          "ownerConfirmed": true,
+          "badge": "Read & Write \u00b7 owner-verified"
+        },
+        "bankComparisons": [
+          {
+            "bank": 1,
+            "checkedUtc": "2026-09-30T02:18:22Z",
+            "filmSimulation": "PROVIA / Standard",
+            "verdict": "differs",
+            "rows": [
+              {
+                "field": "Film Simulation",
+                "clientShowed": "PROVIA / Standard",
+                "differs": false
+              },
+              {
+                "field": "Grain Effect",
+                "clientShowed": "Off",
+                "differs": false
+              },
+              {
+                "field": "Color Chrome Effect",
+                "clientShowed": "Off",
+                "differs": false
+              },
+              {
+                "field": "Color Chrome FX Blue",
+                "clientShowed": "Off",
+                "differs": false
+              },
+              {
+                "field": "White Balance",
+                "clientShowed": "Auto",
+                "differs": false
+              },
+              {
+                "field": "Dynamic Range",
+                "clientShowed": "DR Auto \u00b7 overridden by D-Range Priority",
+                "differs": false
+              },
+              {
+                "field": "D-Range Priority",
+                "clientShowed": "Auto",
+                "differs": true,
+                "ownerReportedCamera": "OFF"
+              },
+              {
+                "field": "Highlight Tone",
+                "clientShowed": "+0 \u00b7 overridden by D-Range Priority",
+                "differs": false
+              },
+              {
+                "field": "Shadow Tone",
+                "clientShowed": "+0 \u00b7 overridden by D-Range Priority",
+                "differs": false
+              },
+              {
+                "field": "Color",
+                "clientShowed": "+0",
+                "differs": false
+              },
+              {
+                "field": "Sharpness",
+                "clientShowed": "+0",
+                "differs": false
+              },
+              {
+                "field": "High ISO NR",
+                "clientShowed": "+0",
+                "differs": false
+              },
+              {
+                "field": "Clarity",
+                "clientShowed": "+0",
+                "differs": false
+              }
+            ]
+          },
+          {
+            "bank": 2,
+            "checkedUtc": "2026-09-30T02:19:58Z",
+            "filmSimulation": "PROVIA / Standard",
+            "verdict": "matches",
+            "rows": [
+              {
+                "field": "Film Simulation",
+                "clientShowed": "PROVIA / Standard",
+                "differs": false
+              },
+              {
+                "field": "Grain Effect",
+                "clientShowed": "Off",
+                "differs": false
+              },
+              {
+                "field": "Color Chrome Effect",
+                "clientShowed": "Off",
+                "differs": false
+              },
+              {
+                "field": "Color Chrome FX Blue",
+                "clientShowed": "Off",
+                "differs": false
+              },
+              {
+                "field": "White Balance",
+                "clientShowed": "Auto",
+                "differs": false
+              },
+              {
+                "field": "Dynamic Range",
+                "clientShowed": "DR400",
+                "differs": false
+              },
+              {
+                "field": "D-Range Priority",
+                "clientShowed": "Off",
+                "differs": false
+              },
+              {
+                "field": "Highlight Tone",
+                "clientShowed": "+1.5",
+                "differs": false
+              },
+              {
+                "field": "Shadow Tone",
+                "clientShowed": "\u22121",
+                "differs": false
+              },
+              {
+                "field": "Color",
+                "clientShowed": "+0",
+                "differs": false
+              },
+              {
+                "field": "Sharpness",
+                "clientShowed": "+0",
+                "differs": false
+              },
+              {
+                "field": "High ISO NR",
+                "clientShowed": "+0",
+                "differs": false
+              },
+              {
+                "field": "Clarity",
+                "clientShowed": "+0",
+                "differs": false
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "profileHarvests": [
+      {
+        "recordedUtc": "2026-09-18T01:15:37Z",
+        "firmware": "2.13",
+        "profileBeforeUploadResponse": "0x2002",
+        "rafBytes": 208071296,
+        "uploadOutcome": "accepted",
+        "uploadCreatedObject": false,
+        "profileBytes": 621,
+        "numParams": 28,
+        "tableOffset": 509,
+        "iopCode": "FF149502",
+        "first64BytesHex": "1c000846004600310034003900350030003200000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+        "canonicalTableOffset": 509,
+        "tailTableOffset": 509,
+        "layoutCandidates": [
+          {
+            "tableOffset": 509,
+            "dynamicRangeCell": 100,
+            "filmSimulationShown": "PROVIA / Standard",
+            "score": 5,
+            "verdict": "accepted"
+          },
+          {
+            "tableOffset": 513,
+            "dynamicRangeCell": 0,
+            "filmSimulationShown": "PROVIA / Standard",
+            "score": 3,
+            "verdict": "rejected"
+          },
+          {
+            "tableOffset": 505,
+            "dynamicRangeCell": 0,
+            "filmSimulationShown": "?0",
+            "score": 2,
+            "verdict": "rejected"
+          }
+        ]
+      }
+    ],
+    "notes": []
+  }
+}

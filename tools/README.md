@@ -63,6 +63,15 @@ Some experiments ask the operator to change ISO, format, modes, the active shoot
 
 Runs produce local JSON logs, transcripts, and recovery files. They can contain bank names and recipe contents even though DeviceInfo serials are omitted. `.gitignore` excludes the default `bankprobe-*.json` and `bankprobe-*.txt` filenames and the `backups/` directory. Custom `--out` or `--log` paths outside those patterns aren't automatically excluded. Check custom outputs before publishing, and review/sanitize all run output before sharing. Follow the [contribution guidance](../CONTRIBUTING.md).
 
+## Write timing
+
+```bash
+python3 -B tools/write_timing.py
+python3 -B tools/write_timing.py --json
+```
+
+[`write_timing.py`](write_timing.py) recomputes the bank-write timing figures that the [transport chapter](../docs/01-transport.md#timing) and the [write-timing note](../evidence/write-timing.md) cite: name, bank-setting, white balance, and live Image Size writes, and property reads, for each body. It reads only the published client-trace ledgers and never opens a camera or an original. A trace that is an exact prefix of a later trace of the same body is counted once, and a write of 200 ms or more counts as slow. `test_client_trace_packages.py` checks the figures the record cites.
+
 ## Evidence validation and the offline checks
 
 [`validate_evidence.py`](validate_evidence.py) checks an observation report against the [report schema](../evidence/report-schema.md); [`check_reference.py`](check_reference.py) checks the record's links, anchors, table widths, and Python syntax, and reports stray captures or caches. The design patterns a client should follow are prose, in [client implementation](../docs/11-client-implementation.md).

@@ -1,0 +1,198 @@
+{
+  "format": "fuji-owner-client-report-observations-v1",
+  "evidenceId": "gfx100s-20260915-181130",
+  "observations": {
+    "getDeviceInfo": [
+      {
+        "sequence": 1,
+        "response": "0x2001",
+        "durationMs": 5
+      }
+    ],
+    "selector": [
+      {
+        "sequence": 2,
+        "operation": "read",
+        "valueUnsigned": 7,
+        "response": "0x2001"
+      },
+      {
+        "sequence": 58,
+        "operation": "read",
+        "valueUnsigned": 7,
+        "response": "0x2001"
+      },
+      {
+        "sequence": 59,
+        "operation": "read",
+        "valueUnsigned": 7,
+        "response": "0x2001"
+      }
+    ],
+    "writes": [],
+    "descriptorResponses": {
+      "0xD183": {
+        "0x2001": 2
+      },
+      "0xD185": {
+        "0x200A": 2
+      },
+      "0xD18C": {
+        "0x200A": 2
+      },
+      "0xD18D": {
+        "0x200A": 2
+      },
+      "0xD18E": {
+        "0x200A": 2
+      },
+      "0xD18F": {
+        "0x200A": 2
+      },
+      "0xD190": {
+        "0x200A": 2
+      },
+      "0xD191": {
+        "0x200A": 2
+      },
+      "0xD192": {
+        "0x200A": 2
+      },
+      "0xD193": {
+        "0x200A": 2
+      },
+      "0xD194": {
+        "0x200A": 2
+      },
+      "0xD195": {
+        "0x200A": 2
+      },
+      "0xD196": {
+        "0x200A": 2
+      },
+      "0xD197": {
+        "0x200A": 2
+      },
+      "0xD198": {
+        "0x200A": 2
+      },
+      "0xD199": {
+        "0x200A": 2
+      },
+      "0xD19A": {
+        "0x200A": 2
+      },
+      "0xD19B": {
+        "0x200A": 2
+      },
+      "0xD19C": {
+        "0x200A": 2
+      },
+      "0xD19D": {
+        "0x200A": 2
+      },
+      "0xD19E": {
+        "0x200A": 2
+      },
+      "0xD19F": {
+        "0x200A": 2
+      },
+      "0xD1A0": {
+        "0x200A": 2
+      },
+      "0xD1A1": {
+        "0x200A": 2
+      },
+      "0xD1A2": {
+        "0x200A": 2
+      },
+      "0xD1A3": {
+        "0x200A": 2
+      },
+      "0xD1A4": {
+        "0x200A": 2
+      },
+      "0xD1A5": {
+        "0x200A": 2
+      }
+    },
+    "conversionProfileReads": [
+      {
+        "sequence": 8,
+        "response": "0x2002",
+        "durationMs": 5,
+        "bytes": null
+      },
+      {
+        "sequence": 111,
+        "response": "0x2002",
+        "durationMs": 5,
+        "bytes": null
+      }
+    ],
+    "objectOperations": [],
+    "acceptedSettingWriteDurationsMs": null
+  },
+  "reviewed": {
+    "firmwareReported": "1.32",
+    "clientIdentification": "unknown",
+    "getDeviceInfo": {
+      "sequence": 1,
+      "response": "0x2001",
+      "durationMs": 5,
+      "datasetBytes": 601
+    },
+    "selectorWithoutAnyWrite": {
+      "readSequence": 2,
+      "valueUnsigned": 7,
+      "selectorWritesInTrace": 0
+    },
+    "imageSizeAtThatSelector": {
+      "readSequence": 10,
+      "valueUnsigned": 16
+    },
+    "bankBlockReads": {
+      "count": 53,
+      "allResponses": "0x2001"
+    },
+    "bankBlockDescriptors": {
+      "properties": 26,
+      "requestsPerProperty": 2,
+      "allResponses": "0x200A"
+    },
+    "d183": {
+      "valueReadSequences": [
+        6,
+        113
+      ],
+      "valueResponse": "0x200A",
+      "descriptorResponse": "0x2001",
+      "descriptor": {
+        "dataType": "UINT16",
+        "form": "enumeration",
+        "enumeration": [
+          0,
+          1
+        ],
+        "factoryDefault": 65535,
+        "current": 65535,
+        "writable": true
+      },
+      "descriptorSource": "the client's property sweep; the ledger omits descriptor payloads"
+    },
+    "d185": {
+      "valueReadSequences": [
+        8,
+        111
+      ],
+      "valueResponse": "0x2002",
+      "descriptorResponse": "0x200A"
+    },
+    "notEstablished": [
+      "USB mode",
+      "why the selector read 7, a bank the fw 2.13 traces refuse to select",
+      "whether the block addressed a bank the camera shoots with",
+      "AUTO UPDATE CUSTOM SETTING, ISO, lens and image format"
+    ]
+  }
+}

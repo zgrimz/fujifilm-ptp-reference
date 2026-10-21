@@ -1,0 +1,117 @@
+{
+  "format": "fuji-owner-app-log-sanitized-package-v1",
+  "evidenceId": "xt20-undated-172851",
+  "evidenceKind": "owner_report_original_sanitized_derivative",
+  "source": {
+    "access": "private archive",
+    "archivePath": "hardware-runs/app-reports-x-t20/xt20.txt",
+    "revision": "a9c1bf66fd0ad7f7383540c0d35b4629f3c948a9",
+    "sha256": "061306bc4670986ed312fa391e991f1cb819ca7b18ca6f997221128935486f62",
+    "bytes": 16721,
+    "lines": 150,
+    "encoding": "UTF-8, no final newline"
+  },
+  "camera": {
+    "model": "X-T20",
+    "firmware": "2.01",
+    "provenance": "owner_report",
+    "usbMode": null
+  },
+  "host": {
+    "client": "the maintainers' iOS client; build not recorded",
+    "operatingSystem": "iOS or iPadOS",
+    "systemVersion": null,
+    "transport": "ImageCaptureCore"
+  },
+  "conditions": {
+    "autoUpdateCustomSetting": "unknown",
+    "lensPresent": null,
+    "iso": null,
+    "imageFormat": "unknown"
+  },
+  "time": {
+    "date": null,
+    "receivedLocalDate": "2026-09-14",
+    "timezone": null,
+    "firstLocalTime": "17:28:51.375",
+    "lastLocalTime": "17:32:45.982",
+    "identifierClock": "the first log line's local time of day; the log carries no date"
+  },
+  "coverage": {
+    "sourceLines": 150,
+    "retainedLines": 150,
+    "droppedLines": 0,
+    "logLines": 59,
+    "propertyReportLines": 91,
+    "events": {
+      "app_backgrounding": 1,
+      "app_foregrounded": 3,
+      "authorization_already_granted": 7,
+      "authorization_requested": 1,
+      "authorization_result": 1,
+      "bank_protocol_not_advertised": 4,
+      "blank": 2,
+      "browser_created": 1,
+      "browser_started": 1,
+      "connect_requested": 4,
+      "descriptor": 27,
+      "descriptor_detail": 1,
+      "descriptor_enumeration": 1,
+      "device_added": 3,
+      "device_already_known": 2,
+      "device_info": 4,
+      "device_info_operations": 4,
+      "device_info_properties": 4,
+      "device_removed": 2,
+      "disconnect_requested": 3,
+      "operations_suspended": 1,
+      "property_entry": 28,
+      "property_report_camera": 1,
+      "property_report_heading": 1,
+      "property_report_start": 1,
+      "ptp_error": 4,
+      "separator": 1,
+      "session_closing": 3,
+      "session_opened": 4,
+      "value_read": 28,
+      "waiting_for_device": 2
+    },
+    "connections": 4,
+    "propertyReportEntries": 28
+  },
+  "interpretation": {
+    "sourceLine": "one-based line number in the original; order preserved",
+    "localTime": "the client's log time of day, with no date or offset",
+    "logIntervals": "differences between log-line times; not PTP transaction durations",
+    "propertyReport": "the client's report after the log; which connection it came from is not recorded",
+    "bankLabel": "the report's heading, not evidence of a successful selector write"
+  },
+  "transform": {
+    "generator": "export.py",
+    "generatorSha256": "8d39f6fb642a197b357ef542c204f44e42df0831e04e10641c74c00491340f66",
+    "helperModule": "../bankprobe_package.py",
+    "helperModuleSha256": "cdfbedda21b06b8586c6c59606e3ae6a3b9a588bba62580628a28ed23e81c7cc",
+    "originalUnchanged": true,
+    "publicSchemaV1Compatible": false,
+    "losslessBackup": false,
+    "reviewedLineForms": 30,
+    "unreviewedLines": "refused",
+    "omissions": [
+      "USB vendor and product identifiers",
+      "the client's property labels and prose",
+      "the log's category tag"
+    ],
+    "serialCheck": "the original holds no serial number or serial hash; no reviewed line form admits one, and the outputs are refused if any holds a hexadecimal run longer than a PTP code",
+    "generatedFacts": "No missing dates, conditions, or hardware observations are invented; finding interpretations are labeled."
+  },
+  "artifacts": {
+    "log.jsonl": {
+      "sha256": "82327d5a3958305ddb26056a841b23ee15c87229b4ba62cd30e1049626dcd298",
+      "bytes": 22886
+    },
+    "findings.json": {
+      "sha256": "09a4d5c74888223ba97c7832f3e6c088528e2782fedd642884fbe4f45195d527",
+      "bytes": 10732
+    }
+  }
+}

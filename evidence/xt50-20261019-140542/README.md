@@ -13,7 +13,7 @@ The original's SHA-256 is `23a8d14188add4d699bcd614d492a2775078a1637fb2f88d94339
 | [`manifest.json`](manifest.json) | Source and derivative hashes, coverage counts, host and conditions, omissions, and hashes of the three exporter modules. |
 | [`export.py`](export.py) | Run-specific projection using the shared [client-report exporter](../client_report_package.py); rejects any original with a different hash. |
 
-The ledger retains 311 scalar payloads on the selector, bank, and live `0xD1A5` allowlist and the four `0xD18D` payloads that hold no name. It omits ten payload fields with their lengths: DeviceInfo and every name. All 325 transactions record `0x2001`.
+The ledger retains 311 scalar payloads on the selector, bank, and live `0xD1A5` allowlist and the four `0xD18D` payloads that hold no name. It omits ten payload fields with their lengths: DeviceInfo and every name. All 325 transactions record `0x2001`. The [manifest](manifest.json) keeps the client's keyed camera identifier (`hmac-sha256`), the same value as the [12:50 package's](../xt50-20261019-125007/README.md); the connection identifier, USB identifiers, and phone model are omitted.
 
 ## The push and the undo
 

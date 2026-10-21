@@ -1,0 +1,802 @@
+{
+  "format": "fuji-owner-client-report-observations-v1",
+  "evidenceId": "gfx100s-20260915-195437",
+  "observations": {
+    "getDeviceInfo": [
+      {
+        "sequence": 1,
+        "response": "0x2001",
+        "durationMs": 3
+      }
+    ],
+    "selector": [
+      {
+        "sequence": 2,
+        "operation": "write",
+        "valueUnsigned": 1,
+        "response": "0x2001"
+      },
+      {
+        "sequence": 3,
+        "operation": "read",
+        "valueUnsigned": 1,
+        "response": "0x2001"
+      },
+      {
+        "sequence": 29,
+        "operation": "write",
+        "valueUnsigned": 2,
+        "response": "0x2001"
+      },
+      {
+        "sequence": 30,
+        "operation": "read",
+        "valueUnsigned": 2,
+        "response": "0x2001"
+      },
+      {
+        "sequence": 56,
+        "operation": "write",
+        "valueUnsigned": 3,
+        "response": "0x2001"
+      },
+      {
+        "sequence": 57,
+        "operation": "read",
+        "valueUnsigned": 3,
+        "response": "0x2001"
+      },
+      {
+        "sequence": 83,
+        "operation": "write",
+        "valueUnsigned": 4,
+        "response": "0x2001"
+      },
+      {
+        "sequence": 84,
+        "operation": "read",
+        "valueUnsigned": 4,
+        "response": "0x2001"
+      },
+      {
+        "sequence": 110,
+        "operation": "write",
+        "valueUnsigned": 5,
+        "response": "0x2001"
+      },
+      {
+        "sequence": 111,
+        "operation": "read",
+        "valueUnsigned": 5,
+        "response": "0x2001"
+      },
+      {
+        "sequence": 137,
+        "operation": "write",
+        "valueUnsigned": 6,
+        "response": "0x2001"
+      },
+      {
+        "sequence": 138,
+        "operation": "read",
+        "valueUnsigned": 6,
+        "response": "0x2001"
+      },
+      {
+        "sequence": 164,
+        "operation": "write",
+        "valueUnsigned": 7,
+        "response": "0x200A"
+      },
+      {
+        "sequence": 165,
+        "operation": "write",
+        "valueUnsigned": 2,
+        "response": "0x2001"
+      },
+      {
+        "sequence": 166,
+        "operation": "read",
+        "valueUnsigned": 2,
+        "response": "0x2001"
+      }
+    ],
+    "writes": [
+      {
+        "sequence": 192,
+        "addressedBank": 2,
+        "property": "0xD18D",
+        "nameForm": "name_omitted",
+        "response": "0x2001",
+        "durationMs": 325
+      },
+      {
+        "sequence": 193,
+        "addressedBank": 2,
+        "property": "0xD18E",
+        "writtenUnsigned": 14,
+        "response": "0x2001",
+        "durationMs": 85
+      },
+      {
+        "sequence": 194,
+        "addressedBank": 2,
+        "property": "0xD18F",
+        "writtenUnsigned": 2,
+        "response": "0x2001",
+        "durationMs": 73
+      },
+      {
+        "sequence": 195,
+        "addressedBank": 2,
+        "property": "0xD190",
+        "writtenUnsigned": 100,
+        "response": "0x2001",
+        "durationMs": 76
+      },
+      {
+        "sequence": 196,
+        "addressedBank": 2,
+        "property": "0xD191",
+        "writtenUnsigned": 0,
+        "response": "0x2001",
+        "durationMs": 79
+      },
+      {
+        "sequence": 197,
+        "addressedBank": 2,
+        "property": "0xD192",
+        "writtenUnsigned": 1,
+        "response": "0x2001",
+        "durationMs": 126
+      },
+      {
+        "sequence": 198,
+        "addressedBank": 2,
+        "property": "0xD195",
+        "writtenUnsigned": 1,
+        "response": "0x2001",
+        "durationMs": 130
+      },
+      {
+        "sequence": 199,
+        "addressedBank": 2,
+        "property": "0xD196",
+        "writtenUnsigned": 1,
+        "response": "0x2001",
+        "durationMs": 77
+      },
+      {
+        "sequence": 200,
+        "addressedBank": 2,
+        "property": "0xD197",
+        "writtenUnsigned": 1,
+        "response": "0x2001",
+        "durationMs": 71
+      },
+      {
+        "sequence": 201,
+        "addressedBank": 2,
+        "property": "0xD198",
+        "writtenUnsigned": 1,
+        "response": "0x2001",
+        "durationMs": 74
+      },
+      {
+        "sequence": 202,
+        "addressedBank": 2,
+        "property": "0xD199",
+        "writtenUnsigned": 2,
+        "response": "0x2001",
+        "durationMs": 78
+      },
+      {
+        "sequence": 203,
+        "addressedBank": 2,
+        "property": "0xD19A",
+        "writtenUnsigned": 0,
+        "response": "0x2001",
+        "durationMs": 122
+      },
+      {
+        "sequence": 204,
+        "addressedBank": 2,
+        "property": "0xD19B",
+        "writtenUnsigned": 0,
+        "response": "0x2001",
+        "durationMs": 132
+      },
+      {
+        "sequence": 205,
+        "addressedBank": 2,
+        "property": "0xD19D",
+        "writtenUnsigned": 0,
+        "response": "0x2001",
+        "durationMs": 121
+      },
+      {
+        "sequence": 206,
+        "addressedBank": 2,
+        "property": "0xD19E",
+        "writtenUnsigned": 0,
+        "response": "0x2001",
+        "durationMs": 120
+      },
+      {
+        "sequence": 207,
+        "addressedBank": 2,
+        "property": "0xD19F",
+        "writtenUnsigned": 0,
+        "response": "0x2001",
+        "durationMs": 79
+      },
+      {
+        "sequence": 208,
+        "addressedBank": 2,
+        "property": "0xD1A0",
+        "writtenUnsigned": 0,
+        "response": "0x2001",
+        "durationMs": 132
+      },
+      {
+        "sequence": 209,
+        "addressedBank": 2,
+        "property": "0xD1A1",
+        "writtenUnsigned": 8192,
+        "response": "0x2001",
+        "durationMs": 346
+      },
+      {
+        "sequence": 210,
+        "addressedBank": 2,
+        "property": "0xD1A2",
+        "writtenUnsigned": 0,
+        "response": "0x2001",
+        "durationMs": 128
+      },
+      {
+        "sequence": 211,
+        "addressedBank": 2,
+        "property": "0xD1A3",
+        "writtenUnsigned": 1,
+        "response": "0x2001",
+        "durationMs": 69
+      },
+      {
+        "sequence": 212,
+        "addressedBank": 2,
+        "property": "0xD1A4",
+        "writtenUnsigned": 1,
+        "response": "0x2001",
+        "durationMs": 67
+      },
+      {
+        "sequence": 213,
+        "addressedBank": 2,
+        "property": "0xD1A5",
+        "writtenUnsigned": 14,
+        "response": "0x201C",
+        "durationMs": 6
+      }
+    ],
+    "descriptorResponses": {},
+    "conversionProfileReads": [],
+    "objectOperations": [],
+    "acceptedSettingWriteDurationsMs": {
+      "count": 20,
+      "minimum": 67,
+      "median": 85,
+      "maximum": 346
+    }
+  },
+  "reviewed": {
+    "bankPass": [
+      {
+        "bank": 1,
+        "selectSequence": 2,
+        "readSequences": [
+          5,
+          28
+        ],
+        "nameForm": "named_contents_omitted",
+        "bankSettingsUnsigned": {
+          "0xD18E": 14,
+          "0xD18F": 2,
+          "0xD190": 65535,
+          "0xD191": 0,
+          "0xD192": 1,
+          "0xD193": 0,
+          "0xD194": 0,
+          "0xD195": 3,
+          "0xD196": 3,
+          "0xD197": 1,
+          "0xD198": 1,
+          "0xD199": 32770,
+          "0xD19A": 65534,
+          "0xD19B": 65534,
+          "0xD19C": 10000,
+          "0xD19D": 0,
+          "0xD19E": 0,
+          "0xD19F": 0,
+          "0xD1A0": 65516,
+          "0xD1A1": 32768,
+          "0xD1A2": 0,
+          "0xD1A3": 1,
+          "0xD1A4": 1
+        },
+        "liveD1A5Unsigned": 14
+      },
+      {
+        "bank": 2,
+        "selectSequence": 29,
+        "readSequences": [
+          32,
+          55
+        ],
+        "nameForm": "named_contents_omitted",
+        "bankSettingsUnsigned": {
+          "0xD18E": 14,
+          "0xD18F": 2,
+          "0xD190": 100,
+          "0xD191": 0,
+          "0xD192": 14,
+          "0xD193": 20,
+          "0xD194": 65526,
+          "0xD195": 5,
+          "0xD196": 1,
+          "0xD197": 1,
+          "0xD198": 1,
+          "0xD199": 2,
+          "0xD19A": 65535,
+          "0xD19B": 2,
+          "0xD19C": 10000,
+          "0xD19D": 10,
+          "0xD19E": 5,
+          "0xD19F": 0,
+          "0xD1A0": 10,
+          "0xD1A1": 12288,
+          "0xD1A2": 65516,
+          "0xD1A3": 1,
+          "0xD1A4": 1
+        },
+        "liveD1A5Unsigned": 14
+      },
+      {
+        "bank": 3,
+        "selectSequence": 56,
+        "readSequences": [
+          59,
+          82
+        ],
+        "nameForm": "empty:010000",
+        "bankSettingsUnsigned": {
+          "0xD18E": 14,
+          "0xD18F": 2,
+          "0xD190": 100,
+          "0xD191": 0,
+          "0xD192": 1,
+          "0xD193": 0,
+          "0xD194": 0,
+          "0xD195": 6,
+          "0xD196": 1,
+          "0xD197": 1,
+          "0xD198": 1,
+          "0xD199": 2,
+          "0xD19A": 0,
+          "0xD19B": 0,
+          "0xD19C": 10000,
+          "0xD19D": 0,
+          "0xD19E": 0,
+          "0xD19F": 0,
+          "0xD1A0": 0,
+          "0xD1A1": 8192,
+          "0xD1A2": 0,
+          "0xD1A3": 1,
+          "0xD1A4": 1
+        },
+        "liveD1A5Unsigned": 14
+      },
+      {
+        "bank": 4,
+        "selectSequence": 83,
+        "readSequences": [
+          86,
+          109
+        ],
+        "nameForm": "empty:010000",
+        "bankSettingsUnsigned": {
+          "0xD18E": 14,
+          "0xD18F": 2,
+          "0xD190": 100,
+          "0xD191": 0,
+          "0xD192": 1,
+          "0xD193": 0,
+          "0xD194": 0,
+          "0xD195": 6,
+          "0xD196": 1,
+          "0xD197": 1,
+          "0xD198": 1,
+          "0xD199": 2,
+          "0xD19A": 0,
+          "0xD19B": 0,
+          "0xD19C": 10000,
+          "0xD19D": 0,
+          "0xD19E": 0,
+          "0xD19F": 0,
+          "0xD1A0": 0,
+          "0xD1A1": 8192,
+          "0xD1A2": 0,
+          "0xD1A3": 1,
+          "0xD1A4": 1
+        },
+        "liveD1A5Unsigned": 14
+      },
+      {
+        "bank": 5,
+        "selectSequence": 110,
+        "readSequences": [
+          113,
+          136
+        ],
+        "nameForm": "empty:010000",
+        "bankSettingsUnsigned": {
+          "0xD18E": 14,
+          "0xD18F": 2,
+          "0xD190": 100,
+          "0xD191": 0,
+          "0xD192": 1,
+          "0xD193": 0,
+          "0xD194": 0,
+          "0xD195": 6,
+          "0xD196": 1,
+          "0xD197": 1,
+          "0xD198": 1,
+          "0xD199": 2,
+          "0xD19A": 0,
+          "0xD19B": 0,
+          "0xD19C": 10000,
+          "0xD19D": 0,
+          "0xD19E": 0,
+          "0xD19F": 0,
+          "0xD1A0": 0,
+          "0xD1A1": 8192,
+          "0xD1A2": 0,
+          "0xD1A3": 1,
+          "0xD1A4": 1
+        },
+        "liveD1A5Unsigned": 14
+      },
+      {
+        "bank": 6,
+        "selectSequence": 137,
+        "readSequences": [
+          140,
+          163
+        ],
+        "nameForm": "empty:010000",
+        "bankSettingsUnsigned": {
+          "0xD18E": 14,
+          "0xD18F": 2,
+          "0xD190": 100,
+          "0xD191": 0,
+          "0xD192": 1,
+          "0xD193": 0,
+          "0xD194": 0,
+          "0xD195": 6,
+          "0xD196": 1,
+          "0xD197": 1,
+          "0xD198": 1,
+          "0xD199": 2,
+          "0xD19A": 0,
+          "0xD19B": 0,
+          "0xD19C": 10000,
+          "0xD19D": 0,
+          "0xD19E": 0,
+          "0xD19F": 0,
+          "0xD1A0": 0,
+          "0xD1A1": 8192,
+          "0xD1A2": 0,
+          "0xD1A3": 1,
+          "0xD1A4": 1
+        },
+        "liveD1A5Unsigned": 14
+      }
+    ],
+    "bankSevenSelect": {
+      "writeSequence": 164,
+      "valueUnsigned": 7,
+      "response": "0x200A"
+    },
+    "trialOnC2AfterPowerCycle": {
+      "readSequences": [
+        32,
+        55
+      ],
+      "toningUnsigned": {
+        "0xD193": 20,
+        "0xD194": 65526
+      },
+      "toningSigned": {
+        "0xD193": 20,
+        "0xD194": -10
+      },
+      "grainUnsigned": 5,
+      "clientRecord": {
+        "pushedUtc": "2026-09-15T23:49:13Z",
+        "outcome": "applied",
+        "persistenceCheckedUtc": "2026-09-15T23:50:12Z",
+        "persisted": true,
+        "nameHolds": true,
+        "photoMatchesRecipe": "yes",
+        "menuComparison": {
+          "checkedUtc": "2026-09-15T23:53:18Z",
+          "rows": 12,
+          "differences": 0,
+          "monochromaticColorClientShowed": "WC +2, MG \u22121"
+        }
+      },
+      "trialPushRecord": {
+        "recordedUtc": "2026-09-15T23:49:13Z",
+        "fields": 22,
+        "written": 20,
+        "refused": [
+          {
+            "property": "0xD191",
+            "response": "0x201C"
+          },
+          {
+            "property": "0xD1A5",
+            "response": "0x201C"
+          }
+        ],
+        "nameWritten": true,
+        "grainBeforeUnsigned": 6,
+        "grainWrittenUnsigned": 5
+      },
+      "pushTransactions": "not in this trace; the client traced only its last connection"
+    },
+    "restoreOfC2": {
+      "bank": 2,
+      "selectSequence": 165,
+      "beforeReadSequences": [
+        167,
+        190
+      ],
+      "bankBeforeUnsigned": {
+        "0xD18E": 14,
+        "0xD18F": 2,
+        "0xD190": 100,
+        "0xD191": 0,
+        "0xD192": 14,
+        "0xD193": 20,
+        "0xD194": 65526,
+        "0xD195": 5,
+        "0xD196": 1,
+        "0xD197": 1,
+        "0xD198": 1,
+        "0xD199": 2,
+        "0xD19A": 65535,
+        "0xD19B": 2,
+        "0xD19C": 10000,
+        "0xD19D": 10,
+        "0xD19E": 5,
+        "0xD19F": 0,
+        "0xD1A0": 10,
+        "0xD1A1": 12288,
+        "0xD1A2": 65516,
+        "0xD1A3": 1,
+        "0xD1A4": 1
+      },
+      "liveD1A5BeforeUnsigned": 14,
+      "nameRead": {
+        "sequence": 191,
+        "form": "named_contents_omitted"
+      },
+      "nameWrite": {
+        "sequence": 192,
+        "response": "0x2001",
+        "durationMs": 325,
+        "form": "name_contents_omitted"
+      },
+      "writes": [
+        {
+          "sequence": 193,
+          "property": "0xD18E",
+          "writtenUnsigned": 14,
+          "response": "0x2001",
+          "durationMs": 85
+        },
+        {
+          "sequence": 194,
+          "property": "0xD18F",
+          "writtenUnsigned": 2,
+          "response": "0x2001",
+          "durationMs": 73
+        },
+        {
+          "sequence": 195,
+          "property": "0xD190",
+          "writtenUnsigned": 100,
+          "response": "0x2001",
+          "durationMs": 76
+        },
+        {
+          "sequence": 196,
+          "property": "0xD191",
+          "writtenUnsigned": 0,
+          "response": "0x2001",
+          "durationMs": 79
+        },
+        {
+          "sequence": 197,
+          "property": "0xD192",
+          "writtenUnsigned": 1,
+          "response": "0x2001",
+          "durationMs": 126
+        },
+        {
+          "sequence": 198,
+          "property": "0xD195",
+          "writtenUnsigned": 1,
+          "response": "0x2001",
+          "durationMs": 130
+        },
+        {
+          "sequence": 199,
+          "property": "0xD196",
+          "writtenUnsigned": 1,
+          "response": "0x2001",
+          "durationMs": 77
+        },
+        {
+          "sequence": 200,
+          "property": "0xD197",
+          "writtenUnsigned": 1,
+          "response": "0x2001",
+          "durationMs": 71
+        },
+        {
+          "sequence": 201,
+          "property": "0xD198",
+          "writtenUnsigned": 1,
+          "response": "0x2001",
+          "durationMs": 74
+        },
+        {
+          "sequence": 202,
+          "property": "0xD199",
+          "writtenUnsigned": 2,
+          "response": "0x2001",
+          "durationMs": 78
+        },
+        {
+          "sequence": 203,
+          "property": "0xD19A",
+          "writtenUnsigned": 0,
+          "response": "0x2001",
+          "durationMs": 122
+        },
+        {
+          "sequence": 204,
+          "property": "0xD19B",
+          "writtenUnsigned": 0,
+          "response": "0x2001",
+          "durationMs": 132
+        },
+        {
+          "sequence": 205,
+          "property": "0xD19D",
+          "writtenUnsigned": 0,
+          "response": "0x2001",
+          "durationMs": 121
+        },
+        {
+          "sequence": 206,
+          "property": "0xD19E",
+          "writtenUnsigned": 0,
+          "response": "0x2001",
+          "durationMs": 120
+        },
+        {
+          "sequence": 207,
+          "property": "0xD19F",
+          "writtenUnsigned": 0,
+          "response": "0x2001",
+          "durationMs": 79
+        },
+        {
+          "sequence": 208,
+          "property": "0xD1A0",
+          "writtenUnsigned": 0,
+          "response": "0x2001",
+          "durationMs": 132
+        },
+        {
+          "sequence": 209,
+          "property": "0xD1A1",
+          "writtenUnsigned": 8192,
+          "response": "0x2001",
+          "durationMs": 346
+        },
+        {
+          "sequence": 210,
+          "property": "0xD1A2",
+          "writtenUnsigned": 0,
+          "response": "0x2001",
+          "durationMs": 128
+        },
+        {
+          "sequence": 211,
+          "property": "0xD1A3",
+          "writtenUnsigned": 1,
+          "response": "0x2001",
+          "durationMs": 69
+        },
+        {
+          "sequence": 212,
+          "property": "0xD1A4",
+          "writtenUnsigned": 1,
+          "response": "0x2001",
+          "durationMs": 67
+        },
+        {
+          "sequence": 213,
+          "property": "0xD1A5",
+          "writtenUnsigned": 14,
+          "response": "0x201C",
+          "durationMs": 6
+        }
+      ],
+      "afterReadSequences": [
+        214,
+        237
+      ],
+      "bankAfterUnsigned": {
+        "0xD18E": 14,
+        "0xD18F": 2,
+        "0xD190": 100,
+        "0xD191": 0,
+        "0xD192": 1,
+        "0xD193": 20,
+        "0xD194": 65526,
+        "0xD195": 7,
+        "0xD196": 1,
+        "0xD197": 1,
+        "0xD198": 1,
+        "0xD199": 2,
+        "0xD19A": 0,
+        "0xD19B": 0,
+        "0xD19C": 10000,
+        "0xD19D": 0,
+        "0xD19E": 0,
+        "0xD19F": 0,
+        "0xD1A0": 0,
+        "0xD1A1": 8192,
+        "0xD1A2": 0,
+        "0xD1A3": 1,
+        "0xD1A4": 1
+      },
+      "liveD1A5AfterUnsigned": 14,
+      "acceptedWritesReadBackDifferently": [
+        {
+          "property": "0xD195",
+          "writtenUnsigned": 1,
+          "readbackUnsigned": 7
+        }
+      ]
+    },
+    "grainRollback": {
+      "savedUnsigned": 6,
+      "trialUnsigned": 5,
+      "restoreWroteUnsigned": 1,
+      "readbackUnsigned": 7,
+      "readSequence": 221
+    },
+    "notEstablished": [
+      "the trial push's own transactions",
+      "the power cycle itself, beyond the client's record",
+      "USB mode",
+      "AUTO UPDATE CUSTOM SETTING, ISO, lens and image format"
+    ]
+  }
+}

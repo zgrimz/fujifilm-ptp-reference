@@ -15,7 +15,12 @@
     "firmware": "1.32",
     "provenance": "original_report",
     "identification": "exact",
-    "usbMode": null
+    "usbMode": null,
+    "identifier": {
+      "scheme": "hmac-sha256",
+      "value": "ce1f6030f1bbe80e",
+      "basis": "HMAC-SHA256 of the serial under a random key that stays on the reporting phone, truncated to 8 bytes; the same body reported through another phone has another value"
+    }
   },
   "host": {
     "client": "the maintainers' iOS client, debug build",
@@ -63,7 +68,7 @@
     "generator": "export.py",
     "generatorSha256": "cb0c5a67f1d1d52f997dec02bc37c7bc4da1a5e2a321a6a17fd2a0d7d6933776",
     "sharedGenerator": "../client_report_package.py",
-    "sharedGeneratorSha256": "81e55009f632994b55b5f7903dbc9c41882a3837fd46748c0270a5f271612a86",
+    "sharedGeneratorSha256": "bc7a4c34d454f334429152ffdecf85047751d5061541c00e69a36218645a0776",
     "helperModule": "../bankprobe_package.py",
     "helperModuleSha256": "cdfbedda21b06b8586c6c59606e3ae6a3b9a588bba62580628a28ed23e81c7cc",
     "originalUnchanged": true,
@@ -102,7 +107,7 @@
       "lengths of every omitted payload",
       "DeviceInfo, D186/D187, conversion-profile and object payloads",
       "parameters of operations other than property get, set and describe",
-      "serial hash, USB identifiers, connection identifier and phone model",
+      "unkeyed serial hashes, USB identifiers, connection identifier and phone model; only the keyed hmac-sha256 camera identifier is kept",
       "error text, push, develop and camera-test records, slot reads and log lines"
     ],
     "generatedFacts": "No missing times, conditions, or hardware observations are invented; finding interpretations are labeled."

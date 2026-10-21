@@ -1,0 +1,20 @@
+{
+ "format": "private-source-inventory-v1",
+ "inventoryId": "xt20-owner-log",
+ "retrievalDateLocal": "2026-10-20",
+ "archive": "maintainers' private archive",
+ "revision": "a9c1bf66fd0ad7f7383540c0d35b4629f3c948a9",
+ "directory": "hardware-runs/app-reports-x-t20",
+ "access": "private",
+ "originalsIncluded": false,
+ "retrievedDirectoryFileCount": 2,
+ "inventoryScope": "The X-T20 owner's app-log excerpt the package derives from; not the directory's README. The hash identifies the evidence file, not a device.",
+ "artifacts": [
+  {
+   "path": "xt20.txt",
+   "bytes": 16721,
+   "sha256": "061306bc4670986ed312fa391e991f1cb819ca7b18ca6f997221128935486f62",
+   "gitBlob": "310b77a7ea7f37e421da6821cdf36bc46903b8e0"
+  }
+ ]
+}

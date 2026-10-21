@@ -1,0 +1,188 @@
+{
+  "format": "fuji-client-trace-observations-v1",
+  "evidenceId": "xt50-20261019-102134",
+  "observations": {
+    "getDeviceInfo": [
+      {
+        "sequence": 1,
+        "response": "0x2001",
+        "durationMs": 9
+      }
+    ],
+    "selector": [
+      {
+        "sequence": 2,
+        "operation": "read",
+        "valueUnsigned": 1,
+        "response": "0x2001"
+      },
+      {
+        "sequence": 3,
+        "operation": "write",
+        "valueUnsigned": 1,
+        "response": "0x2001"
+      },
+      {
+        "sequence": 4,
+        "operation": "read",
+        "valueUnsigned": 1,
+        "response": "0x2001"
+      },
+      {
+        "sequence": 29,
+        "operation": "write",
+        "valueUnsigned": 2,
+        "response": "0x2001"
+      },
+      {
+        "sequence": 30,
+        "operation": "read",
+        "valueUnsigned": 2,
+        "response": "0x2001"
+      },
+      {
+        "sequence": 55,
+        "operation": "write",
+        "valueUnsigned": 3,
+        "response": "0x2001"
+      },
+      {
+        "sequence": 56,
+        "operation": "read",
+        "valueUnsigned": 3,
+        "response": "0x2001"
+      },
+      {
+        "sequence": 81,
+        "operation": "write",
+        "valueUnsigned": 4,
+        "response": "0x2001"
+      },
+      {
+        "sequence": 82,
+        "operation": "read",
+        "valueUnsigned": 4,
+        "response": "0x2001"
+      },
+      {
+        "sequence": 107,
+        "operation": "write",
+        "valueUnsigned": 5,
+        "response": "0x2001"
+      },
+      {
+        "sequence": 108,
+        "operation": "read",
+        "valueUnsigned": 5,
+        "response": "0x2001"
+      },
+      {
+        "sequence": 133,
+        "operation": "write",
+        "valueUnsigned": 6,
+        "response": "0x2001"
+      },
+      {
+        "sequence": 134,
+        "operation": "read",
+        "valueUnsigned": 6,
+        "response": "0x2001"
+      },
+      {
+        "sequence": 159,
+        "operation": "write",
+        "valueUnsigned": 7,
+        "response": "0x2001"
+      },
+      {
+        "sequence": 160,
+        "operation": "read",
+        "valueUnsigned": 7,
+        "response": "0x2001"
+      },
+      {
+        "sequence": 185,
+        "operation": "read",
+        "valueUnsigned": 7,
+        "response": "0x2001"
+      },
+      {
+        "sequence": 186,
+        "operation": "write",
+        "valueUnsigned": 1,
+        "response": "0x2001"
+      },
+      {
+        "sequence": 187,
+        "operation": "read",
+        "valueUnsigned": 1,
+        "response": "0x2001"
+      }
+    ],
+    "writes": [],
+    "descriptorResponses": {},
+    "conversionProfileReads": [
+      {
+        "sequence": 190,
+        "response": "0x2001",
+        "durationMs": 42,
+        "bytes": 625
+      },
+      {
+        "sequence": 192,
+        "response": "0x2001",
+        "durationMs": 8,
+        "bytes": 625
+      }
+    ],
+    "objectOperations": [
+      {
+        "sequence": 188,
+        "opcode": "0x900C",
+        "response": "0x2001",
+        "durationMs": 7
+      },
+      {
+        "sequence": 189,
+        "opcode": "0x900D",
+        "response": "0x2001",
+        "durationMs": 2252,
+        "bytesSent": 87118848
+      },
+      {
+        "sequence": 193,
+        "opcode": "0x1007",
+        "response": "0x2001",
+        "durationMs": 4,
+        "handleCount": 0
+      },
+      {
+        "sequence": 195,
+        "opcode": "0x1007",
+        "response": "0x2001",
+        "durationMs": 13,
+        "handleCount": 0
+      },
+      {
+        "sequence": 196,
+        "opcode": "0x1007",
+        "response": "0x2001",
+        "durationMs": 12,
+        "handleCount": 0
+      },
+      {
+        "sequence": 197,
+        "opcode": "0x1007",
+        "response": "0x2001",
+        "durationMs": 14,
+        "handleCount": 1
+      }
+    ],
+    "acceptedSettingWriteDurationsMs": null
+  },
+  "propertyReads": {
+    "basis": "every GetDevicePropValue except the 0xD185 profile",
+    "count": 178,
+    "maximumMs": 29
+  }
+}

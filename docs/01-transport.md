@@ -150,10 +150,9 @@ The refusal code itself differs by body, and neither code means the property is 
 | Bank property read | ~2–4 ms each | [Measured: X-T50] |
 | Warm `GetDeviceInfo` | 5 ms (GFX100S), 9–19 ms (X-T20) | [Owner report] |
 | First `GetDeviceInfo` after a cold session | 1.56 s, about 100× the warm figure | [Owner report: X-T20] |
-| Typical accepted bank-setting write | ~70–130 ms; the full captured range is 55–246 ms | [Captured] [Owner report: GFX100S — typical range] |
+| Accepted bank-setting write | 97–160 ms on an X-T50 and 67–135 ms on a GFX100S through ImageCaptureCore, median 118 ms on both; 55–246 ms in X RAW Studio's save. About one write in 20 takes 170–240 ms longer: 288–318 ms on the X-T50, 344–356 ms on the GFX100S. No property is consistently slow, and reads never are. See [write timing](../evidence/write-timing.md). | [Measured: X-T50 fw 1.32] [Owner report: GFX100S fw 2.13] [Captured: X-T50 fw 1.31, FilmKit #12 capture] |
 | Refused bank-setting write | Three refusals near 46 ms; the Kelvin (`0xD19C`) refusal was 5.283 ms | [Captured: X-T50 fw 1.31, FilmKit #12 capture] |
-| Bank name write (`0xD18D`) | ~230–325 ms | [Captured] [Owner report: GFX100S] |
-| White balance mode write (`0xD199`) | ~240 ms | [Captured] |
+| Bank name write (`0xD18D`) | The same as a bank-setting write: 76–114 ms for 41 of 47 X-T50 name writes, the two empty-name writes among them, and 103 ms for two GFX100S writes. The others were slow: 266–275 ms on the X-T50, 325 and 329 ms on the GFX100S, and 232 ms in X RAW Studio's save. | [Measured: X-T50 fw 1.32] [Owner report: GFX100S fw 2.13] [Captured: X-T50 fw 1.31, FilmKit #12 capture] |
 | Select bank, then write the name | 4.676 ms between command starts: 4.291 ms for the selector transaction, then 0.385 ms from its response to the name command. No substantial settling pause in this save. | [Captured: X-T50 fw 1.31, FilmKit #12 capture] |
 | Delay between property writes | none needed on an X-H2: 0 ms between property writes worked in fujifilm-ptp-recipes' application testing, and a seven-bank bench ran clean with a 50 ms pause after each select | [Published: X-H2 fw 5.20, fujifilm-ptp-recipes] |
 | Live property write (X RAW Studio, after a bank save) | 4–18 ms, against 55–246 ms for accepted bank-setting writes | [Captured: X-T50 fw 1.31, FilmKit #12 capture] |
