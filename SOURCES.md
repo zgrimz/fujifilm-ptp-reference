@@ -64,7 +64,7 @@ Reported measurements: Nine raw `0xD185` profiles (`fp/d185/`), which are camera
 
 Relayed material: The Wi-Fi protocol and libgphoto2's property names, out of scope here.
 
-Used here: The profiles, which settled the layout; the name and 1/2 encoding of cell 21 (Lens Modulation Optimizer); the two Monochromatic Color cells and their −180…+180 range; its D-Range Priority (0–3) and HDR enumerations; the `0xD212` event list; `0xD16E`; `0x901D`; settings backup and restore; and its tether-mode test note that a property write answers `0x2019` while a menu is open. Its color-space table and its Color Chrome FX Blue indexing are in errata.
+Used here: The profiles, which settled the layout; the name and 1/2 encoding of cell 21 (Lens Modulation Optimizer); the two Monochromatic Color cells and their −180…+180 range; its D-Range Priority (0–3) and HDR enumerations; the `0xD212` event list; `0xD16E`; `0x901D`; settings backup and restore; its tether-mode test note that a property write answers `0x2019` while a menu is open; and its names for `0xD207` and `0xD38C`. Its color-space table and its Color Chrome FX Blue indexing are in errata.
 
 ### [libgphoto2](https://github.com/gphoto/libgphoto2) `camlibs/ptp2`
 
@@ -74,7 +74,7 @@ Reported measurements: Its X-T5 additions of August 2026 are `0xD030`, `0xD032`,
 
 Relayed material: No relayed material identified here.
 
-Used here: Names for the vendor property codes, including the live shooting properties and `0xD184`, `0xD186`, `0xD187`, `0xD189`, `0xD20E`, and `0xD212`, and the `0xD212` event-list structure; the X-T4 `0x2019` reports in issue #653 and the GFX 50R `0x2019` answers to its `0xD207` and `0xD38C` writes in gphoto2 #456's logs; the X-T3 and GFX 50R `0x200F` answers to `GetObjectInfo` on a stale handle (commit `47b539b` and those logs), whose mismatch with its `0x2019` check is in [errata](docs/errata.md#libgphoto2). It defines no Fujifilm property at `0xD18C` or `0xD18D` and doesn't implement the bank or conversion protocol; it names `0xD029` "Shadowing" while its own X-T5 test saw Color Chrome Effect.
+Used here: Names for the vendor property codes, including the live shooting properties and `0xD184`, `0xD186`, `0xD187`, `0xD189`, `0xD20E`, and `0xD212`, and the `0xD212` event-list structure; the X-T4 `0x2019` reports in issue #653 and the GFX 50R `0x2019` answers to its `0xD207` and `0xD38C` writes in gphoto2 #456's logs; the X-T3 and GFX 50R `0x200F` answers to `GetObjectInfo` on a stale handle (commit `47b539b` and those logs), whose mismatch with its `0x2019` check is in [errata](docs/errata.md#libgphoto2); and the `0xD207` PriorityMode values with its capture-preparation writes of `0xD38C` and `0xD207`. It defines no Fujifilm property at `0xD18C` or `0xD18D` and doesn't implement the bank or conversion protocol; it names `0xD029` "Shadowing" while its own X-T5 test saw Color Chrome Effect.
 
 ### [ILFforever/fujifilm-ptp-recipes](https://github.com/ILFforever/fujifilm-ptp-recipes)
 
