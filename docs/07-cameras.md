@@ -18,7 +18,7 @@ What's known about each body, and how firmly. The table focuses on bodies with p
 | X-S20 | X-Processor 5 | read + write over the block; `0xD198` unsupported on the tested bank path | 4 | yes, REALA ACE included | [Published: fujicli] [Published: grawji issues #108, #114] |
 | X-S10 | X-Processor 4 | reported bank reads and write/readback sweeps; 59 properties advertised, without `0xD198` | 4 (C1–C4 read; no select of 5 reported) | | [Published: Filmcase, firmware unstated] |
 | X-E5 | X-Processor 5 | read + write; `0xD18C` refuses `8` and above | 7 | yes | [Published: grawji] [Community] |
-| X-M5 | X-Processor 5 | banks 1–4 select; 5–7 fail | 4 | conversion works; 629-byte profile read | [Published: FilmKit issue #18, fw 1.30] |
+| X-M5 | X-Processor 5 | banks 1–4 select; 5–7 fail; mode reported as **USB RAW CONV.** | 4 | conversion works; 629-byte profile read | [Published: FilmKit issue #18, fw 1.30] |
 | X-T30 II | X-Processor 4 | tested bank reads, writes, and names work despite no advertised properties in **USB RAW CONV.** mode | 7 | | [Community: fw 2.04, a report in fujifilm-ptp-recipes' unmerged pull request #2] |
 | X-T3 | X-Processor 4 | direct bank editing unavailable in documented **USB RAW CONV.** runs; banks reached through settings backup | — | yes | [Published: FilmKit issue #5, fw 5.11] [Captured: issue #5 preset-change attachment] [Published: grawji, rawji] |
 | X-T30 | X-Processor 4 | no working direct bank path in supplied evidence: slot-1 select fails in FilmKit's log; X RAW Studio captures contain no bank writes | — | yes; 605-byte profile, 24 cells, IOPCode `FF159502` | [Published: FilmKit #13 log] [Captured: fw 2.01, FilmKit #13 attachments] [Published: rawji] |
