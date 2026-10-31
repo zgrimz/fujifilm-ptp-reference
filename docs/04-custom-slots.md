@@ -25,7 +25,7 @@ Probe the count by selecting banks in ascending order until a select is refused.
 | X-E5 | 7 — `0xD18C` refuses `8` and above | [Published: grawji] |
 | GFX100RF | 7 | [Published: fuji-ptp-notes] |
 | X-T30 II | 7 — C1–C7 read, written, and named at fw 2.04 | [Community: a report in fujifilm-ptp-recipes' unmerged pull request #2] |
-| X100V | 7 — banks 1–7 selected and their names read in the preset-save capture; the manual gives seven | [Published: FilmKit issues #1 and #8] [Captured: FilmKit #1 preset-save capture; see [capture reproduction](../captures/reproduction.md#x100v-preset-save-capture)] [Published: Fujifilm manuals] |
+| X100V | 7 — banks 1–7 selected and their names read in the preset-save capture; the manual gives seven | [Published: FilmKit issue #1] [Captured: FilmKit #1 preset-save capture; see [capture reproduction](../captures/reproduction.md#x100v-preset-save-capture)] [Published: Fujifilm manuals] |
 | X-Pro3 | fails so far — reads, writes, and name writes all fail at fw 2.00; the response codes aren't recorded, and the source hasn't diagnosed it. The manual gives seven | [Published: fujifilm-ptp-recipes] [Published: Fujifilm manuals] |
 | X-T20, X-H1, X-T3, X-T30, X100VI | 7, per the manuals' **EDIT/SAVE CUSTOM SETTING** pages; see [bank counts from Fujifilm's manuals](07-cameras.md#bank-counts-from-fujifilms-manuals) | [Published: Fujifilm manuals] |
 
