@@ -94,9 +94,43 @@ All 16 `SetDevicePropValue(0xD18C)` selector writes have complete two-byte littl
 
 All 15 `GetDevicePropValue(0xD18D)` name reads (tids 10097, 10175, 10201, 10227, 10253, 10279, 10305, 10331, 10357, 10383, 10409, 10435, 10461, 10487, 10513) have complete data containers and `0x2001` responses. This records their presence and success; no name is reproduced.
 
-The capture contains no `GetDeviceInfo` and no `0xD16E` access, so the model comes from the issue, and the decode establishes neither firmware nor the USB menu mode. It confirms successful selections of banks 1–7 and name reads in that session, not persistence and not the film-simulation write the issue reports. [Captured: X100V, FilmKit #1 attachment]
+The capture contains no `GetDeviceInfo` and no `0xD16E` access, so the model comes from the issue, and the decode establishes neither firmware nor the USB menu mode. It confirms successful selections of banks 1–7 and name reads in that session, and the X RAW Studio save described next; it establishes neither persistence across a power cycle nor the film-simulation write the issue reports. [Captured: X100V, FilmKit #1 attachment]
 
-The following check prints only hashes, counts, transaction IDs, selector values, completeness flags, and response codes; it never prints names, photos, serials, or DeviceInfo payloads:
+The same session holds X RAW Studio saving the edited preset to bank 6, between the first read of that bank (tids 10096–10120) and the two re-reads of banks 1–7. After `0xD21C = 0` at tid 10121 (X RAW Studio writes that before every selector write in this capture), it reselects bank 6 at tid 10122, writes the name at tid 10123 (complete data, `0x2001`; the name isn't reproduced), writes the 23 bank settings at tids 10124–10146 in its usual order (`0xD199`, `0xD19C`, `0xD19A`, `0xD19B`), then `0xD1A5` and the 22 other live writes at tids 10147–10169 in the order of the X-T50 save, each carrying the value just written to its bank twin. The selector write and the 46 setting writes each have a complete two-byte data container and a response, and the name write has a complete data container; the 18 recovery boundaries are at tids 9290–10053, inside earlier image transfers. Tid 10170 is another `0xD21C = 0`, and tids 10171–10172 read the battery pair `0xD36A`/`0xD36B`.
+
+| tid | Code | Written | Response | Latency | Bank 6 before, tids 10098–10120 | Bank 6 after, tids 10306–10328 and 10488–10510 |
+|--|--|--|--|--|--|--|
+| 10124 | `0xD18E` | 4 | `0x200A` | 1.5 ms | `0x200A`, empty data phase | `0x200A`, empty data phase |
+| 10125 | `0xD18F` | 3 | `0x200A` | 0.9 ms | `0x200A`, empty data phase | `0x200A`, empty data phase |
+| 10126 | `0xD190` | 200 | `0x2001` | 205.9 ms | 100 | 200 |
+| 10127 | `0xD191` | 0 | `0x2001` | 45.1 ms | 0 | 0 |
+| 10128 | `0xD192` | 17 | `0x2001` | 434.6 ms | 11 | 17 |
+| 10129 | `0xD193` | 0 | `0x201C` | 34.5 ms | 0 | 0 |
+| 10130 | `0xD194` | 0 | `0x201C` | 33.8 ms | 0 | 0 |
+| 10131 | `0xD195` | 5 | `0x2001` | 204.5 ms | 2 | 5 |
+| 10132 | `0xD196` | 2 | `0x2001` | 438.3 ms | 3 | 2 |
+| 10133 | `0xD197` | 3 | `0x2001` | 204.6 ms | 2 | 3 |
+| 10134 | `0xD198` | 1 | `0x201C` | 34.8 ms | 1 | 1 |
+| 10135 | `0xD199` | 4 | `0x2001` | 441.7 ms | 2 | 4 |
+| 10136 | `0xD19C` | 0 | `0x201C` | 35.3 ms | 10000 | 10000 |
+| 10137 | `0xD19A` | 3 | `0x2001` | 43.3 ms | 2 | 3 |
+| 10138 | `0xD19B` | −2 | `0x2001` | 202.1 ms | −4 | −2 |
+| 10139 | `0xD19D` | 0 | `0x2001` | 446.3 ms | −10 | 0 |
+| 10140 | `0xD19E` | 0 | `0x2001` | 214.0 ms | −10 | 0 |
+| 10141 | `0xD19F` | 30 | `0x2001` | 442.7 ms | 20 | 30 |
+| 10142 | `0xD1A0` | −30 | `0x2001` | 212.8 ms | −20 | −30 |
+| 10143 | `0xD1A1` | `0x7000` | `0x2001` | 432.6 ms | `0x8000` | `0x7000` |
+| 10144 | `0xD1A2` | −10 | `0x2001` | 200.4 ms | 0 | −10 |
+| 10145 | `0xD1A3` | 1 | `0x200A` | 1.0 ms | `0x200A`, empty data phase | `0x200A`, empty data phase |
+| 10146 | `0xD1A4` | 2 | `0x200A` | 0.8 ms | `0x200A`, empty data phase | `0x200A`, empty data phase |
+
+Four codes answer `0x200A` on this body in this session, on reads and writes alike: every one of the 15 reads of `0xD18E`, `0xD18F`, `0xD1A3`, and `0xD1A4` (one per bank-read pass, banks 1–7 included) returns a zero-length data phase and `0x200A`, and the save's writes of `4`, `3`, `1`, and `2` to them answer `0x200A` in 0.8–1.5 ms. The other 19 codes read two bytes with `0x2001` in every pass. Four writes answer `0x201C` in 33.8–35.3 ms: `0xD193 = 0` and `0xD194 = 0` with `0xD192 = 17` just written, on a bank that read `0` on both axes before and after; `0xD198 = 1` on a bank that read `1` before and after; and `0xD19C = 0` right after `0xD199 = 4`, on a bank that read `10000` before and after. The 15 accepted writes, 43–446 ms each, read back as written in both later reads of bank 6; 14 changed the bank's value, and `0xD191 = 0` rewrote the value the bank held. The name write took 428 ms.
+
+Of the live writes, `0xD1A5 = 4`, `0xD018 = 3`, `0xD34D = 1`, and `0xD00A = 2`, the live twins of the four `0x200A` bank writes, answer `0x2001`; `0xD104 = 0`, `0xD031 = 0`, and `0xD017 = 0`, the twins of three `0x201C` bank writes, answer `0x201C`; `0xD189 = 1`, Smooth Skin's twin, answers `0x200A` where its bank twin answered `0x201C`; the other 15 answer `0x2001`. Accepted live writes take 5.9–34 ms and the live refusals 0.8–1.0 ms. X RAW Studio sends no `0xD1A8`, `0xD03A`, or `0xD03B` anywhere in the capture, so the `0x200A` to `0xD18E` didn't trigger the Image Size fallback that fujifilm-ptp-recipes' static analysis describes; see [writing a bank](../docs/04-custom-slots.md#writing-a-bank).
+
+This is one save on one X100V in a session whose firmware and USB mode the capture doesn't establish: no `GetDeviceInfo`, no `0xD16E` access, no `GetDevicePropDesc`, and no `OpenSession`. It records what this body answered then, not why, not what it answers in another USB mode, and not what another X100V or firmware answers. [Captured: X100V, FilmKit #1 attachment, firmware and USB mode unknown]
+
+The following check prints only hashes, counts, transaction IDs, property codes, scalar values, completeness flags, response codes, and latencies in milliseconds; it never prints names, name lengths, photos, serials, or DeviceInfo payloads:
 
 ```sh
 python3 -B - 'REPO_DIR' 'DOWNLOAD_DIR/profileSave.pcapng' <<'PY'
@@ -129,19 +163,75 @@ device_info = [t['tid'] for t in transactions if t['op'] == 0x1001]
 mode_access = [t['tid'] for t in transactions if t['op'] in (0x1014, 0x1015, 0x1016) and t['params'] == [0xD16E]]
 assert not device_info and not mode_access
 
-# Strict output allowlist: no bank names, DeviceInfo, serials, photos, or other payloads.
+# The save to bank 6: the name write, the 23 bank-setting writes, then the 23 live writes.
+BANK_ORDER = [0xD18E, 0xD18F, 0xD190, 0xD191, 0xD192, 0xD193, 0xD194, 0xD195, 0xD196, 0xD197, 0xD198,
+              0xD199, 0xD19C, 0xD19A, 0xD19B, 0xD19D, 0xD19E, 0xD19F, 0xD1A0, 0xD1A1, 0xD1A2, 0xD1A3, 0xD1A4]
+LIVE_ORDER = [0xD1A5, 0xD018, 0xD007, 0xD02E, 0xD001, 0xD104, 0xD031, 0xD023, 0xD029, 0xD030, 0xD189,
+              0x5005, 0xD017, 0xD00B, 0xD00C, 0xD320, 0xD321, 0xD008, 0x5015, 0xD01C, 0xD032, 0xD34D, 0xD00A]
+by_tid = {t['tid']: t for t in transactions}
+assert len(by_tid) == len(transactions)  # one session, no repeated transaction IDs
+
+def scalar_write(tid, code):
+    t = by_tid[tid]
+    assert t['op'] == 0x1016 and t['params'] == [code] and t['out'] is not None and len(t['out']) == 2
+    assert t['resp'] is not None
+    return {'tid': tid, 'code': f'0x{code:04X}', 'value': int.from_bytes(t['out'], 'little', signed=True),
+            'u16': f'0x{int.from_bytes(t["out"], "little"):04X}', 'response': f'0x{t["resp"]:04X}',
+            'latency_ms': round((t['resp_ts'] - t['ts']) / 1000, 1)}
+
+name_write = by_tid[10123]
+assert name_write['op'] == 0x1016 and name_write['params'] == [0xD18D] and name_write['out'] is not None
+bank_writes = [scalar_write(tid, code) for tid, code in zip(range(10124, 10147), BANK_ORDER)]
+live_writes = [scalar_write(tid, code) for tid, code in zip(range(10147, 10170), LIVE_ORDER)]
+assert [w['value'] for w in bank_writes] == [w['value'] for w in live_writes]  # each live write carries its bank twin's value
+assert all(by_tid[tid]['op'] == 0x1016 and by_tid[tid]['params'] == [0xD21C] for tid in (10121, 10170))
+assert [by_tid[tid]['params'] for tid in (10171, 10172)] == [[0xD36A], [0xD36B]]
+assert not [t['tid'] for t in transactions if t['op'] == 0x1016 and t['params'][:1] and t['params'][0] in (0xD1A8, 0xD03A, 0xD03B)]
+assert not [t['tid'] for t in transactions if t['op'] in (0x1002, 0x1014)]
+diagnostic_tids = [d[key] for d in diagnostics for key in ('tid', 'abandoned_tid') if key in d]
+assert max(diagnostic_tids) < 10096  # every recovery boundary precedes the bank reads and the save
+
+# Every read of each bank setting, by response and data length; bank 6 before and after the save.
+reads = {code: collections.Counter() for code in BANK_ORDER}
+for t in transactions:
+    if t['op'] == 0x1015 and t['params'][:1] and t['params'][0] in reads:
+        reads[t['params'][0]][(f'0x{t["resp"]:04X}', None if t['in'] is None else len(t['in']))] += 1
+
+def bank_six(select_tid):
+    assert by_tid[select_tid]['params'] == [0xD18C] and int.from_bytes(by_tid[select_tid]['out'], 'little') == 6
+    reads_of_six = [by_tid[tid] for tid in range(select_tid + 2, select_tid + 25)]
+    assert all(t['op'] == 0x1015 for t in reads_of_six) and [t['params'][0] for t in reads_of_six] == BANK_ORDER
+    return {f'0x{t["params"][0]:04X}': int.from_bytes(t['in'], 'little', signed=True) if t['in'] else f'0x{t["resp"]:04X}'
+            for t in reads_of_six}
+
+before, after = bank_six(10096), [bank_six(10304), bank_six(10486)]
+accepted = [w for w in bank_writes if w['response'] == '0x2001']
+assert all(readback[w['code']] == w['value'] for w in accepted for readback in after)
+
+# Strict output allowlist: no bank names, name lengths, DeviceInfo, serials, photos, or other payloads.
 print(json.dumps({
     'capture_sha256': digest,
     'format': 'pcapng / LINKTYPE_USBPCAP (249)',
     'transaction_count': len(transactions),
     'recovery_enabled': True,
     'diagnostic_counts': dict(collections.Counter(d['reason'] for d in diagnostics)),
+    'diagnostic_tid_range': [min(diagnostic_tids), max(diagnostic_tids)],
     'selectors': [{'tid': t['tid'], 'value': int.from_bytes(t['out'], 'little'),
                    'payload_bytes': len(t['out']), 'response': f'0x{t["resp"]:04X}'} for t in selectors],
     'name_reads': [{'tid': t['tid'], 'complete_data': t['in'] is not None,
                     'response': f'0x{t["resp"]:04X}'} for t in names],
     'device_info_tids': device_info,
     'usb_mode_property_tids': mode_access,
+    'name_write': {'tid': 10123, 'complete_data': True, 'response': f'0x{name_write["resp"]:04X}',
+                   'latency_ms': round((name_write['resp_ts'] - name_write['ts']) / 1000, 1)},
+    'bank_writes': bank_writes,
+    'live_writes': live_writes,
+    'bank_setting_reads': {f'0x{code:04X}': [{'response': response, 'data_bytes': length, 'count': count}
+                                             for (response, length), count in sorted(counter.items())]
+                           for code, counter in reads.items()},
+    'bank_6_before_save': before,
+    'bank_6_after_save': after,
+    'accepted_writes_read_back_as_written': len(accepted),
 }, indent=2))
 PY
 ```
