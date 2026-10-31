@@ -17,7 +17,7 @@ Probe the count by selecting banks in ascending order until a select is refused.
 | X-T50 | 7 | [Measured] |
 | GFX100S | 6 — selecting 7 answers `0x200A` | [Owner report: fw 2.13] |
 | X-M5 | 4 — selecting 5, 6, or 7 fails | [Published: FilmKit issue #18, fw 1.30] |
-| X-S20 | 4 over the `0xD18C` block; whether the camera refuses a select of 5–7 isn't shown (one refusal came from the tool's own guard) | [Published: fujicli] [Published: grawji issue #114] |
+| X-S20 | C1–C4 work over the `0xD18C` block; whether the camera refuses a select of 5–7 isn't shown: grawji's C5–C7 refusal is its own validation, with the count taken from the manual, and fujicli caps its list at four without a reported camera test | [Published: fujicli] [Published: grawji issue #114] |
 | X-S10 | C1–C4 read over USB, with values that differ per bank; no select of 5 is reported, so the USB count isn't proven. C1–C4 on the mode dial, per the manual | [Published: X-S10, Filmcase] [Published: Fujifilm manuals] |
 | GFX100 II | C1–C6 on the mode dial; in USB tether mode `0xD18C` answers a descriptor with enumeration `1`–`6` | [Published: Fujifilm manuals] [Published: libgphoto2 camera dump, paraphrased] |
 | X-H2 | 7 — C1–C7 read; property and name writes reported OK; a seven-bank write bench ran clean | [Published: X-H2 fw 5.20, fujifilm-ptp-recipes] |
@@ -29,7 +29,7 @@ Probe the count by selecting banks in ascending order until a select is refused.
 | X-Pro3 | fails so far — reads, writes, and name writes all fail at fw 2.00; the response codes aren't recorded, and the source hasn't diagnosed it. The manual gives seven | [Published: fujifilm-ptp-recipes] [Published: Fujifilm manuals] |
 | X-T20, X-H1, X-T3, X-T30, X100VI | 7, per the manuals' **EDIT/SAVE CUSTOM SETTING** pages; see [bank counts from Fujifilm's manuals](07-cameras.md#bank-counts-from-fujifilms-manuals) | [Published: Fujifilm manuals] |
 
-The manual's count and the USB count agree on every body that has both: seven on the X-T50, X-H2, X-T5, X-E5, X100V, X-T30 II, and GFX100RF, six on the GFX100S, and four on the X-M5. The X-S20's manual also gives four, but its USB sources' C5–C7 rejection came from application validation, so its USB count isn't established. [Published: Fujifilm manuals]
+The manual's count and the USB count agree on every body that has both: seven on the X-T50, X-H2, X-T5, X-E5, X100V, X-T30 II, and GFX100RF, six on the GFX100S, and four on the X-M5. The X-S20's manual also gives four, but grawji's C5–C7 rejection is its own validation and fujicli caps its list at four without a reported camera test, so its USB count isn't established. [Published: Fujifilm manuals]
 
 No clearing operation is characterized in this bank-property path. The camera's menu can **ERASE** a bank and **CREATE NEW** ones [Published: Fujifilm manuals, X-T50]. A property snapshot restores readable values, not a proven empty/occupied state; it doesn't establish what the separate settings-backup path can restore. What an erased bank reads over USB is untested.
 
