@@ -16,7 +16,7 @@ Probe the count by selecting banks in ascending order until a select is refused.
 |--|--|--|
 | X-T50 | 7 | [Measured] |
 | GFX100S | 6 — selecting 7 answers `0x200A` | [Owner report: fw 2.13] |
-| X-M5 | 4 — selecting 5, 6, or 7 fails | [Published: FilmKit issue #18, fw 1.30] |
+| X-M5 | 4 — selecting 5 answers `0x200A`; FilmKit reports 5, 6, and 7 failing | [Owner report: fw 1.30, 2026-10-31] [Published: FilmKit issue #18, fw 1.30] |
 | X-S20 | 4 over the `0xD18C` block; whether the camera refuses a select of 5–7 isn't shown (one refusal came from the tool's own guard) | [Published: fujicli] [Published: grawji issue #114] |
 | X-S10 | C1–C4 read over USB, with values that differ per bank; no select of 5 is reported, so the USB count isn't proven. C1–C4 on the mode dial, per the manual | [Published: X-S10, Filmcase] [Published: Fujifilm manuals] |
 | GFX100 II | C1–C6 on the mode dial; in USB tether mode `0xD18C` answers a descriptor with enumeration `1`–`6` | [Published: Fujifilm manuals] [Published: libgphoto2 camera dump, paraphrased] |
@@ -99,7 +99,7 @@ The X-T50 fw 1.32 observations were:
 
 The final controlled `name-timing`, `reset-check`, and `power-dot` runs establish the practical result on this X-T50: the red dot is cosmetic for the tested USB writes, which survive **RESET THE CHANGES** and power cycling. Name writes didn't clear it; opening the flagged item and backing out, or power cycling, did. The results suggest USB writes land in the bank itself, with shooting-menu edits in a separate layer that **RESET** discards. [Inferred] The internal storage interpretation remains conditional on the unrecorded AUTO UPDATE state.
 
-Both peer records describe successful name-last writes: fujifilm-ptp-recipes on an X-H2 and X-T5, and fuji-ptp-notes on a GFX100RF. [Published: fujifilm-ptp-recipes] [Published: fuji-ptp-notes] The captured X RAW Studio sequence earlier in this chapter writes the name first. These observations don't establish a persistence benefit for either order.
+Both peer records describe successful name-last writes: fujifilm-ptp-recipes on an X-H2 and X-T5, and fuji-ptp-notes on a GFX100RF. [Published: fujifilm-ptp-recipes] [Published: fuji-ptp-notes] The captured X RAW Studio sequence earlier in this chapter writes the name first. These observations don't establish a persistence benefit for either order. Two owner reports add name-first write passes through the maintainers' client whose settings and name read back after an owner-confirmed power cycle, on a GFX100S and an X-M5; neither records the AUTO UPDATE state, and the X-M5 owner answered that the item isn't in that camera's menu, which its manual page contradicts. [Owner report: GFX100S fw 2.13, 2026-09-15] [Owner report: X-M5 fw 1.30, 2026-10-31]
 
 The runs behind these results are published as [sanitized packages](../evidence/README.md#available-x-t50-packages); the [October records note](../evidence/xt50-october-records.md) gives the source-array position of each write and read. The probe's prompts mention AUTO UPDATE as an instruction, not as a recorded observation of that setting.
 
@@ -168,7 +168,7 @@ The gate follows the bank's ISO in the X-T50 tests. A GFX100S accepted the same 
 
 No bank-ISO read is characterized through the tested X-T50 properties. `0x500F` ExposureIndex answers `0x200A` on banks at ISO 125 and ISO 500 alike. [Measured: X-T50 fw 1.32, 2026-09-18] A refusal can reveal a gate, but doesn't identify the bank's ISO or rule out another cause. The GFX100S advertises `0x500F`; whether it tracks the selected bank is untested.
 
-D-Range Priority (`0xD191`) is gated harder: at base ISO, the camera refuses every write, including one of the value already held, and at ISO 500 every write succeeds. [Measured: X-T50 fw 1.32] The manuals give Weak a floor of 2× base and Strong 4× base, both capped at 12800 (the X-E5 manual alone gives Weak a floor of ISO 320; the per-body floors are in the table earlier in this section) [Published: Fujifilm manuals], so at ISO 250 you'd expect an X-T50 to take Weak and refuse Strong; untested.
+D-Range Priority (`0xD191`) is gated harder: at base ISO, the camera refuses every write, including one of the value already held, and at ISO 500 every write succeeds. [Measured: X-T50 fw 1.32] An X-M5 bank refused `0xD191 = 0x8000` with `0x201C`; its ISO wasn't recorded, so that refusal doesn't test the gate. [Owner report: X-M5 fw 1.30, 2026-10-31] The manuals give Weak a floor of 2× base and Strong 4× base, both capped at 12800 (the X-E5 manual alone gives Weak a floor of ISO 320; the per-body floors are in the table earlier in this section) [Published: Fujifilm manuals], so at ISO 250 you'd expect an X-T50 to take Weak and refuse Strong; untested.
 
 D-Range Priority also drives **TONE CURVE** and **DYNAMIC RANGE** itself whenever it's anything but **OFF**, in the manual's own words [Published: Fujifilm manuals, X-T50], which is the interlock described in the next section.
 
@@ -201,7 +201,7 @@ Several settings keep a stored value while another setting makes them irrelevant
 
 | Setting | Kept while | Evidence |
 |--|--|--|
-| Grain size | Grain is Off — read back as `6` (Small) or `7` (Large) | [Measured: X-T50] [Owner report: GFX100S] |
+| Grain size | Grain is Off — read back as `6` (Small) or `7` (Large) | [Measured: X-T50] [Owner report: GFX100S] [Owner report: X-M5 fw 1.30, 2026-10-31] |
 | Kelvin (`0xD19C`) | White balance isn't Kelvin | [Measured: X-T50 fw 1.32, 2026-09-20] |
 | White balance shift, per mode (`0xD19A`/`0xD19B`) | Another white balance mode is active — each mode keeps its own shift, and the pair reports the active mode's | [Measured: X-T50 fw 1.32, 2026-10-15] |
 | Monochromatic Color (`0xD193`/`0xD194`) | The simulation is color or Sepia | [Measured: X-T50, 2026-09-20] |
@@ -225,7 +225,7 @@ When presenting a recipe, don't show inactive values as applied settings: showin
 Restoring is a write and follows every rule earlier in this chapter, with three additions:
 
 - Decide the conditional writes from the saved bytes, but put a changed inactive value back before restoring the state that makes it inactive. Skip `0xD193`/`0xD194` unless the saved simulation is a monochrome type with toning, and `0xD19C` unless the saved white balance is `0x8007`: a restore that wrote all three while inactive reported three refusals. [Measured: X-T50 fw 1.32, 2026-09-14] If the experiment changed one of them, write it while its prerequisite still holds, then restore the final simulation or white balance and shifts, and verify against the baseline; if that isn't possible, report what wasn't restored.
-- Direct writes of grain Off's saved `6`/`7` bytes are refused on the tested X-T50 and GFX100S. Both bodies demonstrated reconstruction of `6` by writing `2` then `1`, and of `7` by writing `5` then `1`. A GFX100S rollback that wrote only `1` restored Off but changed saved `6` to `7`. Use the [demonstrated grain sequences](03-encodings.md#0xd195-grain-effect) where applicable and verify the saved size as well as Off; those sequences alone don't prove complete-bank restoration. [Measured: X-T50 fw 1.32, 2026-09-14] [Owner report: GFX100S fw 2.13, 2026-09-15]
+- Direct writes of grain Off's saved `6`/`7` bytes are refused on the tested X-T50, GFX100S, and X-M5. All three bodies demonstrated reconstruction of `6` by writing `2` then `1`, and of `7` by writing `5` then `1`. A GFX100S rollback that wrote only `1` restored Off but changed saved `6` to `7`. Use the [demonstrated grain sequences](03-encodings.md#0xd195-grain-effect) where applicable and verify the saved size as well as Off; those sequences alone don't prove complete-bank restoration. [Measured: X-T50 fw 1.32, 2026-09-14] [Owner report: GFX100S fw 2.13, 2026-09-15] [Owner report: X-M5 fw 1.30, 2026-10-31]
 - Order D-Range Priority by direction. If the saved bank had the priority off, turn it off before writing Dynamic Range and the tones. If it had the priority on and the bank currently has it off, write Dynamic Range and the tones first and turn the priority on last. An ascending-order restore had `0xD190 = 400` refused before `0xD191 = Off` was accepted. [Measured: X-T50 fw 1.32, 2026-10-03]
 
 Save the bank's name along with its settings. Otherwise, you can end up restoring settings under the name a later write left behind.

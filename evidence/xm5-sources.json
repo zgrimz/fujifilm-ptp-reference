@@ -1,0 +1,26 @@
+{
+ "format": "private-source-inventory-v1",
+ "inventoryId": "xm5-owner-report-2026-10-31",
+ "retrievalDateLocal": "2026-10-31",
+ "archive": "maintainers' private archive",
+ "revision": "9c036138f096136110b6e14983426c53849434af",
+ "directory": "hardware-runs/app-reports-x-m5",
+ "access": "private",
+ "originalsIncluded": false,
+ "retrievedDirectoryFileCount": 3,
+ "inventoryScope": "The X-M5 owner's exports from the maintainers' iOS client on 2026-10-31: the camera report the record's X-M5 section cites, and the Camera Test result exported beside it. Not the directory's README. Hashes identify entire evidence files, not device identities.",
+ "artifacts": [
+  {
+   "path": "fuji-cookbook-camera-report-X-M5-20261031-1508.json",
+   "bytes": 176344,
+   "sha256": "a6977076db80e48bb11f4f3662b0032310b902db0f1dbd6a51334d1ca84ea9f5",
+   "gitBlob": "c4ebbbc0426c2b42c29f5a63257f91391b912097"
+  },
+  {
+   "path": "fuji-cookbook-test-results-X-M5-20261031-1512.txt",
+   "bytes": 65277,
+   "sha256": "16db9f99e77dadf1f91b40e7419dc0822aa292e6f1106633579214a74e73d341",
+   "gitBlob": "b87ff1023508a66236f0ce6adfa1297e7dcf8fc6"
+  }
+ ]
+}
