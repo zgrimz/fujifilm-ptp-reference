@@ -2,7 +2,7 @@
 
 ## Camera setup
 
-Set the camera's USB connection setting to **USB RAW CONV./BACKUP RESTORE** (the exact menu wording varies slightly by body). This is the mode Fujifilm's X RAW Studio uses for the procedures here. [Measured: X-T50] [Owner report: GFX100S] It isn't the only mode exposing banks on every body: the GFX100RF answers bank writes in tether mode, and the GFX100 II has a bank-selector descriptor there. [Published: fuji-ptp-notes] [Published: libgphoto2 camera dump, paraphrased] Check conversion support and property visibility for each body and mode.
+Set the camera's USB connection setting to **USB RAW CONV./BACKUP RESTORE** (the exact menu wording varies slightly by body). This is the mode Fujifilm's X RAW Studio uses for the procedures here. [Measured: X-T50] [Owner report: GFX100S] It isn't the only mode exposing banks on every body: the GFX100RF took a bank write in tether mode from a macOS host, and the GFX100 II has a bank-selector descriptor there. [Published: fuji-ptp-notes] [Published: libgphoto2 camera dump, paraphrased] Check conversion support and property visibility for each body and mode.
 
 In any other mode, the camera still answers PTP, but describes itself very differently. To identify the mode, see [Recognizing the wrong USB mode](#recognizing-the-wrong-usb-mode).
 
