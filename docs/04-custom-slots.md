@@ -202,7 +202,7 @@ Several settings keep a stored value while another setting makes them irrelevant
 | Setting | Kept while | Evidence |
 |--|--|--|
 | Grain size | Grain is Off — read back as `6` (Small) or `7` (Large) | [Measured: X-T50] [Owner report: GFX100S] [Owner report: X-M5 fw 1.30, 2026-10-31] |
-| Kelvin (`0xD19C`) | White balance isn't Kelvin | [Measured: X-T50 fw 1.32, 2026-09-20] |
+| Kelvin (`0xD19C`) | White balance isn't Kelvin | [Measured: X-T50 fw 1.32, 2026-09-20] [Captured: X100V, FilmKit #1 attachment, firmware and USB mode unknown: a bank read `10000` with `0xD199 = 2` (Auto), and still `10000` in both later reads after the save set `0xD199 = 4` (Daylight) and had Kelvin `0` refused] |
 | White balance shift, per mode (`0xD19A`/`0xD19B`) | Another white balance mode is active — each mode keeps its own shift, and the pair reports the active mode's | [Measured: X-T50 fw 1.32, 2026-10-15] |
 | Monochromatic Color (`0xD193`/`0xD194`) | The simulation is color or Sepia | [Measured: X-T50, 2026-09-20] |
 | Color (`0xD19F`) | The simulation is monochrome | [Measured: X-T50, 2026-10-03] |
