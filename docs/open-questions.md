@@ -77,6 +77,7 @@ This page lists what isn't known yet, and what would settle each question. Answe
 | Does `OpenSession` answer `0x201E` on an X-T50 when a session is already open, as FilmKit reports on an X-T3 and X100V? | Two `OpenSession`s in a row |
 | Does the X-T50's USB product ID change with the USB mode, as the X-M5's two reported IDs suggest? | Read the descriptor in each mode |
 | Does `0xD235`, a dormant multi-property read in X RAW Studio's SDK that an X-H2 refused `0x200A` (Published: fujifilm-ptp-recipes, static analysis), answer on any body? | A read on the X-T50 |
+| Can the endpoint-0 class requests recover a body stuck after a conversion without a power cycle? Filmcase uses Cancel Request, Get Device Status, and Device Reset for stalled recipe pushes on an X-S10 and reports that Cancel alone can leave the camera claiming readiness while stuck (Published: Filmcase); see [class requests on endpoint 0](01-transport.md#class-requests-on-endpoint-0). | On a body answering `0x2019` after a conversion: Get Device Status, then Cancel Request, then Device Reset and `OpenSession`; record each answer and whether a fresh conversion then succeeds |
 
 ## JPEG metadata
 
