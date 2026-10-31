@@ -7,6 +7,7 @@ The camera can develop a RAF file with its own image processor and hand back the
 - The camera's USB setting is **USB RAW CONV./BACKUP RESTORE**.
 - This body shot the RAF. rawji [reports a foreign-RAF failure with `0x2002`](https://github.com/pinpox/rawji/blob/02cb559/README.md#L38), without naming the failed PTP request. grawji [places that error at the profile read after sending the foreign RAF](https://github.com/p5k369/grawji/blob/7cd98fe/src/grawji/camera/core.py#L151-L155), so an upload response alone doesn't establish that the file can be converted. [Published: rawji] [Published: grawji] The container matters: grawji converts another body's raw data by embedding it in an uncompressed RAF the connected body shot. [Published: grawji]
 - The body supports conversion. For the bodies known to support it, see [Camera bodies](07-cameras.md).
+- The battery can last the job. Fujifilm says the camera's power saving feature does not work while it's connected in USB RAW CONVERSION mode and that conversion uses the camera's battery, whose level X RAW Studio shows [Published: Fujifilm, X RAW Studio Features & Users Guide]; in the public captures it polls [`0xD36A`/`0xD36B`](02-properties.md#live-shooting-properties) about every 3 s [Captured: X-T50 fw 1.31, X-T30 fw 2.01]. No conversion failing for want of charge is recorded here.
 
 ## The sequence
 
