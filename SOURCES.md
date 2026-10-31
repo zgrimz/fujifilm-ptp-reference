@@ -130,7 +130,7 @@ Used here: DR Auto `0xFFFF` read from a bank; the four D-Range Priority values w
 
 License: GPL-3.0-or-later.
 
-Reported measurements: From an X-E5 (its author's body), the upload-once live preview, grain `6`/`7` on factory banks, and `0xD18C` refusing 8 and above. From an X100F and an X-T3, bank writes through the settings-backup object. From an X-S20 through its issues #108 and #114, 59 advertised properties without `0xD198`, four banks, and conversions.
+Reported measurements: From an X-E5 (its author's body), the upload-once live preview, grain `6`/`7` on factory banks, and `0xD18C` refusing 8 and above, stated in a code comment with no response code. From an X100F and an X-T3, bank writes through the settings-backup object. From an X-S20 through its issues #108 and #114, 59 advertised properties without `0xD198`, four banks, and conversions.
 
 Relayed material: rawji's profile code and capability tables; FilmKit's name for `0xD1A3`. Its author also contributed the rawji observations and features listed under [pinpox/rawji](#pinpoxrawji); those shared sources are not independent experiments. Its [format-capability matrix](https://github.com/p5k369/grawji/blob/7cd98fe/docs/feature-matrix.md#L12-L17) assumes current firmware and uses in-camera capabilities from the manuals and its capability database as a proxy for USB support, with many rows unverified over USB.
 

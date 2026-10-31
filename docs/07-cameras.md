@@ -17,7 +17,7 @@ What's known about each body, and how firmly. The table focuses on bodies with p
 | X-Pro3 | X-Processor 4 | tested path fails at fw 2.00 in **USB RAW CONV.**: reads, writes, and names; cause undiagnosed | — | X RAW Studio supported; `0xD185` profiles published | [Published: fujifilm-ptp-recipes] [Published: libfuji profiles] [Published: Fujifilm X RAW Studio compatibility list] |
 | X-S20 | X-Processor 5 | read + write over the block; `0xD198` unsupported on the tested bank path | 4 | yes, REALA ACE included | [Published: fujicli] [Published: grawji issues #108, #114] |
 | X-S10 | X-Processor 4 | reported bank reads and write/readback sweeps; 59 properties advertised, without `0xD198` | 4 (C1–C4 read; no select of 5 reported) | | [Published: Filmcase, firmware unstated] |
-| X-E5 | X-Processor 5 | read + write; `0xD18C` refuses `8` and above | 7 | yes | [Published: grawji] [Community] |
+| X-E5 | X-Processor 5 | read + write; `0xD18C` refuses `8` and above | 7 | yes | [Published: grawji; the selector refusal is a code comment] [Community] |
 | X-M5 | X-Processor 5 | banks 1–4 select; 5–7 fail; mode reported as **USB RAW CONV.** | 4 | conversion works; 629-byte profile read | [Published: FilmKit issue #18, fw 1.30] |
 | X-T30 II | X-Processor 4 | tested bank reads, writes, and names work despite no advertised properties in **USB RAW CONV.** mode | 7 | | [Community: fw 2.04, a report in fujifilm-ptp-recipes' unmerged pull request #2] |
 | X-T3 | X-Processor 4 | direct bank editing unavailable in documented **USB RAW CONV.** runs; banks reached through settings backup | — | yes | [Published: FilmKit issue #5, fw 5.11] [Captured: issue #5 preset-change attachment] [Published: grawji, rawji] |
