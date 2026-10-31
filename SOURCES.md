@@ -106,7 +106,7 @@ Used here: Items explicitly marked measured at GFX100RF scope, plus attributed c
 
 License: GPL-3.0.
 
-Reported measurements: From an X-T5 (firmware unstated), seven banks, backup and restore, RAW conversion end to end, IOPCode `FF179502`, and cell 1 always `2`. Its original read implementation implies a 625-byte, 29-cell profile at this reference's base; no raw profile fixture accompanies that evidence. Its historical `10fdc212` comment reports X RAW Studio writing `0` or `1` in cell 29, whose meaning remains unresolved. From an X-S20, four banks over the property block, backup, and no `0xD198`.
+Reported measurements: From an X-T5 (firmware unstated), seven banks, backup and restore, RAW conversion end to end, IOPCode `FF179502`, and cell 1 always `2`. Its original read implementation implies a 625-byte, 29-cell profile at this reference's base; no raw profile fixture accompanies that evidence. Its historical `10fdc212` comment reports X RAW Studio writing `0` or `1` in cell 29, whose meaning remains unresolved. From an X-S20, four banks over the property block and backup. Its X-S20 definition omits `0xD198` by giving the body its X-Trans IV generation's setting list; that is an implementation choice, not a reported advertised-list or response-code observation.
 
 Its [code comment](https://github.com/karaolidis/fujicli/blob/177671c/fml/option.cue#L742-L745) also reports `0xD1A3` refusal while no lens is attached, without identifying the body. The README names the X-T5 as its only extensively tested body, but that does not establish which body produced this observation.
 
