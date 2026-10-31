@@ -63,7 +63,7 @@ Separately, four conversions through ImageCaptureCore on iOS, one full-resolutio
 
 ## Upload once, develop many
 
-The conversion buffer survives a conversion. To render several versions of one photo, upload it once and repeat steps 4–10 for each version. [Measured: X-T50] [Published: grawji, which renders live previews this way] A conversion that never completes can leave the body unresponsive until a power cycle, answering `0x2019` Device Busy meanwhile. [Published: rawji] [Published: grawji]
+The conversion buffer survives a conversion. To render several versions of one photo, upload it once and repeat steps 4–10 for each version. [Measured: X-T50] [Published: grawji, which renders live previews this way] A conversion that never completes can leave the body unresponsive until a power cycle; rawji's advice covers the timeout, and grawji's error classification treats a follow-up `0x2019` Device Busy as the same wedged state. [Published: rawji] [Published: grawji]
 
 In the captured X-T50 conversion, re-reading `0xD185` after conversion returned the last written cell values. [Captured] This isn't established as a universal echo rule: the sequence and provenance of libfuji's `xt5_*` files are undocumented, and one apparent pair changes cell 4 between write and read. [Published: libfuji; interpretation conditional on file order] So patch each version from the profile read at step 3. Patching the latest re-read would build each version on top of the one before.
 
