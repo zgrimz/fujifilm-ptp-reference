@@ -98,6 +98,10 @@ Both projects model dynamic range as percentages (or a 1/2/3 UI enumeration) wit
 
 libgphoto2 keeps the older name; its own X-T5 commit notes the property behaved as Color Chrome Effect, and X RAW Studio writes the bank's Color Chrome Effect to it. [Published: libgphoto2] [Captured: X-T50 fw 1.31]
 
+### Its event emulation's `0x2019` check cites a `0x200F` case
+
+libgphoto2's Fuji event emulation skipped a listed handle only when `GetObjectInfo` answered `0x2019`, citing gphoto2 issue #456, and [commit 47b539b](https://github.com/gphoto/libgphoto2/commit/47b539b9eeb87f2e7dd82376f2b59b411c5fa91d) describes the X-T3's `0x200F` as a departure from that case. The GFX 50R logs attached to the issue show `0x200F` on the same `GetObjectInfo`, and `0x2019` only on the `0xD207` and `0xD38C` writes; the commit's fix, skipping any handle whose ObjectInfo can't be read, covers both bodies. [Published: libgphoto2] [Published: gphoto2 issue #456 logs]
+
 ## fujifilm-ptp-recipes
 
 fujifilm-ptp-recipes is an independent record of the bank protocol on an X-H2 and an X-T5 (fw 4.20), and a static analysis of X RAW Studio. It gives its X-H2 firmware as 5.20 in tested-body and experiment reports and 2.00 in reverse-engineering bench descriptions. Keep each observation's stated firmware; those descriptions do not establish that every experiment used the same version. The following entries list disagreements and evidence limits.
